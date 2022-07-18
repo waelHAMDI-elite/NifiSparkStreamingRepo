@@ -1,0 +1,850 @@
+2022-07-16 18:03:15.431  INFO   47 --- [           main] com.elite.cdr.validator.Application      : Starting ASN1 Reader 
+2022-07-16 18:03:15.447  INFO   49 --- [           main] com.elite.cdr.validator.Application      : ############### Run with the args [--env, local, --file, C:\IntelliJProjects\FraudDetectionSpark3\src\main\resources\data\simpleTypes.ber, --prop, C:\IntelliJProjects\NifiSparkStreaming\src\main\resources\myapp.properties]
+2022-07-16 18:03:15.509  INFO   55 --- [           main] com.elite.cdr.validator.Application      : ############### Run in local mode
+2022-07-16 18:03:16.994  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Running Spark version 3.2.1
+2022-07-16 18:03:17.338  INFO   57 --- [           main] org.apache.spark.internal.Logging        : ==============================================================
+2022-07-16 18:03:17.338  INFO   57 --- [           main] org.apache.spark.internal.Logging        : No custom resources configured for spark.driver.
+2022-07-16 18:03:17.338  INFO   57 --- [           main] org.apache.spark.internal.Logging        : ==============================================================
+2022-07-16 18:03:17.353  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Submitted application: NiFi Spark Streaming example
+2022-07-16 18:03:17.400  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2022-07-16 18:03:17.431  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Limiting resource is cpu
+2022-07-16 18:03:17.447  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Added ResourceProfile id: 0
+2022-07-16 18:03:17.634  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing view acls to: Wael Hamdi
+2022-07-16 18:03:17.634  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing modify acls to: Wael Hamdi
+2022-07-16 18:03:17.634  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing view acls groups to: 
+2022-07-16 18:03:17.650  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing modify acls groups to: 
+2022-07-16 18:03:17.650  INFO   57 --- [           main] org.apache.spark.internal.Logging        : SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Wael Hamdi); groups with view permissions: Set(); users  with modify permissions: Set(Wael Hamdi); groups with modify permissions: Set()
+2022-07-16 18:03:20.681  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'sparkDriver' on port 53407.
+2022-07-16 18:03:20.713  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering MapOutputTracker
+2022-07-16 18:03:20.744  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManagerMaster
+2022-07-16 18:03:20.775  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2022-07-16 18:03:20.775  INFO   57 --- [           main] org.apache.spark.internal.Logging        : BlockManagerMasterEndpoint up
+2022-07-16 18:03:20.775  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManagerMasterHeartbeat
+2022-07-16 18:03:20.806  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Created local directory at C:\Users\Wael Hamdi\AppData\Local\Temp\blockmgr-f08f66db-cae9-43e0-820e-91aa3f2cd4b1
+2022-07-16 18:03:20.838  INFO   57 --- [           main] org.apache.spark.internal.Logging        : MemoryStore started with capacity 897.6 MiB
+2022-07-16 18:03:20.869  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering OutputCommitCoordinator
+2022-07-16 18:03:20.994  INFO  170 --- [           main] org.sparkproject.jetty.util.log.Log      : Logging initialized @6476ms to org.sparkproject.jetty.util.log.Slf4jLog
+2022-07-16 18:03:21.088  INFO  375 --- [           main] org.sparkproject.jetty.server.Server     : jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 1.8.0_301-b09
+2022-07-16 18:03:21.119  INFO  415 --- [           main] org.sparkproject.jetty.server.Server     : Started @6609ms
+2022-07-16 18:03:21.181  INFO  331 --- [           main] rkproject.jetty.server.AbstractConnector : Started ServerConnector@7caa550{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-07-16 18:03:21.181  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'SparkUI' on port 4040.
+2022-07-16 18:03:21.213  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@a50b09c{/jobs,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.213  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@4eeea57d{/jobs/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.213  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@e24ddd0{/jobs/job,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.213  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@5aabbb29{/jobs/job/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.213  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1ac85b0c{/stages,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.213  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3aa3193a{/stages/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.213  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@59a67c3a{/stages/stage,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.228  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@6bc248ed{/stages/stage/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.228  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@ca27722{/stages/pool,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.228  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@9573b3b{/stages/pool/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.228  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@78461bc4{/storage,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.228  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@64f857e7{/storage/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.228  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@58c540cf{/storage/rdd,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.228  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1b822fcc{/storage/rdd/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.228  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@56102e1c{/environment,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.228  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@7927bd9f{/environment/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.228  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@410954b{/executors,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.228  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3b366632{/executors/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.244  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@514eedd8{/executors/threadDump,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.244  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@6970140a{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.244  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3af4e0bf{/static,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.244  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@70925b45{/,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.244  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@aa22f1c{/api,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.259  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@2af616d3{/jobs/job/kill,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.259  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3deb2326{/stages/stage/kill,null,AVAILABLE,@Spark}
+2022-07-16 18:03:21.259  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Bound SparkUI to 0.0.0.0, and started at http://host.docker.internal:4040
+2022-07-16 18:03:21.447  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Starting executor ID driver on host host.docker.internal
+2022-07-16 18:03:21.588  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53431.
+2022-07-16 18:03:21.588  INFO   82 --- [           main] .network.netty.NettyBlockTransferService : Server created on host.docker.internal:53431
+2022-07-16 18:03:21.588  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2022-07-16 18:03:21.603  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManager BlockManagerId(driver, host.docker.internal, 53431, None)
+2022-07-16 18:03:21.603  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Registering block manager host.docker.internal:53431 with 897.6 MiB RAM, BlockManagerId(driver, host.docker.internal, 53431, None)
+2022-07-16 18:03:21.619  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registered BlockManager BlockManagerId(driver, host.docker.internal, 53431, None)
+2022-07-16 18:03:21.619  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Initialized BlockManager: BlockManagerId(driver, host.docker.internal, 53431, None)
+2022-07-16 18:03:21.900  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@2189e7a7{/metrics/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:22.697  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Starting 1 receivers
+2022-07-16 18:03:22.713  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : ReceiverTracker started
+2022-07-16 18:03:22.713  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-07-16 18:03:22.713  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-07-16 18:03:22.713  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-07-16 18:03:22.713  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-07-16 18:03:22.713  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.PluggableInputDStream@7ae3326b
+2022-07-16 18:03:22.713  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@1c9858b3
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@7158e875
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.PluggableInputDStream@7ae3326b
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@1c9858b3
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-07-16 18:03:22.728  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@471bf2c
+2022-07-16 18:03:22.838  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Receiver 0 started
+2022-07-16 18:03:22.853  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started timer for JobGenerator at time 1657991003000
+2022-07-16 18:03:22.853  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started JobGenerator at 1657991003000 ms
+2022-07-16 18:03:22.853  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started JobScheduler
+2022-07-16 18:03:22.868  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@26a2f7f9{/streaming,null,AVAILABLE,@Spark}
+2022-07-16 18:03:22.871  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@8bffb8b{/streaming/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:22.872  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 0 (start at Application.java:146) with 1 output partitions
+2022-07-16 18:03:22.874  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 0 (start at Application.java:146)
+2022-07-16 18:03:22.873  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@36f1046f{/streaming/batch,null,AVAILABLE,@Spark}
+2022-07-16 18:03:22.875  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-07-16 18:03:22.876  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1686f0b4{/streaming/batch/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:22.878  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@7d0614f{/static/streaming,null,AVAILABLE,@Spark}
+2022-07-16 18:03:22.879  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:22.879  INFO   57 --- [           main] org.apache.spark.internal.Logging        : StreamingContext started
+2022-07-16 18:03:22.886  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:609), which has no missing parents
+2022-07-16 18:03:23.070  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991003000 ms
+2022-07-16 18:03:23.080  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991003000 ms.0 from job set of time 1657991003000 ms
+2022-07-16 18:03:23.147  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkContext; some configuration may not take effect.
+2022-07-16 18:03:23.180  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_0 stored as values in memory (estimated size 97.5 KiB, free 897.5 MiB)
+2022-07-16 18:03:23.334  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 897.5 MiB)
+2022-07-16 18:03:23.340  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_0_piece0 in memory on host.docker.internal:53431 (size: 34.2 KiB, free: 897.6 MiB)
+2022-07-16 18:03:23.354  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 0 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:23.395  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:609) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:23.397  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 0.0 with 1 tasks resource profile 0
+2022-07-16 18:03:23.538  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 0.0 (TID 0) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 5950 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:23.604  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 0.0 (TID 0)
+2022-07-16 18:03:23.793  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+2022-07-16 18:03:24.080  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991004000 ms
+2022-07-16 18:03:24.196  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Started timer for BlockGenerator at time 1657991004200
+2022-07-16 18:03:24.202  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Started BlockGenerator
+2022-07-16 18:03:24.204  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Started block pushing thread
+2022-07-16 18:03:24.216  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:53407
+2022-07-16 18:03:24.218  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-16 18:03:24.220  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-16 18:03:24.221  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Waiting for receiver to be stopped
+2022-07-16 18:03:25.004  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991005000 ms
+2022-07-16 18:03:25.008  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Warehouse path is 'file:/C:/IntelliJProjects/NifiSparkStreaming/spark-warehouse'.
+2022-07-16 18:03:25.032  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@26abae1f{/SQL,null,AVAILABLE,@Spark}
+2022-07-16 18:03:25.034  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@39d9b0f0{/SQL/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:25.036  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@6763c1ec{/SQL/execution,null,AVAILABLE,@Spark}
+2022-07-16 18:03:25.037  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3287009f{/SQL/execution/json,null,AVAILABLE,@Spark}
+2022-07-16 18:03:25.041  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@47d63822{/static/sql,null,AVAILABLE,@Spark}
+2022-07-16 18:03:26.000  INFO  571 --- [  NiFi Receiver] g.apache.nifi.remote.client.PeerSelector : Successfully refreshed peer status cache; remote group consists of 1 peers
+2022-07-16 18:03:26.000  INFO  571 --- [ool Maintenance] g.apache.nifi.remote.client.PeerSelector : Successfully refreshed peer status cache; remote group consists of 1 peers
+2022-07-16 18:03:26.010  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991006000 ms
+2022-07-16 18:03:26.283  INFO   57 --- [  NiFi Receiver] org.apache.spark.internal.Logging        : Block input-0-1657991004182 stored as values in memory (estimated size 10.2 MiB, free 887.3 MiB)
+2022-07-16 18:03:26.286  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added input-0-1657991004182 in memory on host.docker.internal:53431 (size: 10.2 MiB, free: 887.4 MiB)
+2022-07-16 18:03:27.007  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991007000 ms
+2022-07-16 18:03:28.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991008000 ms
+2022-07-16 18:03:29.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991009000 ms
+2022-07-16 18:03:29.914  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Code generated in 288.8588 ms
+2022-07-16 18:03:30.004  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991010000 ms
+2022-07-16 18:03:30.367  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Code generated in 44.8141 ms
+2022-07-16 18:03:30.448  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Code generated in 24.6353 ms
+2022-07-16 18:03:30.575  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:30.581  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 22 (count at Application.java:141) as input to shuffle 0
+2022-07-16 18:03:30.589  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 1 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:30.589  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 2 (count at Application.java:141)
+2022-07-16 18:03:30.589  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 1)
+2022-07-16 18:03:30.591  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:30.595  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 2 (MapPartitionsRDD[25] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:30.605  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_1 stored as values in memory (estimated size 11.0 KiB, free 887.3 MiB)
+2022-07-16 18:03:30.609  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 887.3 MiB)
+2022-07-16 18:03:30.610  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_1_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 887.4 MiB)
+2022-07-16 18:03:30.612  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 1 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:30.613  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[25] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:30.613  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 2.0 with 1 tasks resource profile 0
+2022-07-16 18:03:30.618  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 2.0 (TID 1) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:30.632  INFO   57 --- [age 2.0 (TID 1)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 2.0 (TID 1)
+2022-07-16 18:03:30.892  INFO   57 --- [age 2.0 (TID 1)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:30.900  INFO   57 --- [age 2.0 (TID 1)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 22 ms
+2022-07-16 18:03:30.934  INFO   57 --- [age 2.0 (TID 1)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 2.0 (TID 1). 2684 bytes result sent to driver
+2022-07-16 18:03:30.946  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 2.0 (TID 1) in 328 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:30.949  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:30.960  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 2 (count at Application.java:141) finished in 0.356 s
+2022-07-16 18:03:30.964  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:30.965  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 2: Stage finished
+2022-07-16 18:03:30.968  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 1 finished: count at Application.java:141, took 0.392354 s
+2022-07-16 18:03:30.981  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991003000 ms.0 from job set of time 1657991003000 ms
+2022-07-16 18:03:30.981  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991003000 ms.1 from job set of time 1657991003000 ms
+2022-07-16 18:03:30.983  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991003000 ms.1 from job set of time 1657991003000 ms
+2022-07-16 18:03:30.984  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 7.983 s for time 1657991003000 ms (execution: 7.911 s)
+2022-07-16 18:03:30.990  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991004000 ms.0 from job set of time 1657991004000 ms
+2022-07-16 18:03:30.994  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:30.995  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:30.998  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 
+2022-07-16 18:03:31.001  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 
+2022-07-16 18:03:31.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991011000 ms
+2022-07-16 18:03:31.144  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:31.146  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 33 (count at Application.java:141) as input to shuffle 1
+2022-07-16 18:03:31.147  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 2 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:31.147  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 4 (count at Application.java:141)
+2022-07-16 18:03:31.147  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 3)
+2022-07-16 18:03:31.148  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:31.150  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 4 (MapPartitionsRDD[36] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:31.159  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_2 stored as values in memory (estimated size 11.0 KiB, free 887.3 MiB)
+2022-07-16 18:03:31.164  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_2_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 887.3 MiB)
+2022-07-16 18:03:31.167  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_2_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 887.4 MiB)
+2022-07-16 18:03:31.168  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 2 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:31.170  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[36] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:31.170  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 4.0 with 1 tasks resource profile 0
+2022-07-16 18:03:31.174  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 4.0 (TID 2) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:31.176  INFO   57 --- [age 4.0 (TID 2)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 4.0 (TID 2)
+2022-07-16 18:03:31.188  INFO   57 --- [age 4.0 (TID 2)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:31.188  INFO   57 --- [age 4.0 (TID 2)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 1 ms
+2022-07-16 18:03:31.200  INFO   57 --- [age 4.0 (TID 2)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 4.0 (TID 2). 2555 bytes result sent to driver
+2022-07-16 18:03:31.204  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 4.0 (TID 2) in 31 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:31.204  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:31.206  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 4 (count at Application.java:141) finished in 0.052 s
+2022-07-16 18:03:31.207  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:31.207  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 4: Stage finished
+2022-07-16 18:03:31.208  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 2 finished: count at Application.java:141, took 0.064571 s
+2022-07-16 18:03:31.210  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991004000 ms.0 from job set of time 1657991004000 ms
+2022-07-16 18:03:31.210  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991004000 ms.1 from job set of time 1657991004000 ms
+2022-07-16 18:03:31.211  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991004000 ms.1 from job set of time 1657991004000 ms
+2022-07-16 18:03:31.211  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 7.211 s for time 1657991004000 ms (execution: 0.221 s)
+2022-07-16 18:03:31.214  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991005000 ms.0 from job set of time 1657991005000 ms
+2022-07-16 18:03:31.215  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:31.215  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:31.220  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 2 from persistence list
+2022-07-16 18:03:31.256  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 1 from persistence list
+2022-07-16 18:03:31.259  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[1] at receiverStream at Application.java:121 of time 1657991004000 ms
+2022-07-16 18:03:31.261  INFO   57 --- [c-thread-pool-1] org.apache.spark.internal.Logging        : Removing RDD 1
+2022-07-16 18:03:31.262  INFO   57 --- [c-thread-pool-0] org.apache.spark.internal.Logging        : Removing RDD 2
+2022-07-16 18:03:31.262  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 
+2022-07-16 18:03:31.270  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 
+2022-07-16 18:03:31.407  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:31.413  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 42 (count at Application.java:141) as input to shuffle 2
+2022-07-16 18:03:31.415  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 3 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:31.416  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 6 (count at Application.java:141)
+2022-07-16 18:03:31.417  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 5)
+2022-07-16 18:03:31.418  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:31.419  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 6 (MapPartitionsRDD[45] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:31.444  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_3 stored as values in memory (estimated size 11.0 KiB, free 887.3 MiB)
+2022-07-16 18:03:31.458  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_3_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 887.3 MiB)
+2022-07-16 18:03:31.459  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_3_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 887.4 MiB)
+2022-07-16 18:03:31.460  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 3 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:31.461  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[45] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:31.461  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 6.0 with 1 tasks resource profile 0
+2022-07-16 18:03:31.463  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 6.0 (TID 3) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:31.464  INFO   57 --- [age 6.0 (TID 3)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 6.0 (TID 3)
+2022-07-16 18:03:31.481  INFO   57 --- [age 6.0 (TID 3)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:31.481  INFO   57 --- [age 6.0 (TID 3)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 1 ms
+2022-07-16 18:03:31.485  INFO   57 --- [age 6.0 (TID 3)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 6.0 (TID 3). 2598 bytes result sent to driver
+2022-07-16 18:03:31.493  INFO   57 --- [result-getter-2] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 6.0 (TID 3) in 30 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:31.494  INFO   57 --- [result-getter-2] org.apache.spark.internal.Logging        : Removed TaskSet 6.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:31.495  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 6 (count at Application.java:141) finished in 0.075 s
+2022-07-16 18:03:31.496  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:31.496  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 6: Stage finished
+2022-07-16 18:03:31.497  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 3 finished: count at Application.java:141, took 0.087854 s
+2022-07-16 18:03:31.502  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991005000 ms.0 from job set of time 1657991005000 ms
+2022-07-16 18:03:31.502  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991005000 ms.1 from job set of time 1657991005000 ms
+2022-07-16 18:03:31.503  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991005000 ms.1 from job set of time 1657991005000 ms
+2022-07-16 18:03:31.503  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 6.502 s for time 1657991005000 ms (execution: 0.291 s)
+2022-07-16 18:03:31.503  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991006000 ms.0 from job set of time 1657991006000 ms
+2022-07-16 18:03:31.504  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 6 from persistence list
+2022-07-16 18:03:31.507  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 5 from persistence list
+2022-07-16 18:03:31.509  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:31.509  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:31.510  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[5] at receiverStream at Application.java:121 of time 1657991005000 ms
+2022-07-16 18:03:31.511  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991003000 ms
+2022-07-16 18:03:31.512  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991003000 ms
+2022-07-16 18:03:31.516  INFO   57 --- [c-thread-pool-6] org.apache.spark.internal.Logging        : Removing RDD 6
+2022-07-16 18:03:31.518  INFO   57 --- [c-thread-pool-7] org.apache.spark.internal.Logging        : Removing RDD 5
+2022-07-16 18:03:31.725  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:31.728  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 51 (count at Application.java:141) as input to shuffle 3
+2022-07-16 18:03:31.728  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 4 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:31.729  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 8 (count at Application.java:141)
+2022-07-16 18:03:31.729  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 7)
+2022-07-16 18:03:31.730  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:31.731  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 8 (MapPartitionsRDD[54] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:31.736  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_4 stored as values in memory (estimated size 11.0 KiB, free 887.3 MiB)
+2022-07-16 18:03:31.739  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_4_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 887.2 MiB)
+2022-07-16 18:03:31.742  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_4_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 887.4 MiB)
+2022-07-16 18:03:31.743  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 4 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:31.743  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[54] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:31.743  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 8.0 with 1 tasks resource profile 0
+2022-07-16 18:03:31.745  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 8.0 (TID 4) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:31.746  INFO   57 --- [age 8.0 (TID 4)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 8.0 (TID 4)
+2022-07-16 18:03:31.759  INFO   57 --- [age 8.0 (TID 4)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:31.759  INFO   57 --- [age 8.0 (TID 4)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 0 ms
+2022-07-16 18:03:31.761  INFO   57 --- [age 8.0 (TID 4)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 8.0 (TID 4). 2598 bytes result sent to driver
+2022-07-16 18:03:31.765  INFO   57 --- [result-getter-3] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 8.0 (TID 4) in 20 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:31.766  INFO   57 --- [result-getter-3] org.apache.spark.internal.Logging        : Removed TaskSet 8.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:31.767  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 8 (count at Application.java:141) finished in 0.033 s
+2022-07-16 18:03:31.767  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:31.767  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 8: Stage finished
+2022-07-16 18:03:31.768  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 4 finished: count at Application.java:141, took 0.041121 s
+2022-07-16 18:03:31.773  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991006000 ms.0 from job set of time 1657991006000 ms
+2022-07-16 18:03:31.773  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991006000 ms.1 from job set of time 1657991006000 ms
+2022-07-16 18:03:31.774  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991006000 ms.1 from job set of time 1657991006000 ms
+2022-07-16 18:03:31.774  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 5.773 s for time 1657991006000 ms (execution: 0.270 s)
+2022-07-16 18:03:31.774  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991007000 ms.0 from job set of time 1657991007000 ms
+2022-07-16 18:03:31.776  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 8 from persistence list
+2022-07-16 18:03:31.777  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:31.778  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:31.781  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 7 from persistence list
+2022-07-16 18:03:31.787  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[7] at receiverStream at Application.java:121 of time 1657991006000 ms
+2022-07-16 18:03:31.788  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991004000 ms
+2022-07-16 18:03:31.788  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991004000 ms
+2022-07-16 18:03:31.790  INFO   57 --- [-thread-pool-12] org.apache.spark.internal.Logging        : Removing RDD 8
+2022-07-16 18:03:31.790  INFO   57 --- [-thread-pool-13] org.apache.spark.internal.Logging        : Removing RDD 7
+2022-07-16 18:03:31.857  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: show at Application.java:140
+2022-07-16 18:03:31.858  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 5 (show at Application.java:140) with 1 output partitions
+2022-07-16 18:03:31.858  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 9 (show at Application.java:140)
+2022-07-16 18:03:31.859  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-07-16 18:03:31.859  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:31.860  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 9 (MapPartitionsRDD[58] at show at Application.java:140), which has no missing parents
+2022-07-16 18:03:31.872  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_5 stored as values in memory (estimated size 12.9 KiB, free 887.2 MiB)
+2022-07-16 18:03:31.875  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_5_piece0 stored as bytes in memory (estimated size 5.8 KiB, free 887.2 MiB)
+2022-07-16 18:03:31.876  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_5_piece0 in memory on host.docker.internal:53431 (size: 5.8 KiB, free: 887.4 MiB)
+2022-07-16 18:03:31.877  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 5 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:31.878  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[58] at show at Application.java:140) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:31.878  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 9.0 with 1 tasks resource profile 0
+2022-07-16 18:03:31.880  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 9.0 (TID 5) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4394 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:31.881  INFO   57 --- [age 9.0 (TID 5)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 9.0 (TID 5)
+2022-07-16 18:03:31.912  INFO   57 --- [age 9.0 (TID 5)] org.apache.spark.internal.Logging        : Found block input-0-1657991004182 locally
+2022-07-16 18:03:32.006  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991012000 ms
+2022-07-16 18:03:32.287  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_4_piece0 on host.docker.internal:53431 in memory (size: 5.4 KiB, free: 887.4 MiB)
+2022-07-16 18:03:32.303  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_3_piece0 on host.docker.internal:53431 in memory (size: 5.4 KiB, free: 887.4 MiB)
+2022-07-16 18:03:32.315  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_1_piece0 on host.docker.internal:53431 in memory (size: 5.4 KiB, free: 887.4 MiB)
+2022-07-16 18:03:32.342  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_2_piece0 on host.docker.internal:53431 in memory (size: 5.4 KiB, free: 887.4 MiB)
+2022-07-16 18:03:32.752  INFO   57 --- [age 9.0 (TID 5)] org.apache.spark.internal.Logging        : 1 block locks were not released by task 0.0 in stage 9.0 (TID 5)
+[input-0-1657991004182]
+2022-07-16 18:03:32.754  INFO   57 --- [age 9.0 (TID 5)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 9.0 (TID 5). 2374 bytes result sent to driver
+2022-07-16 18:03:32.755  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 9.0 (TID 5) in 876 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:32.755  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Removed TaskSet 9.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:32.756  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 9 (show at Application.java:140) finished in 0.893 s
+2022-07-16 18:03:32.758  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:32.758  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 9: Stage finished
+2022-07-16 18:03:32.759  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 5 finished: show at Application.java:140, took 0.900879 s
+2022-07-16 18:03:32.822  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Code generated in 32.3021 ms
+2022-07-16 18:03:32.878  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 62 (count at Application.java:141) as input to shuffle 4
+2022-07-16 18:03:32.880  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got map stage job 6 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:32.880  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ShuffleMapStage 10 (count at Application.java:141)
+2022-07-16 18:03:32.881  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-07-16 18:03:32.882  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:32.884  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ShuffleMapStage 10 (MapPartitionsRDD[62] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:32.898  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_6 stored as values in memory (estimated size 13.6 KiB, free 887.3 MiB)
+2022-07-16 18:03:32.900  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_6_piece0 stored as bytes in memory (estimated size 6.7 KiB, free 887.3 MiB)
+2022-07-16 18:03:32.901  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_6_piece0 in memory on host.docker.internal:53431 (size: 6.7 KiB, free: 887.4 MiB)
+2022-07-16 18:03:32.902  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 6 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:32.903  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[62] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:32.903  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 10.0 with 1 tasks resource profile 0
+2022-07-16 18:03:32.906  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 10.0 (TID 6) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4383 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:32.907  INFO   57 --- [ge 10.0 (TID 6)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 10.0 (TID 6)
+2022-07-16 18:03:32.921  INFO   57 --- [ge 10.0 (TID 6)] org.apache.spark.internal.Logging        : Found block input-0-1657991004182 locally
+2022-07-16 18:03:33.028  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991013000 ms
+2022-07-16 18:03:33.138  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_5_piece0 on host.docker.internal:53431 in memory (size: 5.8 KiB, free: 887.4 MiB)
+2022-07-16 18:03:33.535  INFO   57 --- [ge 10.0 (TID 6)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 10.0 (TID 6). 1924 bytes result sent to driver
+2022-07-16 18:03:33.538  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 10.0 (TID 6) in 634 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:33.538  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Removed TaskSet 10.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:33.540  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ShuffleMapStage 10 (count at Application.java:141) finished in 0.652 s
+2022-07-16 18:03:33.541  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : looking for newly runnable stages
+2022-07-16 18:03:33.542  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : running: Set(ResultStage 0)
+2022-07-16 18:03:33.542  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : waiting: Set()
+2022-07-16 18:03:33.542  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : failed: Set()
+2022-07-16 18:03:33.570  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:33.571  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 7 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:33.571  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 12 (count at Application.java:141)
+2022-07-16 18:03:33.571  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 11)
+2022-07-16 18:03:33.572  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:33.574  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 12 (MapPartitionsRDD[67] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:33.583  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_7 stored as values in memory (estimated size 11.0 KiB, free 887.3 MiB)
+2022-07-16 18:03:33.587  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_7_piece0 stored as bytes in memory (estimated size 5.5 KiB, free 887.3 MiB)
+2022-07-16 18:03:33.588  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_7_piece0 in memory on host.docker.internal:53431 (size: 5.5 KiB, free: 887.4 MiB)
+2022-07-16 18:03:33.589  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 7 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:33.590  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 12 (MapPartitionsRDD[67] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:33.590  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 12.0 with 1 tasks resource profile 0
+2022-07-16 18:03:33.592  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 12.0 (TID 7) (host.docker.internal, executor driver, partition 0, NODE_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:33.593  INFO   57 --- [ge 12.0 (TID 7)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 12.0 (TID 7)
+2022-07-16 18:03:33.602  INFO   57 --- [ge 12.0 (TID 7)] org.apache.spark.internal.Logging        : Getting 1 (60.0 B) non-empty blocks including 1 (60.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:33.603  INFO   57 --- [ge 12.0 (TID 7)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 3 ms
+2022-07-16 18:03:33.622  INFO   57 --- [ge 12.0 (TID 7)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 12.0 (TID 7). 2648 bytes result sent to driver
+2022-07-16 18:03:33.625  INFO   57 --- [result-getter-2] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 12.0 (TID 7) in 33 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:33.625  INFO   57 --- [result-getter-2] org.apache.spark.internal.Logging        : Removed TaskSet 12.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:33.626  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 12 (count at Application.java:141) finished in 0.045 s
+2022-07-16 18:03:33.626  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:33.627  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 12: Stage finished
+2022-07-16 18:03:33.628  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 7 finished: count at Application.java:141, took 0.057718 s
+2022-07-16 18:03:33.630  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991007000 ms.0 from job set of time 1657991007000 ms
+2022-07-16 18:03:33.630  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991007000 ms.1 from job set of time 1657991007000 ms
+2022-07-16 18:03:33.643  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: print at Application.java:144
+2022-07-16 18:03:33.644  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 8 (print at Application.java:144) with 1 output partitions
+2022-07-16 18:03:33.644  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 13 (print at Application.java:144)
+2022-07-16 18:03:33.644  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-07-16 18:03:33.644  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:33.645  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 13 (MapPartitionsRDD[12] at map at Application.java:127), which has no missing parents
+2022-07-16 18:03:33.648  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_8 stored as values in memory (estimated size 4.1 KiB, free 887.3 MiB)
+2022-07-16 18:03:33.651  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_8_piece0 stored as bytes in memory (estimated size 2.3 KiB, free 887.3 MiB)
+2022-07-16 18:03:33.653  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_8_piece0 in memory on host.docker.internal:53431 (size: 2.3 KiB, free: 887.4 MiB)
+2022-07-16 18:03:33.654  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 8 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:33.654  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 13 (MapPartitionsRDD[12] at map at Application.java:127) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:33.655  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 13.0 with 1 tasks resource profile 0
+2022-07-16 18:03:33.657  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 13.0 (TID 8) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4394 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:33.658  INFO   57 --- [ge 13.0 (TID 8)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 13.0 (TID 8)
+2022-07-16 18:03:33.661  INFO   57 --- [ge 13.0 (TID 8)] org.apache.spark.internal.Logging        : Found block input-0-1657991004182 locally
+2022-07-16 18:03:33.742  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_7_piece0 on host.docker.internal:53431 in memory (size: 5.5 KiB, free: 887.4 MiB)
+2022-07-16 18:03:34.062  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991014000 ms
+2022-07-16 18:03:34.144  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_6_piece0 on host.docker.internal:53431 in memory (size: 6.7 KiB, free: 887.4 MiB)
+2022-07-16 18:03:34.527  INFO   57 --- [ge 13.0 (TID 8)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 13.0 (TID 8). 777984 bytes result sent to driver
+2022-07-16 18:03:34.557  INFO   57 --- [result-getter-3] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 13.0 (TID 8) in 901 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:34.557  INFO   57 --- [result-getter-3] org.apache.spark.internal.Logging        : Removed TaskSet 13.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:34.558  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 13 (print at Application.java:144) finished in 0.912 s
+2022-07-16 18:03:34.559  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 8 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:34.559  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 13: Stage finished
+2022-07-16 18:03:34.560  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 8 finished: print at Application.java:144, took 0.918126 s
+2022-07-16 18:03:34.585  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991007000 ms.1 from job set of time 1657991007000 ms
+2022-07-16 18:03:34.586  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 7.585 s for time 1657991007000 ms (execution: 2.811 s)
+2022-07-16 18:03:34.587  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991008000 ms.0 from job set of time 1657991008000 ms
+2022-07-16 18:03:34.588  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 10 from persistence list
+2022-07-16 18:03:34.589  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:34.590  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:34.592  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 9 from persistence list
+2022-07-16 18:03:34.596  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[9] at receiverStream at Application.java:121 of time 1657991007000 ms
+2022-07-16 18:03:34.600  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991005000 ms
+2022-07-16 18:03:34.601  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991005000 ms
+2022-07-16 18:03:34.602  INFO   57 --- [-thread-pool-54] org.apache.spark.internal.Logging        : Removing RDD 10
+2022-07-16 18:03:34.609  INFO   57 --- [-thread-pool-55] org.apache.spark.internal.Logging        : Removing RDD 9
+2022-07-16 18:03:34.716  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:34.718  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 75 (count at Application.java:141) as input to shuffle 5
+2022-07-16 18:03:34.719  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 9 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:34.719  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 15 (count at Application.java:141)
+2022-07-16 18:03:34.719  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 14)
+2022-07-16 18:03:34.720  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:34.721  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 15 (MapPartitionsRDD[78] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:34.725  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_9 stored as values in memory (estimated size 11.0 KiB, free 887.3 MiB)
+2022-07-16 18:03:34.730  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_9_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 887.3 MiB)
+2022-07-16 18:03:34.736  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_9_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 887.4 MiB)
+2022-07-16 18:03:34.739  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 9 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:34.740  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 15 (MapPartitionsRDD[78] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:34.740  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 15.0 with 1 tasks resource profile 0
+2022-07-16 18:03:34.742  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 15.0 (TID 9) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:34.743  INFO   57 --- [ge 15.0 (TID 9)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 15.0 (TID 9)
+2022-07-16 18:03:34.749  INFO   57 --- [ge 15.0 (TID 9)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:34.750  INFO   57 --- [ge 15.0 (TID 9)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 1 ms
+2022-07-16 18:03:34.757  INFO   57 --- [ge 15.0 (TID 9)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 15.0 (TID 9). 2555 bytes result sent to driver
+2022-07-16 18:03:34.759  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 15.0 (TID 9) in 17 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:34.760  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Removed TaskSet 15.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:34.854  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 15 (count at Application.java:141) finished in 0.130 s
+2022-07-16 18:03:34.855  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 9 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:34.856  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 15: Stage finished
+2022-07-16 18:03:34.858  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 9 finished: count at Application.java:141, took 0.140952 s
+2022-07-16 18:03:34.871  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:34.872  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:35.046  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991008000 ms.0 from job set of time 1657991008000 ms
+2022-07-16 18:03:35.047  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991008000 ms.1 from job set of time 1657991008000 ms
+2022-07-16 18:03:35.047  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991008000 ms.1 from job set of time 1657991008000 ms
+2022-07-16 18:03:35.047  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 7.047 s for time 1657991008000 ms (execution: 0.460 s)
+2022-07-16 18:03:35.052  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991009000 ms.0 from job set of time 1657991009000 ms
+2022-07-16 18:03:35.066  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 12 from persistence list
+2022-07-16 18:03:35.081  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 11 from persistence list
+2022-07-16 18:03:35.083  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[11] at receiverStream at Application.java:121 of time 1657991008000 ms
+2022-07-16 18:03:35.100  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991006000 ms
+2022-07-16 18:03:35.102  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991006000 ms
+2022-07-16 18:03:35.108  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991015000 ms
+2022-07-16 18:03:35.167  INFO   57 --- [-thread-pool-60] org.apache.spark.internal.Logging        : Removing RDD 12
+2022-07-16 18:03:35.213  INFO   57 --- [-thread-pool-61] org.apache.spark.internal.Logging        : Removing RDD 11
+2022-07-16 18:03:35.225  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed input-0-1657991004182 on host.docker.internal:53431 in memory (size: 10.2 MiB, free: 897.6 MiB)
+2022-07-16 18:03:35.354  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:35.362  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 86 (count at Application.java:141) as input to shuffle 6
+2022-07-16 18:03:35.363  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 10 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:35.363  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 17 (count at Application.java:141)
+2022-07-16 18:03:35.364  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 16)
+2022-07-16 18:03:35.364  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:35.370  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 17 (MapPartitionsRDD[89] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:35.384  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_10 stored as values in memory (estimated size 11.0 KiB, free 897.4 MiB)
+2022-07-16 18:03:35.392  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_10_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 897.4 MiB)
+2022-07-16 18:03:35.393  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_10_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 897.6 MiB)
+2022-07-16 18:03:35.394  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 10 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:35.394  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 17 (MapPartitionsRDD[89] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:35.395  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 17.0 with 1 tasks resource profile 0
+2022-07-16 18:03:35.396  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 17.0 (TID 10) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:35.397  INFO   57 --- [e 17.0 (TID 10)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 17.0 (TID 10)
+2022-07-16 18:03:35.403  INFO   57 --- [e 17.0 (TID 10)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:35.404  INFO   57 --- [e 17.0 (TID 10)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 1 ms
+2022-07-16 18:03:35.408  INFO   57 --- [e 17.0 (TID 10)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 17.0 (TID 10). 2555 bytes result sent to driver
+2022-07-16 18:03:35.409  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 17.0 (TID 10) in 13 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:35.410  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Removed TaskSet 17.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:35.412  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 17 (count at Application.java:141) finished in 0.035 s
+2022-07-16 18:03:35.413  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 10 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:35.414  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 17: Stage finished
+2022-07-16 18:03:35.415  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 10 finished: count at Application.java:141, took 0.060365 s
+2022-07-16 18:03:35.427  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991009000 ms.0 from job set of time 1657991009000 ms
+2022-07-16 18:03:35.428  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991009000 ms.1 from job set of time 1657991009000 ms
+2022-07-16 18:03:35.428  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991009000 ms.1 from job set of time 1657991009000 ms
+2022-07-16 18:03:35.441  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 6.428 s for time 1657991009000 ms (execution: 0.376 s)
+2022-07-16 18:03:35.442  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991010000 ms.0 from job set of time 1657991010000 ms
+2022-07-16 18:03:35.443  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:35.444  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:35.450  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 14 from persistence list
+2022-07-16 18:03:35.461  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 13 from persistence list
+2022-07-16 18:03:35.471  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[13] at receiverStream at Application.java:121 of time 1657991009000 ms
+2022-07-16 18:03:35.472  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991007000 ms
+2022-07-16 18:03:35.472  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991007000 ms
+2022-07-16 18:03:35.492  INFO   57 --- [-thread-pool-69] org.apache.spark.internal.Logging        : Removing RDD 14
+2022-07-16 18:03:35.495  INFO   57 --- [-thread-pool-70] org.apache.spark.internal.Logging        : Removing RDD 13
+2022-07-16 18:03:35.675  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:35.679  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 95 (count at Application.java:141) as input to shuffle 7
+2022-07-16 18:03:35.680  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 11 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:35.680  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 19 (count at Application.java:141)
+2022-07-16 18:03:35.680  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 18)
+2022-07-16 18:03:35.680  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:35.682  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 19 (MapPartitionsRDD[98] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:35.687  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_11 stored as values in memory (estimated size 11.0 KiB, free 897.4 MiB)
+2022-07-16 18:03:35.694  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_11_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 897.4 MiB)
+2022-07-16 18:03:35.695  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_11_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 897.5 MiB)
+2022-07-16 18:03:35.696  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 11 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:35.697  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 19 (MapPartitionsRDD[98] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:35.698  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 19.0 with 1 tasks resource profile 0
+2022-07-16 18:03:35.700  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 19.0 (TID 11) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:35.701  INFO   57 --- [e 19.0 (TID 11)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 19.0 (TID 11)
+2022-07-16 18:03:35.709  INFO   57 --- [e 19.0 (TID 11)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:35.709  INFO   57 --- [e 19.0 (TID 11)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 0 ms
+2022-07-16 18:03:35.711  INFO   57 --- [e 19.0 (TID 11)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 19.0 (TID 11). 2555 bytes result sent to driver
+2022-07-16 18:03:35.713  INFO   57 --- [result-getter-2] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 19.0 (TID 11) in 13 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:35.713  INFO   57 --- [result-getter-2] org.apache.spark.internal.Logging        : Removed TaskSet 19.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:35.714  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 19 (count at Application.java:141) finished in 0.029 s
+2022-07-16 18:03:35.716  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 11 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:35.716  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 19: Stage finished
+2022-07-16 18:03:35.717  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 11 finished: count at Application.java:141, took 0.039697 s
+2022-07-16 18:03:35.722  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991010000 ms.0 from job set of time 1657991010000 ms
+2022-07-16 18:03:35.722  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991010000 ms.1 from job set of time 1657991010000 ms
+2022-07-16 18:03:35.722  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991010000 ms.1 from job set of time 1657991010000 ms
+2022-07-16 18:03:35.723  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 5.722 s for time 1657991010000 ms (execution: 0.280 s)
+2022-07-16 18:03:35.723  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991011000 ms.0 from job set of time 1657991011000 ms
+2022-07-16 18:03:35.726  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:35.727  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:35.730  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 16 from persistence list
+2022-07-16 18:03:35.738  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 15 from persistence list
+2022-07-16 18:03:35.743  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[15] at receiverStream at Application.java:121 of time 1657991010000 ms
+2022-07-16 18:03:35.744  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991008000 ms
+2022-07-16 18:03:35.744  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991008000 ms
+2022-07-16 18:03:35.777  INFO   57 --- [-thread-pool-75] org.apache.spark.internal.Logging        : Removing RDD 16
+2022-07-16 18:03:35.783  INFO   57 --- [-thread-pool-76] org.apache.spark.internal.Logging        : Removing RDD 15
+2022-07-16 18:03:35.915  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_11_piece0 on host.docker.internal:53431 in memory (size: 5.4 KiB, free: 897.6 MiB)
+2022-07-16 18:03:35.926  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:35.930  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 104 (count at Application.java:141) as input to shuffle 8
+2022-07-16 18:03:35.931  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 12 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:35.932  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 21 (count at Application.java:141)
+2022-07-16 18:03:35.933  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 20)
+2022-07-16 18:03:35.934  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:35.949  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 21 (MapPartitionsRDD[107] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:35.966  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_12 stored as values in memory (estimated size 11.0 KiB, free 897.4 MiB)
+2022-07-16 18:03:35.971  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_12_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 897.4 MiB)
+2022-07-16 18:03:35.978  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_12_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 897.5 MiB)
+2022-07-16 18:03:35.979  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 12 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:35.980  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 21 (MapPartitionsRDD[107] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:35.980  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 21.0 with 1 tasks resource profile 0
+2022-07-16 18:03:35.984  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 21.0 (TID 12) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:35.986  INFO   57 --- [e 21.0 (TID 12)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 21.0 (TID 12)
+2022-07-16 18:03:35.994  INFO   57 --- [e 21.0 (TID 12)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:35.995  INFO   57 --- [e 21.0 (TID 12)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 0 ms
+2022-07-16 18:03:35.996  INFO   57 --- [e 21.0 (TID 12)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 21.0 (TID 12). 2555 bytes result sent to driver
+2022-07-16 18:03:36.002  INFO   57 --- [result-getter-3] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 21.0 (TID 12) in 19 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:36.003  INFO   57 --- [result-getter-3] org.apache.spark.internal.Logging        : Removed TaskSet 21.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:36.007  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 21 (count at Application.java:141) finished in 0.045 s
+2022-07-16 18:03:36.008  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 12 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:36.008  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 21: Stage finished
+2022-07-16 18:03:36.011  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 12 finished: count at Application.java:141, took 0.084150 s
+2022-07-16 18:03:36.013  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991016000 ms
+2022-07-16 18:03:36.015  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991011000 ms.0 from job set of time 1657991011000 ms
+2022-07-16 18:03:36.015  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991011000 ms.1 from job set of time 1657991011000 ms
+2022-07-16 18:03:36.015  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991011000 ms.1 from job set of time 1657991011000 ms
+2022-07-16 18:03:36.016  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 5.015 s for time 1657991011000 ms (execution: 0.292 s)
+2022-07-16 18:03:36.016  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991012000 ms.0 from job set of time 1657991012000 ms
+2022-07-16 18:03:36.017  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:36.017  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:36.024  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 20 from persistence list
+2022-07-16 18:03:36.032  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 19 from persistence list
+2022-07-16 18:03:36.045  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[19] at receiverStream at Application.java:121 of time 1657991011000 ms
+2022-07-16 18:03:36.045  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991009000 ms
+2022-07-16 18:03:36.047  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991009000 ms
+2022-07-16 18:03:36.055  INFO   57 --- [-thread-pool-90] org.apache.spark.internal.Logging        : Removing RDD 19
+2022-07-16 18:03:36.056  INFO   57 --- [-thread-pool-89] org.apache.spark.internal.Logging        : Removing RDD 20
+2022-07-16 18:03:36.077  WARN   69 --- [ver-heartbeater] org.apache.spark.internal.Logging        : Exception when trying to compute pagesize, as a result reporting of ProcessTree metrics is stopped
+2022-07-16 18:03:36.091  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_10_piece0 on host.docker.internal:53431 in memory (size: 5.4 KiB, free: 897.6 MiB)
+2022-07-16 18:03:36.147  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_8_piece0 on host.docker.internal:53431 in memory (size: 2.3 KiB, free: 897.6 MiB)
+2022-07-16 18:03:36.167  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_9_piece0 on host.docker.internal:53431 in memory (size: 5.4 KiB, free: 897.6 MiB)
+2022-07-16 18:03:36.180  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:36.182  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 115 (count at Application.java:141) as input to shuffle 9
+2022-07-16 18:03:36.183  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 13 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:36.183  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 23 (count at Application.java:141)
+2022-07-16 18:03:36.183  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 22)
+2022-07-16 18:03:36.184  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:36.184  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 23 (MapPartitionsRDD[118] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:36.193  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_13 stored as values in memory (estimated size 11.0 KiB, free 897.4 MiB)
+2022-07-16 18:03:36.202  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_13_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 897.4 MiB)
+2022-07-16 18:03:36.212  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_13_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 897.6 MiB)
+2022-07-16 18:03:36.213  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 13 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:36.214  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 23 (MapPartitionsRDD[118] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:36.215  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 23.0 with 1 tasks resource profile 0
+2022-07-16 18:03:36.216  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 23.0 (TID 13) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:36.218  INFO   57 --- [e 23.0 (TID 13)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 23.0 (TID 13)
+2022-07-16 18:03:36.227  INFO   57 --- [e 23.0 (TID 13)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:36.228  INFO   57 --- [e 23.0 (TID 13)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 0 ms
+2022-07-16 18:03:36.230  INFO   57 --- [e 23.0 (TID 13)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 23.0 (TID 13). 2555 bytes result sent to driver
+2022-07-16 18:03:36.242  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 23.0 (TID 13) in 25 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:36.242  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Removed TaskSet 23.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:36.246  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 23 (count at Application.java:141) finished in 0.058 s
+2022-07-16 18:03:36.247  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 13 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:36.248  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 23: Stage finished
+2022-07-16 18:03:36.250  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 13 finished: count at Application.java:141, took 0.068777 s
+2022-07-16 18:03:36.252  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991012000 ms.0 from job set of time 1657991012000 ms
+2022-07-16 18:03:36.261  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991012000 ms.1 from job set of time 1657991012000 ms
+2022-07-16 18:03:36.261  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991012000 ms.1 from job set of time 1657991012000 ms
+2022-07-16 18:03:36.262  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 4.261 s for time 1657991012000 ms (execution: 0.245 s)
+2022-07-16 18:03:36.262  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991013000 ms.0 from job set of time 1657991013000 ms
+2022-07-16 18:03:36.260  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:36.271  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:36.298  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 29 from persistence list
+2022-07-16 18:03:36.300  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 28 from persistence list
+2022-07-16 18:03:36.301  INFO   57 --- [c-thread-pool-8] org.apache.spark.internal.Logging        : Removing RDD 29
+2022-07-16 18:03:36.307  INFO   57 --- [c-thread-pool-9] org.apache.spark.internal.Logging        : Removing RDD 28
+2022-07-16 18:03:36.307  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[28] at receiverStream at Application.java:121 of time 1657991012000 ms
+2022-07-16 18:03:36.311  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991010000 ms
+2022-07-16 18:03:36.312  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991010000 ms
+2022-07-16 18:03:36.524  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:36.525  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 124 (count at Application.java:141) as input to shuffle 10
+2022-07-16 18:03:36.526  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 14 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:36.527  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 25 (count at Application.java:141)
+2022-07-16 18:03:36.527  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 24)
+2022-07-16 18:03:36.528  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:36.529  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 25 (MapPartitionsRDD[127] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:36.537  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_14 stored as values in memory (estimated size 11.0 KiB, free 897.4 MiB)
+2022-07-16 18:03:36.540  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_14_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 897.4 MiB)
+2022-07-16 18:03:36.541  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_14_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 897.6 MiB)
+2022-07-16 18:03:36.542  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 14 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:36.543  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 25 (MapPartitionsRDD[127] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:36.543  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 25.0 with 1 tasks resource profile 0
+2022-07-16 18:03:36.544  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 25.0 (TID 14) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:36.546  INFO   57 --- [e 25.0 (TID 14)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 25.0 (TID 14)
+2022-07-16 18:03:36.553  INFO   57 --- [e 25.0 (TID 14)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:36.554  INFO   57 --- [e 25.0 (TID 14)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 3 ms
+2022-07-16 18:03:36.556  INFO   57 --- [e 25.0 (TID 14)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 25.0 (TID 14). 2598 bytes result sent to driver
+2022-07-16 18:03:36.558  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 25.0 (TID 14) in 14 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:36.558  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Removed TaskSet 25.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:36.559  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 25 (count at Application.java:141) finished in 0.026 s
+2022-07-16 18:03:36.560  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 14 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:36.560  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 25: Stage finished
+2022-07-16 18:03:36.565  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 14 finished: count at Application.java:141, took 0.038187 s
+2022-07-16 18:03:36.567  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991013000 ms.0 from job set of time 1657991013000 ms
+2022-07-16 18:03:36.567  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991013000 ms.1 from job set of time 1657991013000 ms
+2022-07-16 18:03:36.569  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991013000 ms.1 from job set of time 1657991013000 ms
+2022-07-16 18:03:36.569  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 3.569 s for time 1657991013000 ms (execution: 0.307 s)
+2022-07-16 18:03:36.570  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991014000 ms.0 from job set of time 1657991014000 ms
+2022-07-16 18:03:36.570  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 60 from persistence list
+2022-07-16 18:03:36.571  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:36.571  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:36.573  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 59 from persistence list
+2022-07-16 18:03:36.573  INFO   57 --- [-thread-pool-15] org.apache.spark.internal.Logging        : Removing RDD 60
+2022-07-16 18:03:36.574  INFO   57 --- [-thread-pool-13] org.apache.spark.internal.Logging        : Removing RDD 59
+2022-07-16 18:03:36.575  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[59] at receiverStream at Application.java:121 of time 1657991013000 ms
+2022-07-16 18:03:36.575  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991011000 ms
+2022-07-16 18:03:36.576  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991011000 ms
+2022-07-16 18:03:36.713  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:36.714  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 133 (count at Application.java:141) as input to shuffle 11
+2022-07-16 18:03:36.715  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 15 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:36.715  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 27 (count at Application.java:141)
+2022-07-16 18:03:36.715  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 26)
+2022-07-16 18:03:36.715  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:36.716  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 27 (MapPartitionsRDD[136] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:36.721  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_15 stored as values in memory (estimated size 11.0 KiB, free 897.4 MiB)
+2022-07-16 18:03:36.723  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_15_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 897.4 MiB)
+2022-07-16 18:03:36.724  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_15_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 897.5 MiB)
+2022-07-16 18:03:36.725  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 15 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:36.726  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 27 (MapPartitionsRDD[136] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:36.726  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 27.0 with 1 tasks resource profile 0
+2022-07-16 18:03:36.728  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 27.0 (TID 15) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:36.729  INFO   57 --- [e 27.0 (TID 15)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 27.0 (TID 15)
+2022-07-16 18:03:36.732  INFO   57 --- [e 27.0 (TID 15)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:36.733  INFO   57 --- [e 27.0 (TID 15)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 0 ms
+2022-07-16 18:03:36.735  INFO   57 --- [e 27.0 (TID 15)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 27.0 (TID 15). 2555 bytes result sent to driver
+2022-07-16 18:03:36.736  INFO   57 --- [result-getter-2] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 27.0 (TID 15) in 9 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:36.736  INFO   57 --- [result-getter-2] org.apache.spark.internal.Logging        : Removed TaskSet 27.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:36.738  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 27 (count at Application.java:141) finished in 0.020 s
+2022-07-16 18:03:36.738  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 15 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:36.739  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 27: Stage finished
+2022-07-16 18:03:36.739  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 15 finished: count at Application.java:141, took 0.026258 s
+2022-07-16 18:03:36.744  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991014000 ms.0 from job set of time 1657991014000 ms
+2022-07-16 18:03:36.744  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991014000 ms.1 from job set of time 1657991014000 ms
+2022-07-16 18:03:36.744  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991014000 ms.1 from job set of time 1657991014000 ms
+2022-07-16 18:03:36.745  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 2.744 s for time 1657991014000 ms (execution: 0.174 s)
+2022-07-16 18:03:36.747  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 64 from persistence list
+2022-07-16 18:03:36.748  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:36.749  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:36.750  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991015000 ms.0 from job set of time 1657991015000 ms
+2022-07-16 18:03:36.768  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 63 from persistence list
+2022-07-16 18:03:36.769  INFO   57 --- [-thread-pool-20] org.apache.spark.internal.Logging        : Removing RDD 64
+2022-07-16 18:03:36.775  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[63] at receiverStream at Application.java:121 of time 1657991014000 ms
+2022-07-16 18:03:36.775  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991012000 ms
+2022-07-16 18:03:36.775  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991012000 ms
+2022-07-16 18:03:36.776  INFO   57 --- [-thread-pool-22] org.apache.spark.internal.Logging        : Removing RDD 63
+2022-07-16 18:03:36.892  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:36.893  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 142 (count at Application.java:141) as input to shuffle 12
+2022-07-16 18:03:36.893  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 16 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:36.894  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 29 (count at Application.java:141)
+2022-07-16 18:03:36.894  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 28)
+2022-07-16 18:03:36.894  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:36.894  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 29 (MapPartitionsRDD[145] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:36.896  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_16 stored as values in memory (estimated size 11.0 KiB, free 897.4 MiB)
+2022-07-16 18:03:36.899  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_16_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 897.4 MiB)
+2022-07-16 18:03:36.900  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_16_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 897.5 MiB)
+2022-07-16 18:03:36.901  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 16 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:36.902  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 29 (MapPartitionsRDD[145] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:36.902  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 29.0 with 1 tasks resource profile 0
+2022-07-16 18:03:36.903  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 29.0 (TID 16) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:36.904  INFO   57 --- [e 29.0 (TID 16)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 29.0 (TID 16)
+2022-07-16 18:03:36.908  INFO   57 --- [e 29.0 (TID 16)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:36.908  INFO   57 --- [e 29.0 (TID 16)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 1 ms
+2022-07-16 18:03:36.910  INFO   57 --- [e 29.0 (TID 16)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 29.0 (TID 16). 2598 bytes result sent to driver
+2022-07-16 18:03:36.911  INFO   57 --- [result-getter-3] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 29.0 (TID 16) in 8 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:36.911  INFO   57 --- [result-getter-3] org.apache.spark.internal.Logging        : Removed TaskSet 29.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:36.912  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 29 (count at Application.java:141) finished in 0.017 s
+2022-07-16 18:03:36.912  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 16 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:36.913  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 29: Stage finished
+2022-07-16 18:03:36.913  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 16 finished: count at Application.java:141, took 0.020667 s
+2022-07-16 18:03:36.915  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991015000 ms.0 from job set of time 1657991015000 ms
+2022-07-16 18:03:36.917  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991015000 ms.1 from job set of time 1657991015000 ms
+2022-07-16 18:03:36.917  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991015000 ms.1 from job set of time 1657991015000 ms
+2022-07-16 18:03:36.918  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:36.918  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:36.920  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 1.917 s for time 1657991015000 ms (execution: 0.168 s)
+2022-07-16 18:03:36.920  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991016000 ms.0 from job set of time 1657991016000 ms
+2022-07-16 18:03:36.925  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 69 from persistence list
+2022-07-16 18:03:36.929  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 68 from persistence list
+2022-07-16 18:03:36.930  INFO   57 --- [-thread-pool-26] org.apache.spark.internal.Logging        : Removing RDD 69
+2022-07-16 18:03:36.936  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[68] at receiverStream at Application.java:121 of time 1657991015000 ms
+2022-07-16 18:03:36.937  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991013000 ms
+2022-07-16 18:03:36.937  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991013000 ms
+2022-07-16 18:03:36.938  INFO   57 --- [-thread-pool-30] org.apache.spark.internal.Logging        : Removing RDD 68
+2022-07-16 18:03:37.068  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657991017000 ms
+2022-07-16 18:03:37.103  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:37.104  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 153 (count at Application.java:141) as input to shuffle 13
+2022-07-16 18:03:37.104  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 17 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:37.105  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 31 (count at Application.java:141)
+2022-07-16 18:03:37.105  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 30)
+2022-07-16 18:03:37.105  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:37.107  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 31 (MapPartitionsRDD[156] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:37.110  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_17 stored as values in memory (estimated size 11.0 KiB, free 897.4 MiB)
+2022-07-16 18:03:37.112  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_17_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 897.4 MiB)
+2022-07-16 18:03:37.113  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_17_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 897.5 MiB)
+2022-07-16 18:03:37.114  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 17 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:37.114  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 31 (MapPartitionsRDD[156] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:37.115  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 31.0 with 1 tasks resource profile 0
+2022-07-16 18:03:37.116  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 31.0 (TID 17) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:37.116  INFO   57 --- [e 31.0 (TID 17)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 31.0 (TID 17)
+2022-07-16 18:03:37.120  INFO   57 --- [e 31.0 (TID 17)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:37.121  INFO   57 --- [e 31.0 (TID 17)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 1 ms
+2022-07-16 18:03:37.126  INFO   57 --- [e 31.0 (TID 17)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 31.0 (TID 17). 2555 bytes result sent to driver
+2022-07-16 18:03:37.127  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 31.0 (TID 17) in 12 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:37.127  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Removed TaskSet 31.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:37.128  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 31 (count at Application.java:141) finished in 0.020 s
+2022-07-16 18:03:37.129  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 17 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:37.129  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 31: Stage finished
+2022-07-16 18:03:37.130  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 17 finished: count at Application.java:141, took 0.026316 s
+2022-07-16 18:03:37.142  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-16 18:03:37.142  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-16 18:03:37.180  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991016000 ms.0 from job set of time 1657991016000 ms
+2022-07-16 18:03:37.180  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991016000 ms.1 from job set of time 1657991016000 ms
+2022-07-16 18:03:37.180  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991016000 ms.1 from job set of time 1657991016000 ms
+2022-07-16 18:03:37.181  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 1.180 s for time 1657991016000 ms (execution: 0.260 s)
+2022-07-16 18:03:37.182  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991017000 ms.0 from job set of time 1657991017000 ms
+2022-07-16 18:03:37.184  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 82 from persistence list
+2022-07-16 18:03:37.185  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 81 from persistence list
+2022-07-16 18:03:37.186  INFO   57 --- [-thread-pool-32] org.apache.spark.internal.Logging        : Removing RDD 82
+2022-07-16 18:03:37.188  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[81] at receiverStream at Application.java:121 of time 1657991016000 ms
+2022-07-16 18:03:37.189  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991014000 ms
+2022-07-16 18:03:37.189  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991014000 ms
+2022-07-16 18:03:37.190  INFO   57 --- [-thread-pool-34] org.apache.spark.internal.Logging        : Removing RDD 81
+2022-07-16 18:03:37.279  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: count at Application.java:141
+2022-07-16 18:03:37.280  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Registering RDD 162 (count at Application.java:141) as input to shuffle 14
+2022-07-16 18:03:37.281  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 18 (count at Application.java:141) with 1 output partitions
+2022-07-16 18:03:37.281  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 33 (count at Application.java:141)
+2022-07-16 18:03:37.281  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List(ShuffleMapStage 32)
+2022-07-16 18:03:37.281  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-16 18:03:37.281  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 33 (MapPartitionsRDD[165] at count at Application.java:141), which has no missing parents
+2022-07-16 18:03:37.284  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_18 stored as values in memory (estimated size 11.0 KiB, free 897.4 MiB)
+2022-07-16 18:03:37.287  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_18_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 897.4 MiB)
+2022-07-16 18:03:37.288  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_18_piece0 in memory on host.docker.internal:53431 (size: 5.4 KiB, free: 897.5 MiB)
+2022-07-16 18:03:37.288  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 18 from broadcast at DAGScheduler.scala:1478
+2022-07-16 18:03:37.289  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 33 (MapPartitionsRDD[165] at count at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-16 18:03:37.289  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 33.0 with 1 tasks resource profile 0
+2022-07-16 18:03:37.291  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 33.0 (TID 18) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4453 bytes) taskResourceAssignments Map()
+2022-07-16 18:03:37.291  INFO   57 --- [e 33.0 (TID 18)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 33.0 (TID 18)
+2022-07-16 18:03:37.294  INFO   57 --- [e 33.0 (TID 18)] org.apache.spark.internal.Logging        : Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2022-07-16 18:03:37.295  INFO   57 --- [e 33.0 (TID 18)] org.apache.spark.internal.Logging        : Started 0 remote fetches in 0 ms
+2022-07-16 18:03:37.297  INFO   57 --- [e 33.0 (TID 18)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 33.0 (TID 18). 2555 bytes result sent to driver
+2022-07-16 18:03:37.298  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 33.0 (TID 18) in 8 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:37.298  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Removed TaskSet 33.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:37.299  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 33 (count at Application.java:141) finished in 0.017 s
+2022-07-16 18:03:37.300  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 18 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:37.300  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 33: Stage finished
+2022-07-16 18:03:37.301  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 18 finished: count at Application.java:141, took 0.021265 s
+2022-07-16 18:03:37.302  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991017000 ms.0 from job set of time 1657991017000 ms
+2022-07-16 18:03:37.302  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657991017000 ms.1 from job set of time 1657991017000 ms
+2022-07-16 18:03:37.303  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657991017000 ms.1 from job set of time 1657991017000 ms
+2022-07-16 18:03:37.303  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.303 s for time 1657991017000 ms (execution: 0.121 s)
+2022-07-16 18:03:37.305  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 109 from persistence list
+2022-07-16 18:03:37.306  INFO   57 --- [-thread-pool-36] org.apache.spark.internal.Logging        : Removing RDD 109
+2022-07-16 18:03:37.306  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 108 from persistence list
+2022-07-16 18:03:37.307  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[108] at receiverStream at Application.java:121 of time 1657991017000 ms
+2022-07-16 18:03:37.307  INFO   57 --- [-thread-pool-41] org.apache.spark.internal.Logging        : Removing RDD 108
+2022-07-16 18:03:37.307  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657991015000 ms
+2022-07-16 18:03:37.308  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657991015000 ms
+2022-07-16 18:03:37.334  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Invoking stop(stopGracefully=false) from shutdown hook
+2022-07-16 18:03:37.340  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Sent stop signal to all 1 receivers
+2022-07-16 18:03:37.341  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Received stop signal
+2022-07-16 18:03:37.343  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Stopping receiver with message: Stopped by driver: 
+2022-07-16 18:03:37.344  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-16 18:03:37.344  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-16 18:03:37.346  ERROR   73 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Stopped by driver
+2022-07-16 18:03:37.347  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-16 18:03:37.349  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Stopping BlockGenerator
+2022-07-16 18:03:37.602  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Stopped timer for BlockGenerator after time 1657991017600
+2022-07-16 18:03:37.604  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Waiting for block pushing thread to terminate
+2022-07-16 18:03:37.613  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Pushing out the last 0 blocks
+2022-07-16 18:03:37.614  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Stopped block pushing thread
+2022-07-16 18:03:37.615  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Stopped BlockGenerator
+2022-07-16 18:03:37.620  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Stopped receiver without error
+2022-07-16 18:03:37.625  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 0.0 (TID 0). 923 bytes result sent to driver
+2022-07-16 18:03:37.627  INFO   57 --- [result-getter-2] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 0.0 (TID 0) in 14129 ms on host.docker.internal (executor driver) (1/1)
+2022-07-16 18:03:37.628  INFO   57 --- [result-getter-2] org.apache.spark.internal.Logging        : Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2022-07-16 18:03:37.629  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 0 (start at Application.java:146) finished in 14.695 s
+2022-07-16 18:03:37.630  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-16 18:03:37.631  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 0: Stage finished
+2022-07-16 18:03:37.633  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : All of the receivers have deregistered successfully
+2022-07-16 18:03:37.636  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : ReceiverTracker stopped
+2022-07-16 18:03:37.639  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopping JobGenerator immediately
+2022-07-16 18:03:37.641  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped timer for JobGenerator after time 1657991017000
+2022-07-16 18:03:37.641  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped JobGenerator
+2022-07-16 18:03:37.641  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped JobScheduler
+2022-07-16 18:03:37.641  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@26a2f7f9{/streaming,null,STOPPED,@Spark}
+2022-07-16 18:03:37.656  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@8bffb8b{/streaming/json,null,STOPPED,@Spark}
+2022-07-16 18:03:37.656  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@36f1046f{/streaming/batch,null,STOPPED,@Spark}
+2022-07-16 18:03:37.656  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@1686f0b4{/streaming/batch/json,null,STOPPED,@Spark}
+2022-07-16 18:03:37.656  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@7d0614f{/static/streaming,null,STOPPED,@Spark}
+2022-07-16 18:03:37.656  INFO  157 --- [           main] com.elite.cdr.validator.Application      : ****************************************************
+2022-07-16 18:03:37.656  INFO  158 --- [           main] com.elite.cdr.validator.Application      : Duration: 0.0 seconds
+2022-07-16 18:03:37.656  INFO  159 --- [           main] com.elite.cdr.validator.Application      : Batch executed with success
+2022-07-16 18:03:37.656  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : StreamingContext stopped successfully
+2022-07-16 18:03:37.656  INFO  160 --- [           main] com.elite.cdr.validator.Application      : ****************************************************
+2022-07-16 18:03:37.656  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Invoking stop() from shutdown hook
+2022-07-16 18:03:37.672  INFO  381 --- [shutdown-hook-0] rkproject.jetty.server.AbstractConnector : Stopped Spark@7caa550{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-07-16 18:03:37.672  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped Spark web UI at http://host.docker.internal:4040
+2022-07-16 18:03:37.688  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : MapOutputTrackerMasterEndpoint stopped!
+2022-07-16 18:03:37.735  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : MemoryStore cleared
+2022-07-16 18:03:37.735  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : BlockManager stopped
+2022-07-16 18:03:37.735  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : BlockManagerMaster stopped
+2022-07-16 18:03:37.750  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : OutputCommitCoordinator stopped!
+2022-07-16 18:03:37.750  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Successfully stopped SparkContext
+2022-07-16 18:03:37.750  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Shutdown hook called
+2022-07-16 18:03:37.750  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Deleting directory C:\Users\Wael Hamdi\AppData\Local\Temp\spark-e1ca57ba-418f-40d5-a52a-e3c3093b4da7

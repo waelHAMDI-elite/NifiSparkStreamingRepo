@@ -1,0 +1,1252 @@
+2022-06-28 13:31:42.697  INFO   56 --- [           main] com.elite.cdr.validator.Application      : Starting ASN1 Reader 
+2022-06-28 13:31:42.702  INFO   58 --- [           main] com.elite.cdr.validator.Application      : ############### Run with the args [--env, local, --file, C:\IntelliJProjects\FraudDetectionSpark3\src\main\resources\data\simpleTypes.ber]
+2022-06-28 13:31:42.785  INFO   64 --- [           main] com.elite.cdr.validator.Application      : ############### Run in local mode
+2022-06-28 13:31:46.521  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Running Spark version 3.2.1
+2022-06-28 13:31:47.408  INFO   57 --- [           main] org.apache.spark.internal.Logging        : ==============================================================
+2022-06-28 13:31:47.411  INFO   57 --- [           main] org.apache.spark.internal.Logging        : No custom resources configured for spark.driver.
+2022-06-28 13:31:47.412  INFO   57 --- [           main] org.apache.spark.internal.Logging        : ==============================================================
+2022-06-28 13:31:47.413  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Submitted application: NiFi-Spark Streaming example
+2022-06-28 13:31:47.520  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2022-06-28 13:31:47.547  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Limiting resource is cpu
+2022-06-28 13:31:47.554  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Added ResourceProfile id: 0
+2022-06-28 13:31:48.344  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing view acls to: Wael Hamdi
+2022-06-28 13:31:48.344  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing modify acls to: Wael Hamdi
+2022-06-28 13:31:48.345  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing view acls groups to: 
+2022-06-28 13:31:48.346  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing modify acls groups to: 
+2022-06-28 13:31:48.347  INFO   57 --- [           main] org.apache.spark.internal.Logging        : SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Wael Hamdi); groups with view permissions: Set(); users  with modify permissions: Set(Wael Hamdi); groups with modify permissions: Set()
+2022-06-28 13:31:51.356  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'sparkDriver' on port 52376.
+2022-06-28 13:31:51.458  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering MapOutputTracker
+2022-06-28 13:31:51.615  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManagerMaster
+2022-06-28 13:31:51.656  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2022-06-28 13:31:51.657  INFO   57 --- [           main] org.apache.spark.internal.Logging        : BlockManagerMasterEndpoint up
+2022-06-28 13:31:51.663  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManagerMasterHeartbeat
+2022-06-28 13:31:51.741  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Created local directory at C:\Users\Wael Hamdi\AppData\Local\Temp\blockmgr-19d4e05f-0a3b-47a2-aff4-a9d6ab8ddaed
+2022-06-28 13:31:51.954  INFO   57 --- [           main] org.apache.spark.internal.Logging        : MemoryStore started with capacity 897.6 MiB
+2022-06-28 13:31:52.021  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering OutputCommitCoordinator
+2022-06-28 13:31:52.527  INFO  170 --- [           main] org.sparkproject.jetty.util.log.Log      : Logging initialized @11013ms to org.sparkproject.jetty.util.log.Slf4jLog
+2022-06-28 13:31:52.699  INFO  375 --- [           main] org.sparkproject.jetty.server.Server     : jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 1.8.0_301-b09
+2022-06-28 13:31:52.754  INFO  415 --- [           main] org.sparkproject.jetty.server.Server     : Started @11242ms
+2022-06-28 13:31:52.862  INFO  331 --- [           main] rkproject.jetty.server.AbstractConnector : Started ServerConnector@7caa550{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-06-28 13:31:52.862  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'SparkUI' on port 4040.
+2022-06-28 13:31:52.904  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@6de54b40{/jobs,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.907  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@2de366bb{/jobs/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.908  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@61a002b1{/jobs/job,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.909  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@e24ddd0{/jobs/job/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.910  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@548e76f1{/stages,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.911  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@72c927f1{/stages/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.913  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3dd69f5a{/stages/stage,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.915  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@5003041b{/stages/stage/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.916  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@16fb356{/stages/pool,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.920  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@23a9ba52{/stages/pool/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.921  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@70ab80e3{/storage,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.922  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@67427b69{/storage/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.923  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@544630b7{/storage/rdd,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.924  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1095f122{/storage/rdd/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.926  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3d6300e8{/environment,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.927  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@24a1c17f{/environment/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.928  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@73511076{/executors,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.929  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@532721fd{/executors/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.931  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@7fb9f71f{/executors/threadDump,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.932  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@51f49060{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.981  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@617fe9e1{/static,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.982  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1a2e2935{/,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.984  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@4b629f13{/api,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.985  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@37cd92d6{/jobs/job/kill,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.987  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@4263b080{/stages/stage/kill,null,AVAILABLE,@Spark}
+2022-06-28 13:31:52.990  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Bound SparkUI to 0.0.0.0, and started at http://host.docker.internal:4040
+2022-06-28 13:31:53.710  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Starting executor ID driver on host host.docker.internal
+2022-06-28 13:31:53.841  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 52401.
+2022-06-28 13:31:53.842  INFO   82 --- [           main] .network.netty.NettyBlockTransferService : Server created on host.docker.internal:52401
+2022-06-28 13:31:53.844  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2022-06-28 13:31:53.867  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManager BlockManagerId(driver, host.docker.internal, 52401, None)
+2022-06-28 13:31:53.873  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Registering block manager host.docker.internal:52401 with 897.6 MiB RAM, BlockManagerId(driver, host.docker.internal, 52401, None)
+2022-06-28 13:31:53.880  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registered BlockManager BlockManagerId(driver, host.docker.internal, 52401, None)
+2022-06-28 13:31:53.882  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Initialized BlockManager: BlockManagerId(driver, host.docker.internal, 52401, None)
+2022-06-28 13:31:54.225  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@5173200b{/metrics/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:55.304  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Starting 1 receivers
+2022-06-28 13:31:55.307  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : ReceiverTracker started
+2022-06-28 13:31:55.313  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-06-28 13:31:55.314  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-06-28 13:31:55.315  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-06-28 13:31:55.316  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-06-28 13:31:55.317  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.PluggableInputDStream@2d511a59
+2022-06-28 13:31:55.317  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-06-28 13:31:55.318  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-06-28 13:31:55.318  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-06-28 13:31:55.319  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-06-28 13:31:55.319  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@7c5ebe18
+2022-06-28 13:31:55.319  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-06-28 13:31:55.320  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-06-28 13:31:55.322  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-06-28 13:31:55.322  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-06-28 13:31:55.323  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@67374811
+2022-06-28 13:31:55.323  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-06-28 13:31:55.323  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-06-28 13:31:55.323  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-06-28 13:31:55.324  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-06-28 13:31:55.324  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.PluggableInputDStream@2d511a59
+2022-06-28 13:31:55.324  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-06-28 13:31:55.324  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-06-28 13:31:55.324  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-06-28 13:31:55.325  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-06-28 13:31:55.325  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@7c5ebe18
+2022-06-28 13:31:55.325  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-06-28 13:31:55.325  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-06-28 13:31:55.325  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-06-28 13:31:55.325  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-06-28 13:31:55.326  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@52e75dd8
+2022-06-28 13:31:55.589  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Receiver 0 started
+2022-06-28 13:31:55.610  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 0 (start at Application.java:237) with 1 output partitions
+2022-06-28 13:31:55.612  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 0 (start at Application.java:237)
+2022-06-28 13:31:55.613  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-06-28 13:31:55.615  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started timer for JobGenerator at time 1656419516000
+2022-06-28 13:31:55.615  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started JobGenerator at 1656419516000 ms
+2022-06-28 13:31:55.615  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-06-28 13:31:55.618  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started JobScheduler
+2022-06-28 13:31:55.623  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:609), which has no missing parents
+2022-06-28 13:31:55.626  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@26722665{/streaming,null,AVAILABLE,@Spark}
+2022-06-28 13:31:55.627  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@627d8516{/streaming/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:55.629  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3cec79d3{/streaming/batch,null,AVAILABLE,@Spark}
+2022-06-28 13:31:55.630  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@4e31c3ec{/streaming/batch/json,null,AVAILABLE,@Spark}
+2022-06-28 13:31:55.634  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@72e789cb{/static/streaming,null,AVAILABLE,@Spark}
+2022-06-28 13:31:55.635  INFO   57 --- [           main] org.apache.spark.internal.Logging        : StreamingContext started
+2022-06-28 13:31:56.014  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_0 stored as values in memory (estimated size 97.5 KiB, free 897.5 MiB)
+2022-06-28 13:31:56.106  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656419516000 ms
+2022-06-28 13:31:56.183  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419516000 ms.0 from job set of time 1656419516000 ms
+2022-06-28 13:31:56.257  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 897.5 MiB)
+2022-06-28 13:31:56.262  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_0_piece0 in memory on host.docker.internal:52401 (size: 34.2 KiB, free: 897.6 MiB)
+2022-06-28 13:31:56.271  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 0 from broadcast at DAGScheduler.scala:1478
+2022-06-28 13:31:56.309  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:609) (first 15 tasks are for partitions Vector(0))
+2022-06-28 13:31:56.311  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 0.0 with 1 tasks resource profile 0
+2022-06-28 13:31:56.413  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkContext; some configuration may not take effect.
+2022-06-28 13:31:56.594  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 0.0 (TID 0) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 6218 bytes) taskResourceAssignments Map()
+2022-06-28 13:31:56.664  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 0.0 (TID 0)
+2022-06-28 13:31:57.006  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656419517000 ms
+2022-06-28 13:31:57.090  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:31:57.113  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 1 finished: foreach at Application.java:136, took 0.005781 s
+2022-06-28 13:31:57.122  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419516000 ms.0 from job set of time 1656419516000 ms
+2022-06-28 13:31:57.124  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419516000 ms.1 from job set of time 1656419516000 ms
+2022-06-28 13:31:57.156  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419516000 ms.1 from job set of time 1656419516000 ms
+2022-06-28 13:31:57.161  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 1.156 s for time 1656419516000 ms (execution: 0.974 s)
+2022-06-28 13:31:57.162  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419517000 ms.0 from job set of time 1656419517000 ms
+2022-06-28 13:31:57.194  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 
+2022-06-28 13:31:57.216  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 
+2022-06-28 13:31:57.496  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Started timer for BlockGenerator at time 1656419517600
+2022-06-28 13:31:57.499  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Started BlockGenerator
+2022-06-28 13:31:57.510  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Started block pushing thread
+2022-06-28 13:31:57.567  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:52376
+2022-06-28 13:31:57.568  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-06-28 13:31:57.585  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-06-28 13:31:57.586  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Waiting for receiver to be stopped
+2022-06-28 13:31:58.028  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656419518000 ms
+2022-06-28 13:31:59.058  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656419519000 ms
+2022-06-28 13:31:59.257  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+2022-06-28 13:32:00.006  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656419520000 ms
+2022-06-28 13:32:00.159  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Warehouse path is 'file:/C:/IntelliJProjects/NifiSparkStreaming/spark-warehouse'.
+2022-06-28 13:32:00.259  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@4e43e255{/SQL,null,AVAILABLE,@Spark}
+2022-06-28 13:32:00.261  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@6cb95554{/SQL/json,null,AVAILABLE,@Spark}
+2022-06-28 13:32:00.262  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1ef6915b{/SQL/execution,null,AVAILABLE,@Spark}
+2022-06-28 13:32:00.263  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@7513b574{/SQL/execution/json,null,AVAILABLE,@Spark}
+2022-06-28 13:32:00.266  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@6b3dc197{/static/sql,null,AVAILABLE,@Spark}
+2022-06-28 13:32:01.002  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656419521000 ms
+2022-06-28 13:32:02.010  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656419522000 ms
+2022-06-28 13:32:03.022  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656419523000 ms
+2022-06-28 13:32:03.891  INFO  571 --- [ool Maintenance] g.apache.nifi.remote.client.PeerSelector : Successfully refreshed peer status cache; remote group consists of 1 peers
+2022-06-28 13:32:03.891  INFO  571 --- [  NiFi Receiver] g.apache.nifi.remote.client.PeerSelector : Successfully refreshed peer status cache; remote group consists of 1 peers
+2022-06-28 13:32:04.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656419524000 ms
+2022-06-28 13:32:04.146  INFO   57 --- [  NiFi Receiver] org.apache.spark.internal.Logging        : Block input-0-1656419517466 stored as values in memory (estimated size 503.2 KiB, free 897.0 MiB)
+2022-06-28 13:32:04.147  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added input-0-1656419517466 in memory on host.docker.internal:52401 (size: 503.2 KiB, free: 897.1 MiB)
+2022-06-28 13:32:04.871  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:32:04.885  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:32:04.886  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 2 finished: foreach at Application.java:136, took 0.000367 s
+2022-06-28 13:32:04.887  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419517000 ms.0 from job set of time 1656419517000 ms
+2022-06-28 13:32:04.888  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419517000 ms.1 from job set of time 1656419517000 ms
+2022-06-28 13:32:04.888  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419517000 ms.1 from job set of time 1656419517000 ms
+2022-06-28 13:32:04.889  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 7.888 s for time 1656419517000 ms (execution: 7.726 s)
+2022-06-28 13:32:04.889  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419518000 ms.0 from job set of time 1656419518000 ms
+2022-06-28 13:32:04.890  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:32:04.891  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:32:04.892  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 2 from persistence list
+2022-06-28 13:32:04.925  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:32:04.926  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 3 finished: foreach at Application.java:136, took 0.000315 s
+2022-06-28 13:32:04.931  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:32:04.931  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:32:04.942  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419518000 ms.0 from job set of time 1656419518000 ms
+2022-06-28 13:32:04.943  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419518000 ms.1 from job set of time 1656419518000 ms
+2022-06-28 13:32:04.943  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419518000 ms.1 from job set of time 1656419518000 ms
+2022-06-28 13:32:04.944  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 6.943 s for time 1656419518000 ms (execution: 0.054 s)
+2022-06-28 13:32:04.944  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419519000 ms.0 from job set of time 1656419519000 ms
+2022-06-28 13:32:04.950  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 1 from persistence list
+2022-06-28 13:32:04.976  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:32:04.980  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 4 finished: foreach at Application.java:136, took 0.000260 s
+2022-06-28 13:32:04.978  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[1] at receiverStream at Application.java:127 of time 1656419517000 ms
+2022-06-28 13:32:04.986  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 
+2022-06-28 13:32:04.981  INFO   57 --- [c-thread-pool-0] org.apache.spark.internal.Logging        : Removing RDD 2
+2022-06-28 13:32:04.987  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419519000 ms.0 from job set of time 1656419519000 ms
+2022-06-28 13:32:04.987  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419519000 ms.1 from job set of time 1656419519000 ms
+2022-06-28 13:32:04.988  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419519000 ms.1 from job set of time 1656419519000 ms
+2022-06-28 13:32:04.988  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 5.988 s for time 1656419519000 ms (execution: 0.044 s)
+2022-06-28 13:32:04.991  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:32:04.992  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:32:04.986  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 
+2022-06-28 13:32:04.996  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 4 from persistence list
+2022-06-28 13:32:04.996  INFO   57 --- [c-thread-pool-1] org.apache.spark.internal.Logging        : Removing RDD 1
+2022-06-28 13:32:04.996  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419520000 ms.0 from job set of time 1656419520000 ms
+2022-06-28 13:32:05.008  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 3 from persistence list
+2022-06-28 13:32:05.012  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:32:05.014  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 5 finished: foreach at Application.java:136, took 0.000611 s
+2022-06-28 13:32:05.020  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:32:05.020  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:32:05.026  INFO   57 --- [c-thread-pool-6] org.apache.spark.internal.Logging        : Removing RDD 4
+2022-06-28 13:32:05.026  INFO   57 --- [c-thread-pool-7] org.apache.spark.internal.Logging        : Removing RDD 3
+2022-06-28 13:32:05.023  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[3] at receiverStream at Application.java:127 of time 1656419518000 ms
+2022-06-28 13:32:05.050  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1656419516000 ms
+2022-06-28 13:32:05.050  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1656419516000 ms
+2022-06-28 13:32:05.051  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 6 from persistence list
+2022-06-28 13:32:05.052  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:32:05.045  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419520000 ms.0 from job set of time 1656419520000 ms
+2022-06-28 13:32:05.053  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419520000 ms.1 from job set of time 1656419520000 ms
+2022-06-28 13:32:05.054  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419520000 ms.1 from job set of time 1656419520000 ms
+2022-06-28 13:32:05.054  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 6 finished: foreach at Application.java:136, took 0.000511 s
+2022-06-28 13:32:05.058  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 5 from persistence list
+2022-06-28 13:32:05.059  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:32:05.062  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[5] at receiverStream at Application.java:127 of time 1656419519000 ms
+2022-06-28 13:32:05.060  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 5.054 s for time 1656419520000 ms (execution: 0.058 s)
+2022-06-28 13:32:05.063  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1656419517000 ms
+2022-06-28 13:32:05.062  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:32:05.064  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1656419517000 ms
+2022-06-28 13:32:05.063  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419521000 ms.0 from job set of time 1656419521000 ms
+2022-06-28 13:32:05.067  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419521000 ms.0 from job set of time 1656419521000 ms
+2022-06-28 13:32:05.068  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419521000 ms.1 from job set of time 1656419521000 ms
+2022-06-28 13:32:05.068  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419521000 ms.1 from job set of time 1656419521000 ms
+2022-06-28 13:32:05.069  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 4.068 s for time 1656419521000 ms (execution: 0.005 s)
+2022-06-28 13:32:05.091  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656419525000 ms
+2022-06-28 13:32:05.085  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:32:05.071  INFO   57 --- [-thread-pool-12] org.apache.spark.internal.Logging        : Removing RDD 6
+2022-06-28 13:32:05.071  INFO   57 --- [-thread-pool-13] org.apache.spark.internal.Logging        : Removing RDD 5
+2022-06-28 13:32:05.095  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 7 finished: foreach at Application.java:136, took 0.000762 s
+2022-06-28 13:32:05.092  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 8 from persistence list
+2022-06-28 13:32:05.092  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419522000 ms.0 from job set of time 1656419522000 ms
+2022-06-28 13:32:05.096  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419522000 ms.0 from job set of time 1656419522000 ms
+2022-06-28 13:32:05.097  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419522000 ms.1 from job set of time 1656419522000 ms
+2022-06-28 13:32:05.098  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:32:05.098  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:32:05.099  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 7 from persistence list
+2022-06-28 13:32:05.099  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419522000 ms.1 from job set of time 1656419522000 ms
+2022-06-28 13:32:05.100  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 3.099 s for time 1656419522000 ms (execution: 0.008 s)
+2022-06-28 13:32:05.100  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419523000 ms.0 from job set of time 1656419523000 ms
+2022-06-28 13:32:05.101  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[7] at receiverStream at Application.java:127 of time 1656419520000 ms
+2022-06-28 13:32:05.102  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1656419518000 ms
+2022-06-28 13:32:05.102  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1656419518000 ms
+2022-06-28 13:32:05.103  INFO   57 --- [-thread-pool-18] org.apache.spark.internal.Logging        : Removing RDD 8
+2022-06-28 13:32:05.106  INFO   57 --- [-thread-pool-19] org.apache.spark.internal.Logging        : Removing RDD 7
+2022-06-28 13:32:05.103  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 10 from persistence list
+2022-06-28 13:32:05.113  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 9 from persistence list
+2022-06-28 13:32:05.114  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[9] at receiverStream at Application.java:127 of time 1656419521000 ms
+2022-06-28 13:32:05.115  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:32:05.115  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1656419519000 ms
+2022-06-28 13:32:05.116  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 8 finished: foreach at Application.java:136, took 0.000261 s
+2022-06-28 13:32:05.116  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1656419519000 ms
+2022-06-28 13:32:05.117  INFO   57 --- [-thread-pool-24] org.apache.spark.internal.Logging        : Removing RDD 10
+2022-06-28 13:32:05.125  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 12 from persistence list
+2022-06-28 13:32:05.117  INFO   57 --- [-thread-pool-25] org.apache.spark.internal.Logging        : Removing RDD 9
+2022-06-28 13:32:05.126  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419523000 ms.0 from job set of time 1656419523000 ms
+2022-06-28 13:32:05.129  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419523000 ms.1 from job set of time 1656419523000 ms
+2022-06-28 13:32:05.130  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419523000 ms.1 from job set of time 1656419523000 ms
+2022-06-28 13:32:05.131  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 11 from persistence list
+2022-06-28 13:32:05.131  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 2.130 s for time 1656419523000 ms (execution: 0.030 s)
+2022-06-28 13:32:05.131  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419524000 ms.0 from job set of time 1656419524000 ms
+2022-06-28 13:32:05.132  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[11] at receiverStream at Application.java:127 of time 1656419522000 ms
+2022-06-28 13:32:05.133  INFO   57 --- [-thread-pool-30] org.apache.spark.internal.Logging        : Removing RDD 12
+2022-06-28 13:32:05.133  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:32:05.134  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:32:05.134  INFO   57 --- [-thread-pool-31] org.apache.spark.internal.Logging        : Removing RDD 11
+2022-06-28 13:32:05.134  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1656419520000 ms
+2022-06-28 13:32:05.136  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1656419520000 ms
+2022-06-28 13:32:05.137  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 14 from persistence list
+2022-06-28 13:32:05.139  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 13 from persistence list
+2022-06-28 13:32:05.143  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[13] at receiverStream at Application.java:127 of time 1656419523000 ms
+2022-06-28 13:32:05.144  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1656419521000 ms
+2022-06-28 13:32:05.145  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1656419521000 ms
+2022-06-28 13:32:05.146  INFO   57 --- [-thread-pool-37] org.apache.spark.internal.Logging        : Removing RDD 13
+2022-06-28 13:32:05.147  INFO   57 --- [-thread-pool-36] org.apache.spark.internal.Logging        : Removing RDD 14
+2022-06-28 13:32:05.150  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:32:05.152  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 9 finished: foreach at Application.java:136, took 0.000272 s
+2022-06-28 13:32:05.161  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:32:05.161  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:32:05.162  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419524000 ms.0 from job set of time 1656419524000 ms
+2022-06-28 13:32:05.162  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419524000 ms.1 from job set of time 1656419524000 ms
+2022-06-28 13:32:05.162  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419524000 ms.1 from job set of time 1656419524000 ms
+2022-06-28 13:32:05.164  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 1.162 s for time 1656419524000 ms (execution: 0.031 s)
+2022-06-28 13:32:05.164  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419525000 ms.0 from job set of time 1656419525000 ms
+2022-06-28 13:32:05.165  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 16 from persistence list
+2022-06-28 13:32:05.166  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 15 from persistence list
+2022-06-28 13:32:05.169  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[15] at receiverStream at Application.java:127 of time 1656419524000 ms
+2022-06-28 13:32:05.171  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1656419522000 ms
+2022-06-28 13:32:05.171  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1656419522000 ms
+2022-06-28 13:32:05.172  INFO   57 --- [-thread-pool-42] org.apache.spark.internal.Logging        : Removing RDD 16
+2022-06-28 13:32:05.173  INFO   57 --- [-thread-pool-43] org.apache.spark.internal.Logging        : Removing RDD 15
+2022-06-28 13:32:05.179  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:32:05.182  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 10 (foreach at Application.java:136) with 1 output partitions
+2022-06-28 13:32:05.183  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 1 (foreach at Application.java:136)
+2022-06-28 13:32:05.184  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-06-28 13:32:05.185  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-06-28 13:32:05.188  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 1 (MapPartitionsRDD[20] at map at Application.java:132), which has no missing parents
+2022-06-28 13:32:05.216  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_1 stored as values in memory (estimated size 6.8 KiB, free 897.0 MiB)
+2022-06-28 13:32:05.219  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.3 KiB, free 897.0 MiB)
+2022-06-28 13:32:05.220  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_1_piece0 in memory on host.docker.internal:52401 (size: 3.3 KiB, free: 897.1 MiB)
+2022-06-28 13:32:05.222  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 1 from broadcast at DAGScheduler.scala:1478
+2022-06-28 13:32:05.223  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[20] at map at Application.java:132) (first 15 tasks are for partitions Vector(0))
+2022-06-28 13:32:05.224  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 1.0 with 1 tasks resource profile 0
+2022-06-28 13:32:05.232  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 1.0 (TID 1) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4394 bytes) taskResourceAssignments Map()
+2022-06-28 13:32:05.234  INFO   57 --- [age 1.0 (TID 1)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 1.0 (TID 1)
+2022-06-28 13:32:05.463  INFO   57 --- [age 1.0 (TID 1)] org.apache.spark.internal.Logging        : Found block input-0-1656419517466 locally
+2022-06-28 13:32:05.704  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.713  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.714  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.714  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.714  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.714  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.714  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.715  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.715  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.715  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.715  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.715  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.716  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.716  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.716  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.716  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.716  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.716  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.717  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.717  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.717  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.717  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.717  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.718  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.718  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.718  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.718  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.718  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.718  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.718  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.719  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.719  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.719  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.719  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.719  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.719  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.719  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.719  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.720  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.720  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.720  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.720  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.720  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.720  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.720  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.721  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.721  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.721  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.721  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.721  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.721  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.721  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.721  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.722  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.722  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.722  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.722  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.722  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.722  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.722  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.723  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.723  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.723  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.723  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.723  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.723  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.724  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.724  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.724  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.724  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.724  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.724  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.724  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.724  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.724  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.725  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.725  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.725  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.725  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.725  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.725  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.725  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.726  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.726  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.726  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.726  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.727  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.727  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.727  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.727  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.728  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.728  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.728  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.728  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.728  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.728  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.728  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.729  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.729  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.730  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.730  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.730  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.730  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.730  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.730  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.730  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.730  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.730  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.731  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.731  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.731  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.731  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.731  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.731  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.731  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.731  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.731  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.732  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.732  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.732  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.732  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.732  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.732  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.732  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.732  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.732  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.733  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.733  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.733  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.733  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.733  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.733  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.733  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.733  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.733  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.734  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.734  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.734  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.734  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.734  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.734  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.734  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.734  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.734  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.735  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.735  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.735  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.735  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.735  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.736  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.736  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.736  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.736  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.737  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.737  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.737  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.737  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.738  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.738  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.738  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.738  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.738  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.739  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.739  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.739  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.739  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.739  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.739  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.740  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.740  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.740  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.740  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.741  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.741  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.741  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.741  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.741  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.741  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.742  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.742  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.742  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.742  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.742  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.743  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.743  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.743  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.743  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.743  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.743  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.744  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.744  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.744  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.744  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.744  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.746  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.746  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.747  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.747  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.747  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.747  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.747  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.748  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.748  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.748  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.748  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.748  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.749  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.749  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.749  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.749  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.749  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.750  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.750  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.750  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.750  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.751  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.751  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.751  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.751  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.751  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.751  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.751  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.751  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.751  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.752  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.752  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.752  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.752  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.752  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.752  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.752  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.752  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.752  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.753  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.753  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.753  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.753  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.753  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.753  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.753  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.754  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.754  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.754  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.754  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.754  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.754  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.754  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.754  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.754  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.754  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.754  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.754  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.755  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.755  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.755  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.755  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.755  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.756  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.756  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.756  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.756  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.756  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.756  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.757  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.757  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.757  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.757  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.757  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.757  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.757  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.757  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.757  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.757  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.758  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.758  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.758  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.758  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.758  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.758  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.758  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.758  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.758  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.759  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.759  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.759  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.759  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.759  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.759  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.759  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.759  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.759  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.759  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.759  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.759  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.760  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.760  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.760  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.760  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.761  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.761  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.761  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.761  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.761  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.761  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.761  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.761  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.762  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.762  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.762  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.762  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.762  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.762  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.762  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.763  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.763  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.763  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.763  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.763  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.763  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.763  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.763  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.764  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.764  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.764  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.764  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.764  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.764  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.764  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.764  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.764  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.765  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.765  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.765  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.765  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.765  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.765  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.765  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.766  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.766  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.766  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.766  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.766  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.766  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.766  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.767  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.767  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.767  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.767  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.767  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.767  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.767  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.768  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.768  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.768  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.768  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.768  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.768  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.768  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.768  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.769  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.769  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.769  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.769  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.769  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.769  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.769  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.769  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.770  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.770  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.770  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.770  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.770  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.770  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.770  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.770  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.771  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.771  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.771  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.771  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.771  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.771  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.771  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.771  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.772  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.772  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.772  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.772  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.772  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.772  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.772  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.772  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.772  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.773  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.773  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.773  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.773  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.773  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.773  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.773  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.773  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.774  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.774  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.774  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.774  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.774  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.774  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.774  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.774  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.775  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.775  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.775  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.775  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.775  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.775  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.775  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.777  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.777  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.777  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.777  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.777  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.777  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.777  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.778  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.778  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.778  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.778  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.778  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.778  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.778  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.778  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.779  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.779  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.779  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.779  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.779  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.779  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.779  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.779  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.779  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.780  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.780  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.780  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.780  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.780  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.780  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.780  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.780  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.781  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.781  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.781  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.781  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.781  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.781  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.781  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.781  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.782  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.782  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.782  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.782  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.782  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.782  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.782  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.782  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.783  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.783  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.783  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.783  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.783  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.783  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.783  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.783  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.784  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.784  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.784  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.784  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.784  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.784  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.784  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.784  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.784  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.785  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.785  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.785  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.785  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.785  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.785  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.785  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.785  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.786  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.786  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.786  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.786  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.786  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.786  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.786  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.786  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.787  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.787  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.787  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.787  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.787  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.787  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.787  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.787  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.788  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.788  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.788  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.788  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.788  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.788  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.788  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.788  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.788  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.789  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.789  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.789  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.789  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.789  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.789  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.789  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.789  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.789  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.789  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.790  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.790  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.790  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.790  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.790  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.790  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.790  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.790  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.790  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.790  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.791  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.791  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.791  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.791  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.791  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.791  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.791  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.791  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.791  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.791  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.792  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.792  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.792  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.792  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.792  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.792  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.793  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.793  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.793  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.793  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.793  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.793  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.793  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.793  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.793  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.793  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.794  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.794  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.794  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.794  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.794  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.794  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.794  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.794  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.794  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.794  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.794  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.795  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.795  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.795  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.795  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.795  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.795  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.795  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.795  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.795  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.795  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.796  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.796  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.796  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.796  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.796  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.796  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.796  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.796  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMO
+2022-06-28 13:32:05.796  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.796  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.796  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.797  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.797  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.797  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.797  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.797  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.797  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.797  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.797  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.797  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.797  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.798  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.798  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.798  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MT
+2022-06-28 13:32:05.798  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.798  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.798  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.798  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.798  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr MO
+2022-06-28 13:32:05.798  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:05.798  INFO  147 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : cdr SMSMT
+2022-06-28 13:32:06.084  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656419526000 ms
+2022-06-28 13:32:06.085  ERROR   94 --- [age 1.0 (TID 1)] org.apache.spark.internal.Logging        : Exception in task 0.0 in stage 1.0 (TID 1)
+java.lang.ArrayIndexOutOfBoundsException: 4
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$StructConverter.toCatalystImpl(CatalystTypeConverters.scala:258)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$StructConverter.toCatalystImpl(CatalystTypeConverters.scala:248)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$CatalystTypeConverter.toCatalyst(CatalystTypeConverters.scala:113)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$.$anonfun$createToCatalystConverter$2(CatalystTypeConverters.scala:485)
+	at org.apache.spark.sql.catalyst.plans.logical.LocalRelation$.$anonfun$fromExternalRows$1(LocalRelation.scala:38)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.catalyst.plans.logical.LocalRelation$.fromExternalRows(LocalRelation.scala:38)
+	at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$4(SparkSession.scala:388)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.SparkSession.createDataFrame(SparkSession.scala:386)
+	at com.elite.cdr.validator.Application.lambda$null$163a0c79$1(Application.java:151)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1(JavaRDDLike.scala:352)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1$adapted(JavaRDDLike.scala:352)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2(RDD.scala:1012)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2$adapted(RDD.scala:1012)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2254)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2022-06-28 13:32:06.158  WARN   69 --- [result-getter-0] org.apache.spark.internal.Logging        : Lost task 0.0 in stage 1.0 (TID 1) (host.docker.internal executor driver): java.lang.ArrayIndexOutOfBoundsException: 4
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$StructConverter.toCatalystImpl(CatalystTypeConverters.scala:258)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$StructConverter.toCatalystImpl(CatalystTypeConverters.scala:248)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$CatalystTypeConverter.toCatalyst(CatalystTypeConverters.scala:113)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$.$anonfun$createToCatalystConverter$2(CatalystTypeConverters.scala:485)
+	at org.apache.spark.sql.catalyst.plans.logical.LocalRelation$.$anonfun$fromExternalRows$1(LocalRelation.scala:38)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.catalyst.plans.logical.LocalRelation$.fromExternalRows(LocalRelation.scala:38)
+	at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$4(SparkSession.scala:388)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.SparkSession.createDataFrame(SparkSession.scala:386)
+	at com.elite.cdr.validator.Application.lambda$null$163a0c79$1(Application.java:151)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1(JavaRDDLike.scala:352)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1$adapted(JavaRDDLike.scala:352)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2(RDD.scala:1012)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2$adapted(RDD.scala:1012)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2254)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-06-28 13:32:06.164  ERROR   73 --- [result-getter-0] org.apache.spark.internal.Logging        : Task 0 in stage 1.0 failed 1 times; aborting job
+2022-06-28 13:32:06.176  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2022-06-28 13:32:06.212  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Cancelling stage 1
+2022-06-28 13:32:06.214  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 1: Stage cancelled
+2022-06-28 13:32:06.221  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 1 (foreach at Application.java:136) failed in 1.017 s due to Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (host.docker.internal executor driver): java.lang.ArrayIndexOutOfBoundsException: 4
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$StructConverter.toCatalystImpl(CatalystTypeConverters.scala:258)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$StructConverter.toCatalystImpl(CatalystTypeConverters.scala:248)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$CatalystTypeConverter.toCatalyst(CatalystTypeConverters.scala:113)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$.$anonfun$createToCatalystConverter$2(CatalystTypeConverters.scala:485)
+	at org.apache.spark.sql.catalyst.plans.logical.LocalRelation$.$anonfun$fromExternalRows$1(LocalRelation.scala:38)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.catalyst.plans.logical.LocalRelation$.fromExternalRows(LocalRelation.scala:38)
+	at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$4(SparkSession.scala:388)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.SparkSession.createDataFrame(SparkSession.scala:386)
+	at com.elite.cdr.validator.Application.lambda$null$163a0c79$1(Application.java:151)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1(JavaRDDLike.scala:352)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1$adapted(JavaRDDLike.scala:352)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2(RDD.scala:1012)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2$adapted(RDD.scala:1012)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2254)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Driver stacktrace:
+2022-06-28 13:32:06.230  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 10 failed: foreach at Application.java:136, took 1.049863 s
+2022-06-28 13:32:06.234  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419525000 ms.0 from job set of time 1656419525000 ms
+2022-06-28 13:32:06.245  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: print at Application.java:234
+2022-06-28 13:32:06.247  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419525000 ms.1 from job set of time 1656419525000 ms
+2022-06-28 13:32:06.247  ERROR   94 --- [   JobScheduler] org.apache.spark.internal.Logging        : Error running job streaming job 1656419525000 ms.0
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (host.docker.internal executor driver): java.lang.ArrayIndexOutOfBoundsException: 4
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$StructConverter.toCatalystImpl(CatalystTypeConverters.scala:258)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$StructConverter.toCatalystImpl(CatalystTypeConverters.scala:248)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$CatalystTypeConverter.toCatalyst(CatalystTypeConverters.scala:113)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$.$anonfun$createToCatalystConverter$2(CatalystTypeConverters.scala:485)
+	at org.apache.spark.sql.catalyst.plans.logical.LocalRelation$.$anonfun$fromExternalRows$1(LocalRelation.scala:38)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.catalyst.plans.logical.LocalRelation$.fromExternalRows(LocalRelation.scala:38)
+	at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$4(SparkSession.scala:388)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.SparkSession.createDataFrame(SparkSession.scala:386)
+	at com.elite.cdr.validator.Application.lambda$null$163a0c79$1(Application.java:151)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1(JavaRDDLike.scala:352)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1$adapted(JavaRDDLike.scala:352)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2(RDD.scala:1012)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2$adapted(RDD.scala:1012)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2254)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2454)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2403)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2402)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2402)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1160)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1160)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1160)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2642)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2584)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2573)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:938)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2214)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2235)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2254)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2279)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$1(RDD.scala:1012)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.foreach(RDD.scala:1010)
+	at org.apache.spark.api.java.JavaRDDLike.foreach(JavaRDDLike.scala:352)
+	at org.apache.spark.api.java.JavaRDDLike.foreach$(JavaRDDLike.scala:351)
+	at org.apache.spark.api.java.AbstractJavaRDDLike.foreach(JavaRDDLike.scala:45)
+	at com.elite.cdr.validator.Application.lambda$main$1282d8df$1(Application.java:136)
+	at org.apache.spark.streaming.api.java.JavaDStreamLike.$anonfun$foreachRDD$1(JavaDStreamLike.scala:272)
+	at org.apache.spark.streaming.api.java.JavaDStreamLike.$anonfun$foreachRDD$1$adapted(JavaDStreamLike.scala:272)
+	at org.apache.spark.streaming.dstream.DStream.$anonfun$foreachRDD$2(DStream.scala:629)
+	at org.apache.spark.streaming.dstream.DStream.$anonfun$foreachRDD$2$adapted(DStream.scala:629)
+	at org.apache.spark.streaming.dstream.ForEachDStream.$anonfun$generateJob$2(ForEachDStream.scala:51)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:417)
+	at org.apache.spark.streaming.dstream.ForEachDStream.$anonfun$generateJob$1(ForEachDStream.scala:51)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.$anonfun$run$1(JobScheduler.scala:256)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 4
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$StructConverter.toCatalystImpl(CatalystTypeConverters.scala:258)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$StructConverter.toCatalystImpl(CatalystTypeConverters.scala:248)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$CatalystTypeConverter.toCatalyst(CatalystTypeConverters.scala:113)
+	at org.apache.spark.sql.catalyst.CatalystTypeConverters$.$anonfun$createToCatalystConverter$2(CatalystTypeConverters.scala:485)
+	at org.apache.spark.sql.catalyst.plans.logical.LocalRelation$.$anonfun$fromExternalRows$1(LocalRelation.scala:38)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+	at org.apache.spark.sql.catalyst.plans.logical.LocalRelation$.fromExternalRows(LocalRelation.scala:38)
+	at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$4(SparkSession.scala:388)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.SparkSession.createDataFrame(SparkSession.scala:386)
+	at com.elite.cdr.validator.Application.lambda$null$163a0c79$1(Application.java:151)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1(JavaRDDLike.scala:352)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1$adapted(JavaRDDLike.scala:352)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2(RDD.scala:1012)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2$adapted(RDD.scala:1012)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2254)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	... 3 more
+2022-06-28 13:32:06.256  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 11 (print at Application.java:234) with 1 output partitions
+2022-06-28 13:32:06.257  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 2 (print at Application.java:234)
+2022-06-28 13:32:06.259  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-06-28 13:32:06.260  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-06-28 13:32:06.272  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 2 (MapPartitionsRDD[20] at map at Application.java:132), which has no missing parents
+2022-06-28 13:32:06.277  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_2 stored as values in memory (estimated size 4.4 KiB, free 897.0 MiB)
+2022-06-28 13:32:06.281  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.4 KiB, free 897.0 MiB)
+2022-06-28 13:32:06.283  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_2_piece0 in memory on host.docker.internal:52401 (size: 2.4 KiB, free: 897.1 MiB)
+2022-06-28 13:32:06.284  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 2 from broadcast at DAGScheduler.scala:1478
+2022-06-28 13:32:06.285  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[20] at map at Application.java:132) (first 15 tasks are for partitions Vector(0))
+2022-06-28 13:32:06.286  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 2.0 with 1 tasks resource profile 0
+2022-06-28 13:32:06.291  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 2.0 (TID 2) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4394 bytes) taskResourceAssignments Map()
+2022-06-28 13:32:06.293  INFO   57 --- [age 2.0 (TID 2)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 2.0 (TID 2)
+2022-06-28 13:32:06.298  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_1_piece0 on host.docker.internal:52401 in memory (size: 3.3 KiB, free: 897.1 MiB)
+2022-06-28 13:32:06.308  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Invoking stop(stopGracefully=false) from shutdown hook
+2022-06-28 13:32:06.316  INFO   57 --- [age 2.0 (TID 2)] org.apache.spark.internal.Logging        : Found block input-0-1656419517466 locally
+2022-06-28 13:32:06.342  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Sent stop signal to all 1 receivers
+2022-06-28 13:32:06.344  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Received stop signal
+2022-06-28 13:32:06.348  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopping receiver with message: Stopped by driver: 
+2022-06-28 13:32:06.349  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-06-28 13:32:06.350  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-06-28 13:32:06.356  ERROR   73 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Stopped by driver
+2022-06-28 13:32:06.360  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-06-28 13:32:06.364  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopping BlockGenerator
+2022-06-28 13:32:06.429  INFO   57 --- [age 2.0 (TID 2)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 2.0 (TID 2). 39484 bytes result sent to driver
+2022-06-28 13:32:06.793  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 2.0 (TID 2) in 501 ms on host.docker.internal (executor driver) (1/1)
+2022-06-28 13:32:06.796  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 2 (print at Application.java:234) finished in 0.521 s
+2022-06-28 13:32:06.800  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 11 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-06-28 13:32:06.801  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2022-06-28 13:32:06.802  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 2: Stage finished
+2022-06-28 13:32:06.804  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 11 finished: print at Application.java:234, took 0.558595 s
+2022-06-28 13:32:06.815  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:32:06.815  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:32:06.840  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:32:06.851  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 12 finished: foreach at Application.java:136, took 0.000467 s
+2022-06-28 13:32:06.854  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419525000 ms.1 from job set of time 1656419525000 ms
+2022-06-28 13:32:06.856  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 1.854 s for time 1656419525000 ms (execution: 1.690 s)
+2022-06-28 13:32:06.857  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419526000 ms.0 from job set of time 1656419526000 ms
+2022-06-28 13:32:06.857  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419526000 ms.0 from job set of time 1656419526000 ms
+2022-06-28 13:32:06.857  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656419526000 ms.1 from job set of time 1656419526000 ms
+2022-06-28 13:32:06.858  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656419526000 ms.1 from job set of time 1656419526000 ms
+2022-06-28 13:32:06.868  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.858 s for time 1656419526000 ms (execution: 0.001 s)
+2022-06-28 13:32:06.872  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 18 from persistence list
+2022-06-28 13:32:06.878  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 17 from persistence list
+2022-06-28 13:32:06.885  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[17] at receiverStream at Application.java:127 of time 1656419525000 ms
+2022-06-28 13:32:06.886  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1656419523000 ms
+2022-06-28 13:32:06.886  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1656419523000 ms
+2022-06-28 13:32:06.886  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 20 from persistence list
+2022-06-28 13:32:06.896  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 19 from persistence list
+2022-06-28 13:32:06.899  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[19] at receiverStream at Application.java:127 of time 1656419526000 ms
+2022-06-28 13:32:06.901  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopped timer for BlockGenerator after time 1656419526600
+2022-06-28 13:32:06.923  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Waiting for block pushing thread to terminate
+2022-06-28 13:32:06.923  INFO   57 --- [-thread-pool-54] org.apache.spark.internal.Logging        : Removing RDD 19
+2022-06-28 13:32:06.928  INFO   57 --- [-thread-pool-53] org.apache.spark.internal.Logging        : Removing RDD 20
+2022-06-28 13:32:06.928  INFO   57 --- [-thread-pool-51] org.apache.spark.internal.Logging        : Removing RDD 18
+2022-06-28 13:32:06.930  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Pushing out the last 0 blocks
+2022-06-28 13:32:06.930  INFO   57 --- [-thread-pool-52] org.apache.spark.internal.Logging        : Removing RDD 17
+2022-06-28 13:32:06.937  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Stopped block pushing thread
+2022-06-28 13:32:06.937  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1656419524000 ms
+2022-06-28 13:32:06.944  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1656419524000 ms
+2022-06-28 13:32:06.945  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed input-0-1656419517466 on host.docker.internal:52401 in memory (size: 503.2 KiB, free: 897.6 MiB)
+2022-06-28 13:32:06.944  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopped BlockGenerator
+2022-06-28 13:32:06.946  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Stopped receiver without error
+2022-06-28 13:32:06.950  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 0.0 (TID 0). 880 bytes result sent to driver
+2022-06-28 13:32:06.953  INFO   57 --- [result-getter-2] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 0.0 (TID 0) in 10427 ms on host.docker.internal (executor driver) (1/1)
+2022-06-28 13:32:06.954  INFO   57 --- [result-getter-2] org.apache.spark.internal.Logging        : Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2022-06-28 13:32:06.955  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 0 (start at Application.java:237) finished in 11.284 s
+2022-06-28 13:32:06.956  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-06-28 13:32:06.956  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 0: Stage finished
+2022-06-28 13:32:06.959  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : All of the receivers have deregistered successfully
+2022-06-28 13:32:06.960  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : ReceiverTracker stopped
+2022-06-28 13:32:06.962  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopping JobGenerator immediately
+2022-06-28 13:32:06.964  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped timer for JobGenerator after time 1656419526000
+2022-06-28 13:32:06.967  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped JobGenerator
+2022-06-28 13:32:06.973  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped JobScheduler
+2022-06-28 13:32:06.981  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@26722665{/streaming,null,STOPPED,@Spark}
+2022-06-28 13:32:06.982  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@627d8516{/streaming/json,null,STOPPED,@Spark}
+2022-06-28 13:32:06.983  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@3cec79d3{/streaming/batch,null,STOPPED,@Spark}
+2022-06-28 13:32:06.983  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@4e31c3ec{/streaming/batch/json,null,STOPPED,@Spark}
+2022-06-28 13:32:06.985  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@72e789cb{/static/streaming,null,STOPPED,@Spark}
+2022-06-28 13:32:06.987  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : StreamingContext stopped successfully
+2022-06-28 13:32:06.988  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Invoking stop() from shutdown hook
+2022-06-28 13:32:07.000  INFO  381 --- [shutdown-hook-0] rkproject.jetty.server.AbstractConnector : Stopped Spark@7caa550{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-06-28 13:32:07.002  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped Spark web UI at http://host.docker.internal:4040
+2022-06-28 13:32:07.049  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : MapOutputTrackerMasterEndpoint stopped!
+2022-06-28 13:32:07.215  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : MemoryStore cleared
+2022-06-28 13:32:07.216  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : BlockManager stopped
+2022-06-28 13:32:07.248  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : BlockManagerMaster stopped
+2022-06-28 13:32:07.253  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : OutputCommitCoordinator stopped!
+2022-06-28 13:32:07.259  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Successfully stopped SparkContext
+2022-06-28 13:32:07.259  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Shutdown hook called
+2022-06-28 13:32:07.261  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Deleting directory C:\Users\Wael Hamdi\AppData\Local\Temp\spark-1c9fa2cc-bb25-4470-b845-c661c62dde9c

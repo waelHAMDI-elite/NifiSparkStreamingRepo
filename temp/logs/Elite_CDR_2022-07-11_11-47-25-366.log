@@ -1,0 +1,767 @@
+2022-07-11 11:47:25.450  INFO   47 --- [           main] com.elite.cdr.validator.Application      : Starting ASN1 Reader 
+2022-07-11 11:47:25.463  INFO   49 --- [           main] com.elite.cdr.validator.Application      : ############### Run with the args [--env, local, --file, C:\IntelliJProjects\FraudDetectionSpark3\src\main\resources\data\simpleTypes.ber, --prop, C:\IntelliJProjects\NifiSparkStreaming\src\main\resources\myapp.properties]
+2022-07-11 11:47:25.553  INFO   55 --- [           main] com.elite.cdr.validator.Application      : ############### Run in local mode
+2022-07-11 11:47:27.151  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Running Spark version 3.2.1
+2022-07-11 11:47:27.440  INFO   57 --- [           main] org.apache.spark.internal.Logging        : ==============================================================
+2022-07-11 11:47:27.443  INFO   57 --- [           main] org.apache.spark.internal.Logging        : No custom resources configured for spark.driver.
+2022-07-11 11:47:27.443  INFO   57 --- [           main] org.apache.spark.internal.Logging        : ==============================================================
+2022-07-11 11:47:27.444  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Submitted application: NiFi-Spark Streaming example
+2022-07-11 11:47:27.483  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2022-07-11 11:47:27.500  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Limiting resource is cpu
+2022-07-11 11:47:27.507  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Added ResourceProfile id: 0
+2022-07-11 11:47:27.627  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing view acls to: Wael Hamdi
+2022-07-11 11:47:27.627  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing modify acls to: Wael Hamdi
+2022-07-11 11:47:27.629  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing view acls groups to: 
+2022-07-11 11:47:27.630  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing modify acls groups to: 
+2022-07-11 11:47:27.631  INFO   57 --- [           main] org.apache.spark.internal.Logging        : SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Wael Hamdi); groups with view permissions: Set(); users  with modify permissions: Set(Wael Hamdi); groups with modify permissions: Set()
+2022-07-11 11:47:30.093  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'sparkDriver' on port 51258.
+2022-07-11 11:47:30.141  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering MapOutputTracker
+2022-07-11 11:47:30.194  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManagerMaster
+2022-07-11 11:47:30.222  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2022-07-11 11:47:30.223  INFO   57 --- [           main] org.apache.spark.internal.Logging        : BlockManagerMasterEndpoint up
+2022-07-11 11:47:30.228  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManagerMasterHeartbeat
+2022-07-11 11:47:30.260  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Created local directory at C:\Users\Wael Hamdi\AppData\Local\Temp\blockmgr-47472722-e984-4321-b187-5afb31b51a51
+2022-07-11 11:47:30.291  INFO   57 --- [           main] org.apache.spark.internal.Logging        : MemoryStore started with capacity 897.6 MiB
+2022-07-11 11:47:30.316  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering OutputCommitCoordinator
+2022-07-11 11:47:30.443  INFO  170 --- [           main] org.sparkproject.jetty.util.log.Log      : Logging initialized @6197ms to org.sparkproject.jetty.util.log.Slf4jLog
+2022-07-11 11:47:30.548  INFO  375 --- [           main] org.sparkproject.jetty.server.Server     : jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 1.8.0_301-b09
+2022-07-11 11:47:30.576  INFO  415 --- [           main] org.sparkproject.jetty.server.Server     : Started @6331ms
+2022-07-11 11:47:30.626  INFO  331 --- [           main] rkproject.jetty.server.AbstractConnector : Started ServerConnector@72b16078{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-07-11 11:47:30.626  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'SparkUI' on port 4040.
+2022-07-11 11:47:30.658  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@a50b09c{/jobs,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.662  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@4eeea57d{/jobs/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.663  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@e24ddd0{/jobs/job,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.664  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@5aabbb29{/jobs/job/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.665  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1ac85b0c{/stages,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.666  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3aa3193a{/stages/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.668  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@59a67c3a{/stages/stage,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.671  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@6bc248ed{/stages/stage/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.672  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@ca27722{/stages/pool,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.673  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@9573b3b{/stages/pool/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.674  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@78461bc4{/storage,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.675  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@64f857e7{/storage/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.677  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@58c540cf{/storage/rdd,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.678  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1b822fcc{/storage/rdd/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.680  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@56102e1c{/environment,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.681  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@7927bd9f{/environment/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.682  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@410954b{/executors,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.683  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3b366632{/executors/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.685  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@514eedd8{/executors/threadDump,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.686  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@6970140a{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.697  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3af4e0bf{/static,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.698  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@70925b45{/,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.700  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@aa22f1c{/api,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.702  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@2af616d3{/jobs/job/kill,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.703  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3deb2326{/stages/stage/kill,null,AVAILABLE,@Spark}
+2022-07-11 11:47:30.706  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Bound SparkUI to 0.0.0.0, and started at http://host.docker.internal:4040
+2022-07-11 11:47:31.022  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Starting executor ID driver on host host.docker.internal
+2022-07-11 11:47:31.087  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 51282.
+2022-07-11 11:47:31.087  INFO   82 --- [           main] .network.netty.NettyBlockTransferService : Server created on host.docker.internal:51282
+2022-07-11 11:47:31.090  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2022-07-11 11:47:31.100  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManager BlockManagerId(driver, host.docker.internal, 51282, None)
+2022-07-11 11:47:31.106  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Registering block manager host.docker.internal:51282 with 897.6 MiB RAM, BlockManagerId(driver, host.docker.internal, 51282, None)
+2022-07-11 11:47:31.112  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registered BlockManager BlockManagerId(driver, host.docker.internal, 51282, None)
+2022-07-11 11:47:31.114  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Initialized BlockManager: BlockManagerId(driver, host.docker.internal, 51282, None)
+2022-07-11 11:47:31.415  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@2189e7a7{/metrics/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:32.252  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Starting 1 receivers
+2022-07-11 11:47:32.255  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : ReceiverTracker started
+2022-07-11 11:47:32.264  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 10000 ms
+2022-07-11 11:47:32.266  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-07-11 11:47:32.268  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-07-11 11:47:32.269  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 10000 ms
+2022-07-11 11:47:32.270  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.PluggableInputDStream@341bfb3b
+2022-07-11 11:47:32.271  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 10000 ms
+2022-07-11 11:47:32.271  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-07-11 11:47:32.271  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-07-11 11:47:32.272  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 10000 ms
+2022-07-11 11:47:32.272  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@475a0078
+2022-07-11 11:47:32.272  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 10000 ms
+2022-07-11 11:47:32.273  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-07-11 11:47:32.273  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-07-11 11:47:32.274  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 10000 ms
+2022-07-11 11:47:32.274  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@5f20fa98
+2022-07-11 11:47:32.405  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Receiver 0 started
+2022-07-11 11:47:32.414  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started timer for JobGenerator at time 1657536460000
+2022-07-11 11:47:32.415  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started JobGenerator at 1657536460000 ms
+2022-07-11 11:47:32.419  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started JobScheduler
+2022-07-11 11:47:32.425  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@5109e8cf{/streaming,null,AVAILABLE,@Spark}
+2022-07-11 11:47:32.426  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@78b41097{/streaming/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:32.431  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 0 (start at Application.java:146) with 1 output partitions
+2022-07-11 11:47:32.433  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 0 (start at Application.java:146)
+2022-07-11 11:47:32.433  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@2d000e80{/streaming/batch,null,AVAILABLE,@Spark}
+2022-07-11 11:47:32.434  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-07-11 11:47:32.437  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@20e6c4dc{/streaming/batch/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:32.440  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-11 11:47:32.440  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@33f98231{/static/streaming,null,AVAILABLE,@Spark}
+2022-07-11 11:47:32.441  INFO   57 --- [           main] org.apache.spark.internal.Logging        : StreamingContext started
+2022-07-11 11:47:32.448  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:609), which has no missing parents
+2022-07-11 11:47:32.649  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_0 stored as values in memory (estimated size 97.5 KiB, free 897.5 MiB)
+2022-07-11 11:47:32.807  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 897.5 MiB)
+2022-07-11 11:47:32.812  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_0_piece0 in memory on host.docker.internal:51282 (size: 34.2 KiB, free: 897.6 MiB)
+2022-07-11 11:47:32.818  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 0 from broadcast at DAGScheduler.scala:1478
+2022-07-11 11:47:32.839  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:609) (first 15 tasks are for partitions Vector(0))
+2022-07-11 11:47:32.841  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 0.0 with 1 tasks resource profile 0
+2022-07-11 11:47:32.975  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 0.0 (TID 0) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 6218 bytes) taskResourceAssignments Map()
+2022-07-11 11:47:33.018  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 0.0 (TID 0)
+2022-07-11 11:47:33.425  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Started timer for BlockGenerator at time 1657536453600
+2022-07-11 11:47:33.427  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Started BlockGenerator
+2022-07-11 11:47:33.427  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Started block pushing thread
+2022-07-11 11:47:33.440  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:47:33.441  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:47:33.443  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:47:33.444  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Waiting for receiver to be stopped
+2022-07-11 11:47:38.903  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:38.910  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:38.936  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:38.944  WARN   90 --- [rvisor-future-0] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:47:38.949  INFO   57 --- [rvisor-future-0] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:38.949  INFO   57 --- [rvisor-future-0] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:47:38.950  INFO   57 --- [rvisor-future-0] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:47:38.955  ERROR   73 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:47:38.956  INFO   57 --- [rvisor-future-0] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:47:40.060  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657536460000 ms
+2022-07-11 11:47:40.070  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657536460000 ms.0 from job set of time 1657536460000 ms
+2022-07-11 11:47:40.118  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkContext; some configuration may not take effect.
+2022-07-11 11:47:40.480  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+2022-07-11 11:47:40.956  INFO   57 --- [rvisor-future-0] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:47:40.962  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:47:40.963  INFO   57 --- [rvisor-future-0] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:47:40.963  INFO   57 --- [rvisor-future-0] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:47:40.964  INFO   57 --- [rvisor-future-0] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:47:41.105  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Warehouse path is 'file:/C:/IntelliJProjects/NifiSparkStreaming/spark-warehouse'.
+2022-07-11 11:47:41.123  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@571f4c9e{/SQL,null,AVAILABLE,@Spark}
+2022-07-11 11:47:41.126  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3c495316{/SQL/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:41.128  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@15acf904{/SQL/execution,null,AVAILABLE,@Spark}
+2022-07-11 11:47:41.130  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@4fb23842{/SQL/execution/json,null,AVAILABLE,@Spark}
+2022-07-11 11:47:41.132  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@5d3b78a8{/static/sql,null,AVAILABLE,@Spark}
+2022-07-11 11:47:41.298  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:41.302  WARN   90 --- [rvisor-future-1] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:47:41.322  INFO   57 --- [rvisor-future-1] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:41.322  INFO   57 --- [rvisor-future-1] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:47:41.322  INFO   57 --- [rvisor-future-1] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:47:41.371  ERROR   73 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:47:41.413  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:41.453  INFO   57 --- [rvisor-future-1] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:47:41.458  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:43.511  INFO   57 --- [rvisor-future-1] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:47:43.511  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:47:43.512  INFO   57 --- [rvisor-future-1] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:47:43.512  INFO   57 --- [rvisor-future-1] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:47:43.512  INFO   57 --- [rvisor-future-1] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:47:43.799  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:43.817  WARN   90 --- [rvisor-future-2] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:47:43.831  INFO   57 --- [rvisor-future-2] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:43.837  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:43.839  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:43.839  INFO   57 --- [rvisor-future-2] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:47:43.845  INFO   57 --- [rvisor-future-2] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:47:43.846  ERROR   73 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:47:43.848  INFO   57 --- [rvisor-future-2] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:47:45.269  WARN   69 --- [tor-heartbeater] org.apache.spark.internal.Logging        : Exception when trying to compute pagesize, as a result reporting of ProcessTree metrics is stopped
+2022-07-11 11:47:45.841  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Code generated in 296.8968 ms
+2022-07-11 11:47:45.848  INFO   57 --- [rvisor-future-2] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:47:45.849  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:47:45.850  INFO   57 --- [rvisor-future-2] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:47:45.850  INFO   57 --- [rvisor-future-2] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:47:45.850  INFO   57 --- [rvisor-future-2] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:47:45.900  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657536460000 ms.0 from job set of time 1657536460000 ms
+2022-07-11 11:47:45.902  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 5.899 s for time 1657536460000 ms (execution: 5.831 s)
+2022-07-11 11:47:45.910  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 
+2022-07-11 11:47:45.913  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 
+2022-07-11 11:47:46.220  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:46.247  WARN   90 --- [rvisor-future-3] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:47:46.248  INFO   57 --- [rvisor-future-3] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:46.249  INFO   57 --- [rvisor-future-3] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:47:46.249  INFO   57 --- [rvisor-future-3] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:47:46.250  ERROR   73 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:47:46.253  INFO   57 --- [rvisor-future-3] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:47:46.268  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:46.269  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:48.253  INFO   57 --- [rvisor-future-3] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:47:48.253  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:47:48.254  INFO   57 --- [rvisor-future-3] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:47:48.254  INFO   57 --- [rvisor-future-3] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:47:48.255  INFO   57 --- [rvisor-future-3] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:47:48.531  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:48.533  WARN   90 --- [rvisor-future-4] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:47:48.535  INFO   57 --- [rvisor-future-4] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:48.535  INFO   57 --- [rvisor-future-4] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:47:48.535  INFO   57 --- [rvisor-future-4] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:47:48.536  ERROR   73 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:47:48.539  INFO   57 --- [rvisor-future-4] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:47:48.561  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:48.562  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:50.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657536470000 ms
+2022-07-11 11:47:50.004  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657536470000 ms.0 from job set of time 1657536470000 ms
+2022-07-11 11:47:50.010  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-11 11:47:50.010  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-11 11:47:50.118  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657536470000 ms.0 from job set of time 1657536470000 ms
+2022-07-11 11:47:50.119  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.118 s for time 1657536470000 ms (execution: 0.115 s)
+2022-07-11 11:47:50.121  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 2 from persistence list
+2022-07-11 11:47:50.154  INFO   57 --- [c-thread-pool-0] org.apache.spark.internal.Logging        : Removing RDD 2
+2022-07-11 11:47:50.157  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 1 from persistence list
+2022-07-11 11:47:50.167  INFO   57 --- [c-thread-pool-3] org.apache.spark.internal.Logging        : Removing RDD 1
+2022-07-11 11:47:50.164  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[1] at receiverStream at Application.java:119 of time 1657536470000 ms
+2022-07-11 11:47:50.174  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 
+2022-07-11 11:47:50.174  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 
+2022-07-11 11:47:50.540  INFO   57 --- [rvisor-future-4] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:47:50.540  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:47:50.541  INFO   57 --- [rvisor-future-4] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:47:50.541  INFO   57 --- [rvisor-future-4] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:47:50.542  INFO   57 --- [rvisor-future-4] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:47:50.780  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:50.781  WARN   90 --- [rvisor-future-5] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:47:50.782  INFO   57 --- [rvisor-future-5] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:50.784  INFO   57 --- [rvisor-future-5] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:47:50.784  INFO   57 --- [rvisor-future-5] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:47:50.786  ERROR   73 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:47:50.787  INFO   57 --- [rvisor-future-5] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:47:50.800  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:50.801  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:52.788  INFO   57 --- [rvisor-future-5] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:47:52.789  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:47:52.790  INFO   57 --- [rvisor-future-5] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:47:52.792  INFO   57 --- [rvisor-future-5] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:47:52.792  INFO   57 --- [rvisor-future-5] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:47:53.024  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:53.025  WARN   90 --- [rvisor-future-6] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:47:53.026  INFO   57 --- [rvisor-future-6] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:53.027  INFO   57 --- [rvisor-future-6] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:47:53.027  INFO   57 --- [rvisor-future-6] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:47:53.028  ERROR   73 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:47:53.030  INFO   57 --- [rvisor-future-6] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:47:53.043  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:53.044  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:55.030  INFO   57 --- [rvisor-future-6] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:47:55.033  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:47:55.034  INFO   57 --- [rvisor-future-6] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:47:55.034  INFO   57 --- [rvisor-future-6] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:47:55.035  INFO   57 --- [rvisor-future-6] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:47:55.276  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:55.280  WARN   90 --- [rvisor-future-7] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:47:55.291  INFO   57 --- [rvisor-future-7] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:55.291  INFO   57 --- [rvisor-future-7] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:47:55.301  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:55.303  INFO   57 --- [rvisor-future-7] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:47:55.303  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:55.304  ERROR   73 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:47:55.306  INFO   57 --- [rvisor-future-7] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:47:57.307  INFO   57 --- [rvisor-future-7] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:47:57.308  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:47:57.310  INFO   57 --- [rvisor-future-7] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:47:57.311  INFO   57 --- [rvisor-future-7] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:47:57.312  INFO   57 --- [rvisor-future-7] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:47:57.548  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:57.551  WARN   90 --- [rvisor-future-8] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:47:57.553  INFO   57 --- [rvisor-future-8] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:57.561  INFO   57 --- [rvisor-future-8] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:47:57.562  INFO   57 --- [rvisor-future-8] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:47:57.567  ERROR   73 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:47:57.568  INFO   57 --- [rvisor-future-8] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:47:57.569  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:57.570  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:59.569  INFO   57 --- [rvisor-future-8] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:47:59.570  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:47:59.571  INFO   57 --- [rvisor-future-8] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:47:59.573  INFO   57 --- [rvisor-future-8] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:47:59.573  INFO   57 --- [rvisor-future-8] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:47:59.832  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:59.834  WARN   90 --- [rvisor-future-9] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:47:59.836  INFO   57 --- [rvisor-future-9] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:59.837  INFO   57 --- [rvisor-future-9] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:47:59.837  INFO   57 --- [rvisor-future-9] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:47:59.838  ERROR   73 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:47:59.840  INFO   57 --- [rvisor-future-9] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:47:59.849  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:47:59.851  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:00.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657536480000 ms
+2022-07-11 11:48:00.004  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657536480000 ms.0 from job set of time 1657536480000 ms
+2022-07-11 11:48:00.009  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-11 11:48:00.009  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-11 11:48:00.144  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657536480000 ms.0 from job set of time 1657536480000 ms
+2022-07-11 11:48:00.145  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.144 s for time 1657536480000 ms (execution: 0.140 s)
+2022-07-11 11:48:00.146  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 8 from persistence list
+2022-07-11 11:48:00.147  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 7 from persistence list
+2022-07-11 11:48:00.147  INFO   57 --- [c-thread-pool-6] org.apache.spark.internal.Logging        : Removing RDD 8
+2022-07-11 11:48:00.148  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[7] at receiverStream at Application.java:119 of time 1657536480000 ms
+2022-07-11 11:48:00.149  INFO   57 --- [c-thread-pool-9] org.apache.spark.internal.Logging        : Removing RDD 7
+2022-07-11 11:48:00.150  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657536460000 ms
+2022-07-11 11:48:00.152  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657536460000 ms
+2022-07-11 11:48:01.840  INFO   57 --- [rvisor-future-9] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:48:01.840  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:48:01.841  INFO   57 --- [rvisor-future-9] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:48:01.841  INFO   57 --- [rvisor-future-9] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:48:01.841  INFO   57 --- [rvisor-future-9] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:48:02.070  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:02.071  WARN   90 --- [visor-future-10] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:48:02.073  INFO   57 --- [visor-future-10] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:02.073  INFO   57 --- [visor-future-10] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:48:02.073  INFO   57 --- [visor-future-10] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:48:02.073  ERROR   73 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:48:02.074  INFO   57 --- [visor-future-10] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:48:02.085  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:02.086  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:04.074  INFO   57 --- [visor-future-10] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:48:04.075  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:48:04.076  INFO   57 --- [visor-future-10] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:48:04.078  INFO   57 --- [visor-future-10] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:48:04.079  INFO   57 --- [visor-future-10] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:48:04.310  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:04.311  WARN   90 --- [visor-future-11] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:48:04.312  INFO   57 --- [visor-future-11] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:04.312  INFO   57 --- [visor-future-11] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:48:04.313  INFO   57 --- [visor-future-11] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:48:04.313  ERROR   73 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:48:04.314  INFO   57 --- [visor-future-11] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:48:04.340  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:04.341  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:06.314  INFO   57 --- [visor-future-11] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:48:06.316  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:48:06.318  INFO   57 --- [visor-future-11] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:48:06.318  INFO   57 --- [visor-future-11] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:48:06.319  INFO   57 --- [visor-future-11] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:48:06.585  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:06.586  WARN   90 --- [visor-future-12] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:48:06.587  INFO   57 --- [visor-future-12] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:06.588  INFO   57 --- [visor-future-12] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:48:06.589  INFO   57 --- [visor-future-12] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:48:06.591  ERROR   73 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:48:06.592  INFO   57 --- [visor-future-12] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:48:06.603  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:06.604  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:08.593  INFO   57 --- [visor-future-12] org.apache.spark.internal.Logging        : Starting receiver again
+2022-07-11 11:48:08.594  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:51258
+2022-07-11 11:48:08.595  INFO   57 --- [visor-future-12] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-11 11:48:08.595  INFO   57 --- [visor-future-12] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-11 11:48:08.596  INFO   57 --- [visor-future-12] org.apache.spark.internal.Logging        : Receiver started again
+2022-07-11 11:48:08.870  WARN  362 --- [  NiFi Receiver] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:08.871  WARN   90 --- [visor-future-13] org.apache.spark.internal.Logging        : Restarting receiver with delay 2000 ms: Failed to receive data from NiFi
+org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+2022-07-11 11:48:08.872  INFO   57 --- [visor-future-13] org.apache.spark.internal.Logging        : Stopping receiver with message: Restarting receiver with delay 2000ms: Failed to receive data from NiFi: org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:08.872  INFO   57 --- [visor-future-13] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-11 11:48:08.872  INFO   57 --- [visor-future-13] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-11 11:48:08.873  ERROR   73 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Restarting receiver with delay 2000ms: Failed to receive data from NiFi - org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1177)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.execute(SiteToSiteRestApiClient.java:1211)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.fetchController(SiteToSiteRestApiClient.java:417)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:392)
+	at org.apache.nifi.remote.util.SiteToSiteRestApiClient.getController(SiteToSiteRestApiClient.java:359)
+	at org.apache.nifi.remote.client.SiteInfoProvider.refreshRemoteInfo(SiteInfoProvider.java:69)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getPortIdentifier(SiteInfoProvider.java:220)
+	at org.apache.nifi.remote.client.SiteInfoProvider.getOutputPortIdentifier(SiteInfoProvider.java:204)
+	at org.apache.nifi.remote.client.socket.SocketClient.getPortIdentifier(SocketClient.java:79)
+	at org.apache.nifi.remote.client.socket.SocketClient.createTransaction(SocketClient.java:121)
+	at org.apache.nifi.spark.NiFiReceiver$ReceiveRunnable.run(NiFiReceiver.java:149)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-07-11 11:48:08.878  INFO   57 --- [visor-future-13] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-11 11:48:08.890  WARN  362 --- [ool Maintenance] nifi.remote.util.SiteToSiteRestApiClient : Failed to get controller from https://localhost:8443/nifi/ due to org.apache.nifi.remote.util.SiteToSiteRestApiClient$HttpGetFailedException: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:08.890  WARN   29 --- [ool Maintenance] .apache.nifi.remote.util.EventReportUtil : Unable to refresh remote group peers due to: response code 401:Unauthorized with explanation: null
+2022-07-11 11:48:09.920  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Invoking stop(stopGracefully=false) from shutdown hook
+2022-07-11 11:48:09.926  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Sent stop signal to all 1 receivers
+2022-07-11 11:48:09.927  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Received stop signal
+2022-07-11 11:48:09.927  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Stopping receiver with message: Stopped by driver: 
+2022-07-11 11:48:09.927  WARN   69 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Receiver has been stopped
+2022-07-11 11:48:09.929  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Stopping BlockGenerator
+2022-07-11 11:48:10.002  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657536490000 ms
+2022-07-11 11:48:10.003  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657536490000 ms.0 from job set of time 1657536490000 ms
+2022-07-11 11:48:10.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-11 11:48:10.007  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-11 11:48:10.087  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657536490000 ms.0 from job set of time 1657536490000 ms
+2022-07-11 11:48:10.087  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.086 s for time 1657536490000 ms (execution: 0.083 s)
+2022-07-11 11:48:10.088  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 14 from persistence list
+2022-07-11 11:48:10.090  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 13 from persistence list
+2022-07-11 11:48:10.091  INFO   57 --- [-thread-pool-12] org.apache.spark.internal.Logging        : Removing RDD 14
+2022-07-11 11:48:10.091  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[13] at receiverStream at Application.java:119 of time 1657536490000 ms
+2022-07-11 11:48:10.092  INFO   57 --- [-thread-pool-13] org.apache.spark.internal.Logging        : Removing RDD 13
+2022-07-11 11:48:10.092  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657536470000 ms
+2022-07-11 11:48:10.093  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657536470000 ms
+2022-07-11 11:48:10.201  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Stopped timer for BlockGenerator after time 1657536490200
+2022-07-11 11:48:10.201  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Waiting for block pushing thread to terminate
+2022-07-11 11:48:10.217  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Pushing out the last 0 blocks
+2022-07-11 11:48:10.217  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Stopped block pushing thread
+2022-07-11 11:48:10.217  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Stopped BlockGenerator
+2022-07-11 11:48:10.217  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Stopped receiver without error
+2022-07-11 11:48:10.248  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 0.0 (TID 0). 880 bytes result sent to driver
+2022-07-11 11:48:10.264  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 0.0 (TID 0) in 37334 ms on host.docker.internal (executor driver) (1/1)
+2022-07-11 11:48:10.279  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2022-07-11 11:48:10.279  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 0 (start at Application.java:146) finished in 37.797 s
+2022-07-11 11:48:10.279  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-11 11:48:10.279  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 0: Stage finished
+2022-07-11 11:48:10.295  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : All of the receivers have deregistered successfully
+2022-07-11 11:48:10.295  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : ReceiverTracker stopped
+2022-07-11 11:48:10.311  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopping JobGenerator immediately
+2022-07-11 11:48:10.326  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped timer for JobGenerator after time 1657536490000
+2022-07-11 11:48:10.326  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped JobGenerator
+2022-07-11 11:48:10.326  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped JobScheduler
+2022-07-11 11:48:10.342  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@5109e8cf{/streaming,null,STOPPED,@Spark}
+2022-07-11 11:48:10.342  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@78b41097{/streaming/json,null,STOPPED,@Spark}
+2022-07-11 11:48:10.342  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@2d000e80{/streaming/batch,null,STOPPED,@Spark}
+2022-07-11 11:48:10.342  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@20e6c4dc{/streaming/batch/json,null,STOPPED,@Spark}
+2022-07-11 11:48:10.342  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@33f98231{/static/streaming,null,STOPPED,@Spark}
+2022-07-11 11:48:10.357  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : StreamingContext stopped successfully
+2022-07-11 11:48:10.357  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Invoking stop() from shutdown hook
+2022-07-11 11:48:10.357  INFO  165 --- [           main] com.elite.cdr.validator.Application      : ****************************************************
+2022-07-11 11:48:10.357  INFO  166 --- [           main] com.elite.cdr.validator.Application      : Duration: 0.0 seconds
+2022-07-11 11:48:10.357  INFO  167 --- [           main] com.elite.cdr.validator.Application      : Batch executed with success
+2022-07-11 11:48:10.357  INFO  168 --- [           main] com.elite.cdr.validator.Application      : ****************************************************
+2022-07-11 11:48:10.373  INFO  381 --- [shutdown-hook-0] rkproject.jetty.server.AbstractConnector : Stopped Spark@72b16078{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-07-11 11:48:10.373  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped Spark web UI at http://host.docker.internal:4040
+2022-07-11 11:48:10.451  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : MapOutputTrackerMasterEndpoint stopped!
+2022-07-11 11:48:10.623  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : MemoryStore cleared
+2022-07-11 11:48:10.623  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : BlockManager stopped
+2022-07-11 11:48:10.639  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : BlockManagerMaster stopped
+2022-07-11 11:48:10.639  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : OutputCommitCoordinator stopped!
+2022-07-11 11:48:10.654  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Successfully stopped SparkContext
+2022-07-11 11:48:10.654  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Shutdown hook called
+2022-07-11 11:48:10.654  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Deleting directory C:\Users\Wael Hamdi\AppData\Local\Temp\spark-26b60b58-2061-4885-93f5-794c2371d34a

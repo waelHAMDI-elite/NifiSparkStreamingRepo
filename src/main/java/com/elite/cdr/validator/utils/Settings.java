@@ -18,6 +18,12 @@ public class Settings {
           required = true)
   public String filePath;
 
+  @Parameter(
+          names = {"--prop", "-prop"},
+          description = "file .propreties path",
+          arity = 1,
+          required = true)
+  public String propretiesPath;
 
   public static final String LOCAL = "local";
 
@@ -35,4 +41,7 @@ public class Settings {
     return runningEnv;
   }
 
+  public String getPropretiesPath() {
+    return propretiesPath;
+  }
 }

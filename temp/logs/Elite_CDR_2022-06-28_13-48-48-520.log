@@ -1,0 +1,1119 @@
+2022-06-28 13:48:48.546  INFO   56 --- [           main] com.elite.cdr.validator.Application      : Starting ASN1 Reader 
+2022-06-28 13:48:48.552  INFO   58 --- [           main] com.elite.cdr.validator.Application      : ############### Run with the args [--env, local, --file, C:\IntelliJProjects\FraudDetectionSpark3\src\main\resources\data\simpleTypes.ber]
+2022-06-28 13:48:48.617  INFO   64 --- [           main] com.elite.cdr.validator.Application      : ############### Run in local mode
+2022-06-28 13:48:50.157  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Running Spark version 3.2.1
+2022-06-28 13:48:50.570  INFO   57 --- [           main] org.apache.spark.internal.Logging        : ==============================================================
+2022-06-28 13:48:50.574  INFO   57 --- [           main] org.apache.spark.internal.Logging        : No custom resources configured for spark.driver.
+2022-06-28 13:48:50.575  INFO   57 --- [           main] org.apache.spark.internal.Logging        : ==============================================================
+2022-06-28 13:48:50.577  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Submitted application: NiFi-Spark Streaming example
+2022-06-28 13:48:50.645  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2022-06-28 13:48:50.672  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Limiting resource is cpu
+2022-06-28 13:48:50.681  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Added ResourceProfile id: 0
+2022-06-28 13:48:50.860  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing view acls to: Wael Hamdi
+2022-06-28 13:48:50.861  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing modify acls to: Wael Hamdi
+2022-06-28 13:48:50.861  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing view acls groups to: 
+2022-06-28 13:48:50.863  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing modify acls groups to: 
+2022-06-28 13:48:50.865  INFO   57 --- [           main] org.apache.spark.internal.Logging        : SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Wael Hamdi); groups with view permissions: Set(); users  with modify permissions: Set(Wael Hamdi); groups with modify permissions: Set()
+2022-06-28 13:48:53.264  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'sparkDriver' on port 53822.
+2022-06-28 13:48:53.314  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering MapOutputTracker
+2022-06-28 13:48:53.366  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManagerMaster
+2022-06-28 13:48:53.393  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2022-06-28 13:48:53.394  INFO   57 --- [           main] org.apache.spark.internal.Logging        : BlockManagerMasterEndpoint up
+2022-06-28 13:48:53.399  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManagerMasterHeartbeat
+2022-06-28 13:48:53.428  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Created local directory at C:\Users\Wael Hamdi\AppData\Local\Temp\blockmgr-b5219bb8-52ee-4771-9ff3-a41f6f7ae97a
+2022-06-28 13:48:53.459  INFO   57 --- [           main] org.apache.spark.internal.Logging        : MemoryStore started with capacity 897.6 MiB
+2022-06-28 13:48:53.482  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering OutputCommitCoordinator
+2022-06-28 13:48:53.594  INFO  170 --- [           main] org.sparkproject.jetty.util.log.Log      : Logging initialized @5893ms to org.sparkproject.jetty.util.log.Slf4jLog
+2022-06-28 13:48:53.683  INFO  375 --- [           main] org.sparkproject.jetty.server.Server     : jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 1.8.0_301-b09
+2022-06-28 13:48:53.715  INFO  415 --- [           main] org.sparkproject.jetty.server.Server     : Started @6014ms
+2022-06-28 13:48:53.764  INFO  331 --- [           main] rkproject.jetty.server.AbstractConnector : Started ServerConnector@7caa550{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-06-28 13:48:53.765  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'SparkUI' on port 4040.
+2022-06-28 13:48:53.796  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@a50b09c{/jobs,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.799  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@4eeea57d{/jobs/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.800  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@e24ddd0{/jobs/job,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.802  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@5aabbb29{/jobs/job/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.804  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1ac85b0c{/stages,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.805  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3aa3193a{/stages/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.806  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@59a67c3a{/stages/stage,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.808  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@6bc248ed{/stages/stage/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.810  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@ca27722{/stages/pool,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.811  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@9573b3b{/stages/pool/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.812  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@78461bc4{/storage,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.813  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@64f857e7{/storage/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.814  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@58c540cf{/storage/rdd,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.815  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1b822fcc{/storage/rdd/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.816  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@56102e1c{/environment,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.819  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@7927bd9f{/environment/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.819  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@410954b{/executors,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.820  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3b366632{/executors/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.821  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@514eedd8{/executors/threadDump,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.823  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@6970140a{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.835  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3af4e0bf{/static,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.835  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@70925b45{/,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.837  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@aa22f1c{/api,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.838  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@2af616d3{/jobs/job/kill,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.839  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3deb2326{/stages/stage/kill,null,AVAILABLE,@Spark}
+2022-06-28 13:48:53.842  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Bound SparkUI to 0.0.0.0, and started at http://host.docker.internal:4040
+2022-06-28 13:48:54.161  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Starting executor ID driver on host host.docker.internal
+2022-06-28 13:48:54.229  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53846.
+2022-06-28 13:48:54.229  INFO   82 --- [           main] .network.netty.NettyBlockTransferService : Server created on host.docker.internal:53846
+2022-06-28 13:48:54.231  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2022-06-28 13:48:54.243  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManager BlockManagerId(driver, host.docker.internal, 53846, None)
+2022-06-28 13:48:54.249  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Registering block manager host.docker.internal:53846 with 897.6 MiB RAM, BlockManagerId(driver, host.docker.internal, 53846, None)
+2022-06-28 13:48:54.253  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registered BlockManager BlockManagerId(driver, host.docker.internal, 53846, None)
+2022-06-28 13:48:54.255  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Initialized BlockManager: BlockManagerId(driver, host.docker.internal, 53846, None)
+2022-06-28 13:48:54.559  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@2189e7a7{/metrics/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:55.338  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Starting 1 receivers
+2022-06-28 13:48:55.341  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : ReceiverTracker started
+2022-06-28 13:48:55.349  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-06-28 13:48:55.350  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-06-28 13:48:55.351  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-06-28 13:48:55.352  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-06-28 13:48:55.352  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.PluggableInputDStream@7fc85e92
+2022-06-28 13:48:55.353  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-06-28 13:48:55.354  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-06-28 13:48:55.354  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-06-28 13:48:55.354  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-06-28 13:48:55.354  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@5c22d2bd
+2022-06-28 13:48:55.354  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-06-28 13:48:55.356  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-06-28 13:48:55.356  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-06-28 13:48:55.356  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-06-28 13:48:55.356  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@13535103
+2022-06-28 13:48:55.356  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-06-28 13:48:55.356  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-06-28 13:48:55.358  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-06-28 13:48:55.358  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-06-28 13:48:55.359  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.PluggableInputDStream@7fc85e92
+2022-06-28 13:48:55.359  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-06-28 13:48:55.359  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-06-28 13:48:55.359  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-06-28 13:48:55.359  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-06-28 13:48:55.359  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@5c22d2bd
+2022-06-28 13:48:55.359  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-06-28 13:48:55.359  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-06-28 13:48:55.359  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-06-28 13:48:55.360  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-06-28 13:48:55.360  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@5b1f4851
+2022-06-28 13:48:55.472  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Receiver 0 started
+2022-06-28 13:48:55.478  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started timer for JobGenerator at time 1656420536000
+2022-06-28 13:48:55.479  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started JobGenerator at 1656420536000 ms
+2022-06-28 13:48:55.483  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started JobScheduler
+2022-06-28 13:48:55.489  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@5c10285a{/streaming,null,AVAILABLE,@Spark}
+2022-06-28 13:48:55.489  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@6f38a289{/streaming/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:55.495  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3157e4c0{/streaming/batch,null,AVAILABLE,@Spark}
+2022-06-28 13:48:55.495  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 0 (start at Application.java:243) with 1 output partitions
+2022-06-28 13:48:55.498  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 0 (start at Application.java:243)
+2022-06-28 13:48:55.498  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-06-28 13:48:55.498  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@328902d5{/streaming/batch/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:55.502  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-06-28 13:48:55.503  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@39e67516{/static/streaming,null,AVAILABLE,@Spark}
+2022-06-28 13:48:55.503  INFO   57 --- [           main] org.apache.spark.internal.Logging        : StreamingContext started
+2022-06-28 13:48:55.525  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:609), which has no missing parents
+2022-06-28 13:48:55.767  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_0 stored as values in memory (estimated size 97.5 KiB, free 897.5 MiB)
+2022-06-28 13:48:55.843  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 897.5 MiB)
+2022-06-28 13:48:55.846  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_0_piece0 in memory on host.docker.internal:53846 (size: 34.2 KiB, free: 897.6 MiB)
+2022-06-28 13:48:55.850  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 0 from broadcast at DAGScheduler.scala:1478
+2022-06-28 13:48:55.866  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:609) (first 15 tasks are for partitions Vector(0))
+2022-06-28 13:48:55.868  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 0.0 with 1 tasks resource profile 0
+2022-06-28 13:48:55.950  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 0.0 (TID 0) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 6218 bytes) taskResourceAssignments Map()
+2022-06-28 13:48:55.977  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 0.0 (TID 0)
+2022-06-28 13:48:56.097  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656420536000 ms
+2022-06-28 13:48:56.147  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656420536000 ms.0 from job set of time 1656420536000 ms
+2022-06-28 13:48:56.214  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkContext; some configuration may not take effect.
+2022-06-28 13:48:56.433  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Started timer for BlockGenerator at time 1656420536600
+2022-06-28 13:48:56.434  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Started BlockGenerator
+2022-06-28 13:48:56.447  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:53822
+2022-06-28 13:48:56.448  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-06-28 13:48:56.451  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-06-28 13:48:56.451  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Waiting for receiver to be stopped
+2022-06-28 13:48:56.464  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Started block pushing thread
+2022-06-28 13:48:56.513  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:48:56.522  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 1 finished: foreach at Application.java:136, took 0.002356 s
+2022-06-28 13:48:56.532  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656420536000 ms.0 from job set of time 1656420536000 ms
+2022-06-28 13:48:56.534  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656420536000 ms.1 from job set of time 1656420536000 ms
+2022-06-28 13:48:56.538  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656420536000 ms.1 from job set of time 1656420536000 ms
+2022-06-28 13:48:56.539  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.538 s for time 1656420536000 ms (execution: 0.401 s)
+2022-06-28 13:48:56.562  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 
+2022-06-28 13:48:56.566  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 
+2022-06-28 13:48:57.004  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656420537000 ms
+2022-06-28 13:48:57.005  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656420537000 ms.0 from job set of time 1656420537000 ms
+2022-06-28 13:48:57.136  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+2022-06-28 13:48:57.964  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Warehouse path is 'file:/C:/IntelliJProjects/NifiSparkStreaming/spark-warehouse'.
+2022-06-28 13:48:57.982  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@441e2c48{/SQL,null,AVAILABLE,@Spark}
+2022-06-28 13:48:57.985  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@285de697{/SQL/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:57.986  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@35972cdd{/SQL/execution,null,AVAILABLE,@Spark}
+2022-06-28 13:48:57.988  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@8db365f{/SQL/execution/json,null,AVAILABLE,@Spark}
+2022-06-28 13:48:57.991  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@29f4cd05{/static/sql,null,AVAILABLE,@Spark}
+2022-06-28 13:48:58.004  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656420538000 ms
+2022-06-28 13:48:59.018  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656420539000 ms
+2022-06-28 13:48:59.664  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:48:59.692  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:48:59.693  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 2 finished: foreach at Application.java:136, took 0.001094 s
+2022-06-28 13:48:59.699  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656420537000 ms.0 from job set of time 1656420537000 ms
+2022-06-28 13:48:59.699  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656420537000 ms.1 from job set of time 1656420537000 ms
+2022-06-28 13:48:59.699  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656420537000 ms.1 from job set of time 1656420537000 ms
+2022-06-28 13:48:59.699  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 2.699 s for time 1656420537000 ms (execution: 2.694 s)
+2022-06-28 13:48:59.700  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656420538000 ms.0 from job set of time 1656420538000 ms
+2022-06-28 13:48:59.700  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:48:59.701  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:48:59.707  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 2 from persistence list
+2022-06-28 13:48:59.742  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 1 from persistence list
+2022-06-28 13:48:59.745  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[1] at receiverStream at Application.java:127 of time 1656420537000 ms
+2022-06-28 13:48:59.747  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 
+2022-06-28 13:48:59.747  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 
+2022-06-28 13:48:59.782  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:48:59.783  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 3 finished: foreach at Application.java:136, took 0.000365 s
+2022-06-28 13:48:59.785  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:48:59.787  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:48:59.799  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:48:59.800  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 4 finished: foreach at Application.java:136, took 0.000265 s
+2022-06-28 13:48:59.803  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656420538000 ms.0 from job set of time 1656420538000 ms
+2022-06-28 13:48:59.803  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656420538000 ms.1 from job set of time 1656420538000 ms
+2022-06-28 13:48:59.805  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656420538000 ms.1 from job set of time 1656420538000 ms
+2022-06-28 13:48:59.805  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 1.805 s for time 1656420538000 ms (execution: 0.106 s)
+2022-06-28 13:48:59.805  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656420539000 ms.0 from job set of time 1656420539000 ms
+2022-06-28 13:48:59.806  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656420539000 ms.0 from job set of time 1656420539000 ms
+2022-06-28 13:48:59.806  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656420539000 ms.1 from job set of time 1656420539000 ms
+2022-06-28 13:48:59.806  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656420539000 ms.1 from job set of time 1656420539000 ms
+2022-06-28 13:48:59.807  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.806 s for time 1656420539000 ms (execution: 0.001 s)
+2022-06-28 13:48:59.811  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 4 from persistence list
+2022-06-28 13:48:59.817  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 3 from persistence list
+2022-06-28 13:48:59.828  INFO   57 --- [c-thread-pool-3] org.apache.spark.internal.Logging        : Removing RDD 3
+2022-06-28 13:48:59.816  INFO   57 --- [c-thread-pool-1] org.apache.spark.internal.Logging        : Removing RDD 1
+2022-06-28 13:48:59.816  INFO   57 --- [c-thread-pool-0] org.apache.spark.internal.Logging        : Removing RDD 2
+2022-06-28 13:48:59.837  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[3] at receiverStream at Application.java:127 of time 1656420538000 ms
+2022-06-28 13:48:59.829  INFO   57 --- [c-thread-pool-2] org.apache.spark.internal.Logging        : Removing RDD 4
+2022-06-28 13:48:59.849  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1656420536000 ms
+2022-06-28 13:48:59.849  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1656420536000 ms
+2022-06-28 13:48:59.850  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 6 from persistence list
+2022-06-28 13:48:59.853  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 5 from persistence list
+2022-06-28 13:48:59.858  INFO   57 --- [-thread-pool-13] org.apache.spark.internal.Logging        : Removing RDD 5
+2022-06-28 13:48:59.861  INFO   57 --- [-thread-pool-10] org.apache.spark.internal.Logging        : Removing RDD 6
+2022-06-28 13:48:59.862  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[5] at receiverStream at Application.java:127 of time 1656420539000 ms
+2022-06-28 13:48:59.865  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1656420537000 ms
+2022-06-28 13:48:59.866  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1656420537000 ms
+2022-06-28 13:49:00.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656420540000 ms
+2022-06-28 13:49:00.008  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:49:00.008  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:49:00.009  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656420540000 ms.0 from job set of time 1656420540000 ms
+2022-06-28 13:49:00.022  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:49:00.022  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 5 finished: foreach at Application.java:136, took 0.000385 s
+2022-06-28 13:49:00.028  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656420540000 ms.0 from job set of time 1656420540000 ms
+2022-06-28 13:49:00.028  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656420540000 ms.1 from job set of time 1656420540000 ms
+2022-06-28 13:49:00.028  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656420540000 ms.1 from job set of time 1656420540000 ms
+2022-06-28 13:49:00.030  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.028 s for time 1656420540000 ms (execution: 0.019 s)
+2022-06-28 13:49:00.032  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 8 from persistence list
+2022-06-28 13:49:00.035  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 7 from persistence list
+2022-06-28 13:49:00.039  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[7] at receiverStream at Application.java:127 of time 1656420540000 ms
+2022-06-28 13:49:00.039  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1656420538000 ms
+2022-06-28 13:49:00.040  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1656420538000 ms
+2022-06-28 13:49:00.063  INFO   57 --- [-thread-pool-18] org.apache.spark.internal.Logging        : Removing RDD 8
+2022-06-28 13:49:00.065  INFO   57 --- [-thread-pool-19] org.apache.spark.internal.Logging        : Removing RDD 7
+2022-06-28 13:49:00.626  INFO  571 --- [  NiFi Receiver] g.apache.nifi.remote.client.PeerSelector : Successfully refreshed peer status cache; remote group consists of 1 peers
+2022-06-28 13:49:00.657  INFO  571 --- [ool Maintenance] g.apache.nifi.remote.client.PeerSelector : Successfully refreshed peer status cache; remote group consists of 1 peers
+2022-06-28 13:49:00.875  INFO   57 --- [  NiFi Receiver] org.apache.spark.internal.Logging        : Block input-0-1656420536420 stored as values in memory (estimated size 503.2 KiB, free 897.0 MiB)
+2022-06-28 13:49:00.877  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added input-0-1656420536420 in memory on host.docker.internal:53846 (size: 503.2 KiB, free: 897.1 MiB)
+2022-06-28 13:49:01.007  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656420541000 ms
+2022-06-28 13:49:01.008  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-06-28 13:49:01.010  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-06-28 13:49:01.010  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656420541000 ms.0 from job set of time 1656420541000 ms
+2022-06-28 13:49:01.021  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: foreach at Application.java:136
+2022-06-28 13:49:01.025  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 6 (foreach at Application.java:136) with 1 output partitions
+2022-06-28 13:49:01.026  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 1 (foreach at Application.java:136)
+2022-06-28 13:49:01.026  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-06-28 13:49:01.026  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-06-28 13:49:01.028  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 1 (MapPartitionsRDD[12] at map at Application.java:132), which has no missing parents
+2022-06-28 13:49:01.047  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_1 stored as values in memory (estimated size 6.8 KiB, free 897.0 MiB)
+2022-06-28 13:49:01.051  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.4 KiB, free 897.0 MiB)
+2022-06-28 13:49:01.052  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_1_piece0 in memory on host.docker.internal:53846 (size: 3.4 KiB, free: 897.1 MiB)
+2022-06-28 13:49:01.053  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 1 from broadcast at DAGScheduler.scala:1478
+2022-06-28 13:49:01.054  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[12] at map at Application.java:132) (first 15 tasks are for partitions Vector(0))
+2022-06-28 13:49:01.055  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 1.0 with 1 tasks resource profile 0
+2022-06-28 13:49:01.060  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 1.0 (TID 1) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4394 bytes) taskResourceAssignments Map()
+2022-06-28 13:49:01.063  INFO   57 --- [age 1.0 (TID 1)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 1.0 (TID 1)
+2022-06-28 13:49:01.296  INFO   57 --- [age 1.0 (TID 1)] org.apache.spark.internal.Logging        : Found block input-0-1656420536420 locally
+2022-06-28 13:49:01.428  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010342429350 354682094969190 null null
+2022-06-28 13:49:01.430  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010311018018 354609081358820 ACI_HES_M1 ACIMBSC-2G
+2022-06-28 13:49:01.430  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010342021696 356360095331780 HWSEVMBSC-3G ACIOML_S1
+2022-06-28 13:49:01.430  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010201536492 353269070974610 ACI_HES_M1 COURAMBSC-3G
+2022-06-28 13:49:01.430  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010366396495 358005085634150 ACI_HES_M0 HW-VMS_02
+2022-06-28 13:49:01.430  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010361964858 353181095750380 ACI_HES_M0 HWKYSBSC01
+2022-06-28 13:49:01.430  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010366111982 359320091778340 OACI_E2 ACIMBSC-2G
+2022-06-28 13:49:01.430  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370125451 358052082055820 HALLESMBSC-2G ATELMSC1_2
+2022-06-28 13:49:01.431  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371223340 359768078856880 null null
+2022-06-28 13:49:01.431  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010102346208 355938096608050 null null
+2022-06-28 13:49:01.431  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010310953787 null OML_GMSC58 HW-VMS_01
+2022-06-28 13:49:01.431  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370922482 354301098436580 HWSEVMBSC-3G HWSEVMBSC-2G
+2022-06-28 13:49:01.431  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370792908 351701097620720 HWSEVMBSC-3G HWSEVMBSC-2G
+2022-06-28 13:49:01.433  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375558284 358158062129610 null null
+2022-06-28 13:49:01.433  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010372998782 359871041696560 null null
+2022-06-28 13:49:01.433  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010300562526 359607072783050 null null
+2022-06-28 13:49:01.433  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370273404 359181094924160 SLYMBSC-3G ACIOML_S1
+2022-06-28 13:49:01.433  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010306699499 359818095785510 ACI_HES_M5 NSNMBSC_SEG
+2022-06-28 13:49:01.433  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350105923 354497231807500 null null
+2022-06-28 13:49:01.434  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010310390970 355616084022370 null null
+2022-06-28 13:49:01.434  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370196076 352595097932640 null null
+2022-06-28 13:49:01.434  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370503689 357056080620960 null null
+2022-06-28 13:49:01.434  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370696862 359914078338490 null null
+2022-06-28 13:49:01.435  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010344198745 353009071474280 HALLESMBSC-2G ACIOML_S2
+2022-06-28 13:49:01.435  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010375355074 354346075514900 HESRNCSRAN01 ACIOML_S2
+2022-06-28 13:49:01.435  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010341448443 357125090306620 HWSEVMBSC-3G ACIOML_S3
+2022-06-28 13:49:01.435  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010340796969 null OACI_E4 HW-VMS_03
+2022-06-28 13:49:01.437  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010363109575 null OACI_E3 HW-VMS_01
+2022-06-28 13:49:01.437  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370777211 352628062282750 ATELMSC1_2 HESRNCSRAN01
+2022-06-28 13:49:01.437  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370755567 357392084789000 null null
+2022-06-28 13:49:01.437  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010301519165 355430091721140 ACI_HES_M1 HW-VMS_02
+2022-06-28 13:49:01.438  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010347761695 357828091361180 OACI_E4 HW-VMS_02
+2022-06-28 13:49:01.438  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370980923 null OML_GMSC58 HW-VMS_03
+2022-06-28 13:49:01.438  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370898755 358085082564510 ALCSIKASSOBSC01 ACI_HES_M3
+2022-06-28 13:49:01.438  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010309109340 359607079588280 ACIMBSC-3G ACI_SEG_M1
+2022-06-28 13:49:01.440  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010204788328 358748084503820 ACI_SEG_M0 HW-VMS_04
+2022-06-28 13:49:01.440  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010365697885 353890093171240 null null
+2022-06-28 13:49:01.440  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010346756139 352477092892900 null null
+2022-06-28 13:49:01.440  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010348065621 null OACI_E2 HW-VMS_03
+2022-06-28 13:49:01.440  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366106622 353147084380590 null null
+2022-06-28 13:49:01.440  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010347190129 352769082665530 null null
+2022-06-28 13:49:01.440  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010380971495 352701082964540 null null
+2022-06-28 13:49:01.440  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010349684651 353181098386470 null null
+2022-06-28 13:49:01.440  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010361508254 353769079304460 SLYMBSC-3G ACIOML_S1
+2022-06-28 13:49:01.442  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010100563583 null OACI_E3 HW-VMS_00
+2022-06-28 13:49:01.442  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010103859328 357955083005050 null null
+2022-06-28 13:49:01.442  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010202511725 359946031839020 null null
+2022-06-28 13:49:01.442  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350858042 356823084612680 null null
+2022-06-28 13:49:01.442  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010366500068 356286090575240 OML_GMSC58 HW-VMS_02
+2022-06-28 13:49:01.442  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010365199077 356685093077730 OACI_E2 NSNMBSC_SEG
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350105923 354497231807500 null null
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010206636062 359818095281990 ACI_SEG_M2 SLYMBSC-2G
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010364557944 357392087370980 COURAMBSC-2G HW-VMS_04
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010303104053 null COURAMBSC-2G HW-VMS_04
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010344235028 352413097298940 null null
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370170277 352975061061100 null null
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010102879099 355429090724140 null null
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010347517608 352206087360480 null null
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370104963 354139089560630 null null
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370276428 351956109246540 null null
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010102879099 355429090724140 null null
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370104963 354139089560630 null null
+2022-06-28 13:49:01.443  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010350365476 356435092359400 HWSKSBSC01 ACI_SEG_M0
+2022-06-28 13:49:01.444  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010305152508 352820083317400 COURAMBSC-3G ACI_SEG_M1
+2022-06-28 13:49:01.444  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010364641819 356546063807030 null null
+2022-06-28 13:49:01.444  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010300304336 359116082884900 ACI_HES_M3 HESRNCSRAN01
+2022-06-28 13:49:01.444  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010366688935 357508059507390 HESRNCSRAN01 ACI_HES_M3
+2022-06-28 13:49:01.444  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010374171217 352821083337380 null null
+2022-06-28 13:49:01.444  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010200805898 355755095701640 null null
+2022-06-28 13:49:01.444  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010366748352 355472083555160 HWSKSBSC01 ACI_SEG_M0
+2022-06-28 13:49:01.445  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010102284041 353147082932500 DJELIMBSC-2G ACI_SEG_M0
+2022-06-28 13:49:01.445  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010371103027 null OACI_E2 HW-VMS_04
+2022-06-28 13:49:01.445  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350437943 352193091527690 null null
+2022-06-28 13:49:01.445  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010102134527 358565037061700 ACIMBSC-2G ACIOML_S2
+2022-06-28 13:49:01.445  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010365860471 358235079267150 null null
+2022-06-28 13:49:01.445  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370940943 355970098438770 null null
+2022-06-28 13:49:01.445  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370017612 356766056290310 RNCNSN01_SEG ACI_SEG_M5
+2022-06-28 13:49:01.446  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010372729370 354266084437150 OACI_E4 SLYMBSC-2G
+2022-06-28 13:49:01.446  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010347797779 353401065135160 null null
+2022-06-28 13:49:01.446  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010201375305 357025084466110 null null
+2022-06-28 13:49:01.446  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010345313693 357622055496770 null null
+2022-06-28 13:49:01.446  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010362600648 353380061743510 null null
+2022-06-28 13:49:01.446  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010362600648 353380061743510 null null
+2022-06-28 13:49:01.446  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010308261315 355236090402120 HWSEVMBSC-3G HW-VMS_01
+2022-06-28 13:49:01.446  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370990870 358241060032180 HWSEVMBSC-3G HW-VMS_01
+2022-06-28 13:49:01.447  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010361701132 358008965241520 HESRNCSRAN01 ACI_NSN2_M1
+2022-06-28 13:49:01.447  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370774726 355182090144090 ACIMBSC-2G ACIOML_S2
+2022-06-28 13:49:01.447  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010101924562 359946055114040 null null
+2022-06-28 13:49:01.447  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010366182004 354452083906420 OACI_E4 HESRNCSRAN01
+2022-06-28 13:49:01.448  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010300763296 353002504197540 null null
+2022-06-28 13:49:01.448  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010349287950 359914079588390 HALLESMBSC-2G ACI_SEG_M3
+2022-06-28 13:49:01.448  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370275826 013553004534740 null null
+2022-06-28 13:49:01.448  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010365716840 355236091693960 null null
+2022-06-28 13:49:01.448  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010101242627 351701097336390 null null
+2022-06-28 13:49:01.449  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370278855 357795089919660 ACIMBSC-2G ACI_HES_M1
+2022-06-28 13:49:01.449  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010340402438 351585093491150 null null
+2022-06-28 13:49:01.449  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010303694867 352921091277630 ACIMBSC-2G NSNMBSC_SEG
+2022-06-28 13:49:01.449  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370781713 352504097404220 ACI_SEG_M2 HW-VMS_00
+2022-06-28 13:49:01.449  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010345775165 359975077694340 OACI_E3 HW-VMS_02
+2022-06-28 13:49:01.450  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010350884611 359911090281060 HALLESMBSC-2G ACI_SEG_M3
+2022-06-28 13:49:01.450  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350567299 354080079283120 null null
+2022-06-28 13:49:01.450  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010372634490 352193094734290 null null
+2022-06-28 13:49:01.450  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010364757305 null OACI_E2 HW-VMS_02
+2022-06-28 13:49:01.450  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375342339 354859074330100 null null
+2022-06-28 13:49:01.450  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342697994 356286090993000 null null
+2022-06-28 13:49:01.450  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350753320 358761082967470 null null
+2022-06-28 13:49:01.450  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010349684651 353181098386470 null null
+2022-06-28 13:49:01.450  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370997618 null OACI_E4 HW-VMS_01
+2022-06-28 13:49:01.450  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010364516041 352404061756380 null null
+2022-06-28 13:49:01.451  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010310449422 357578061067450 null null
+2022-06-28 13:49:01.451  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370985898 357510084399170 ACIMBSC-2G NSNMBSC_SEG
+2022-06-28 13:49:01.451  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374944361 352224083446630 null null
+2022-06-28 13:49:01.451  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342697994 356286090993000 null null
+2022-06-28 13:49:01.451  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010202511725 359946031839020 null null
+2022-06-28 13:49:01.451  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010202973490 357155087450660 null null
+2022-06-28 13:49:01.451  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010375472815 359939090796940 ACI_HES_M3 HESRNCSRAN01
+2022-06-28 13:49:01.451  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010201667842 355209094163330 null null
+2022-06-28 13:49:01.452  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010347467333 354956093679210 ACI_SEG_M0 HWACI2KBSC01
+2022-06-28 13:49:01.452  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010366430195 null OACI_E4 HW-VMS_03
+2022-06-28 13:49:01.452  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342021820 353446076432420 null null
+2022-06-28 13:49:01.453  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010302943946 353870089881500 ACI_SEG_M1 ACIMBSC-2G
+2022-06-28 13:49:01.453  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010308115862 351674083559380 OML_GMSC58 COURAMBSC-2G
+2022-06-28 13:49:01.453  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370170044 353554091849320 null null
+2022-06-28 13:49:01.453  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010305960079 355331086271860 SLYMBSC-3G ACI_HES_M2
+2022-06-28 13:49:01.453  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010341072026 354301093891570 null null
+2022-06-28 13:49:01.454  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375892732 351702099930030 null null
+2022-06-28 13:49:01.454  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370807693 357574091931570 null null
+2022-06-28 13:49:01.454  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010349642534 353002503914730 HWKOUTIALABSC01 ACI_NSN2_M1
+2022-06-28 13:49:01.454  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010344445950 358807084422400 null null
+2022-06-28 13:49:01.454  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010202511725 359946031839020 null null
+2022-06-28 13:49:01.454  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010208052076 355938090606860 null null
+2022-06-28 13:49:01.454  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010365249585 353334094023500 HWKOUTIALABSC01 ACI_SEG_M4
+2022-06-28 13:49:01.454  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370886108 359703070378430 ACIMBSC-2G ACIOML_S2
+2022-06-28 13:49:01.454  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370003484 359946033857960 OACI_E2 ACIMBSC-2G
+2022-06-28 13:49:01.455  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370170044 353554091849320 null null
+2022-06-28 13:49:01.455  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010304708096 356503095090450 COURAMBSC-3G ACI_HES_M1
+2022-06-28 13:49:01.455  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010366270690 null OML_GMSC58 HW-VMS_01
+2022-06-28 13:49:01.455  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370670830 354768085200270 HWSOGOMBSC-2G HWSOGOMBSC-3G
+2022-06-28 13:49:01.455  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010371465770 353860096412970 HWSOGOMBSC-2G HWSOGOMBSC-3G
+2022-06-28 13:49:01.455  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010380663687 358964019397770 OACI_E2 SLYMBSC-2G
+2022-06-28 13:49:01.455  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010212360579 356639053870550 null null
+2022-06-28 13:49:01.455  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370275826 013553004534740 null null
+2022-06-28 13:49:01.455  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370783099 359817081211280 HALLESMBSC-2G ACIOML_S1
+2022-06-28 13:49:01.455  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010371326913 352833090898550 HWSLMBGBSC01 ACI_SEG_M3
+2022-06-28 13:49:01.455  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370273404 359181094924160 null null
+2022-06-28 13:49:01.456  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010344341923 355106074321840 NSNBSC01 ACIOML_S3
+2022-06-28 13:49:01.456  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010345335808 357215087106550 null null
+2022-06-28 13:49:01.477  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375771806 862151020664260 null null
+2022-06-28 13:49:01.477  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010349703467 null ATELMSC1_2 HW-VMS_04
+2022-06-28 13:49:01.477  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370605249 353196090426470 null null
+2022-06-28 13:49:01.477  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342021820 353446076432420 null null
+2022-06-28 13:49:01.477  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010363786839 351692090791300 OML_GMSC58 SLYMBSC-3G
+2022-06-28 13:49:01.477  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010349349450 354303082485670 null null
+2022-06-28 13:49:01.477  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010365716840 355236091693960 null null
+2022-06-28 13:49:01.477  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370822648 354028052493550 null null
+2022-06-28 13:49:01.477  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350553846 355989097953920 null null
+2022-06-28 13:49:01.477  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370780642 356922094641300 null null
+2022-06-28 13:49:01.477  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010102164164 355414092482500 null null
+2022-06-28 13:49:01.479  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370275826 013553004534740 null null
+2022-06-28 13:49:01.479  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010211383743 355958099871490 null null
+2022-06-28 13:49:01.479  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370183718 354387097679520 null null
+2022-06-28 13:49:01.479  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370501640 353567087919410 null null
+2022-06-28 13:49:01.479  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010349352831 355760099313970 HWMPTBSC01 ACIMBSC-2G
+2022-06-28 13:49:01.479  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010348317830 359147086028250 HWMPTBSC01 ACIMBSC-2G
+2022-06-28 13:49:01.479  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010365716840 355236091693960 null null
+2022-06-28 13:49:01.479  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010366502480 354111089190620 DJELIMBSC-2G ACI_HES_M0
+2022-06-28 13:49:01.479  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010342479901 null OML_GMSC58 HW-VMS_00
+2022-06-28 13:49:01.479  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010200688660 359136086050770 HALLESMBSC-2G ACIOML_S2
+2022-06-28 13:49:01.479  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010351039586 354497273889090 HWBACOMBSC-2G ACI_HES_M2
+2022-06-28 13:49:01.479  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010349592578 353566087630950 null null
+2022-06-28 13:49:01.481  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010364863840 354301090241090 null null
+2022-06-28 13:49:01.481  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010305414372 868858026609870 HALLESMBSC-2G ACIOML_S2
+2022-06-28 13:49:01.481  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366417212 357574093599530 null null
+2022-06-28 13:49:01.481  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010348989138 357501087524900 OACI_E3 HW-VMS_01
+2022-06-28 13:49:01.481  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010346147513 358655063034070 null null
+2022-06-28 13:49:01.481  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010345335808 357215087106550 null null
+2022-06-28 13:49:01.481  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010101924562 359946055114040 null null
+2022-06-28 13:49:01.481  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370180588 357155089445680 null null
+2022-06-28 13:49:01.481  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010372088303 352882051964200 ALCSIKASSOBSC01 NSNMBSC_SEG
+2022-06-28 13:49:01.481  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010350286669 352387080955260 ALCSIKASSOBSC01 NSNMBSC_SEG
+2022-06-28 13:49:01.481  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010348428436 356301080764760 null null
+2022-06-28 13:49:01.481  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010310355792 357658095748570 HALLESMBSC-2G ACI_HES_M3
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010380841002 351920091871630 null null
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010345419208 354301096831620 null null
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010302796899 356335085081130 null null
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370964459 357069059579220 COURAMBSC-2G ACIOML_S1
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010364722317 358005083663140 null null
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370865445 356336084211510 OML_GMSC58 NSNMBSC_SEG
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370333137 354608087864660 null null
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010375493886 353567085424430 ACI_SEG_M5 HWMPTBSC01
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010380590345 358219094356980 null null
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010341326509 354727093806260 null null
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010345335808 357215087106550 null null
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010301238233 352262070908450 HESRNCSRAN01 ACIOML_S1
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010360040271 358495099777660 HESRNCSRAN01 ACIOML_S3
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370017856 355938099199460 null null
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374648944 354497222997450 null null
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010365440576 358775060403870 HALLESMBSC-2G ACIOML_S1
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010347797949 354301091741110 ACI_SEG_M2 HW-VMS_01
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010340082755 358492096883110 ACI_HES_M4 HWSEVMBSC-3G
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010375960572 359738009553400 SLYMBSC-2G ACI_HES_M2
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370936018 358448076689050 null null
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010344549249 353621077464540 null null
+2022-06-28 13:49:01.483  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010350344760 null OML_GMSC58 HW-VMS_02
+2022-06-28 13:49:01.484  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370017856 355938099199460 null null
+2022-06-28 13:49:01.484  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342022493 357569094580520 null null
+2022-06-28 13:49:01.484  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010101190839 353567086029490 null null
+2022-06-28 13:49:01.484  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010347633695 355263030459730 null null
+2022-06-28 13:49:01.484  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370827668 866126021791240 null null
+2022-06-28 13:49:01.484  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010361881085 353974090614350 null null
+2022-06-28 13:49:01.484  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010345307256 357873090644750 null null
+2022-06-28 13:49:01.484  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375428789 352790086196830 null null
+2022-06-28 13:49:01.484  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370065892 359652061454040 SLYMBSC-2G ACI_SEG_M2
+2022-06-28 13:49:01.485  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010349335701 null OACI_E2 HW-VMS_03
+2022-06-28 13:49:01.485  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010364723306 353196093742550 null null
+2022-06-28 13:49:01.485  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370146913 352767086557710 null null
+2022-06-28 13:49:01.485  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371296080 356680092301100 null null
+2022-06-28 13:49:01.485  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010365397470 353502071424140 null null
+2022-06-28 13:49:01.485  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366204766 351764082244580 null null
+2022-06-28 13:49:01.485  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010364610896 354308091159710 null null
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370017856 355938099199460 null null
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010344721366 356456093165920 null null
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370915920 352016064833780 COURAMBSC-3G ACIOML_S2
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010361056108 356766071238760 null null
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010342399090 867418030256000 ACI_HES_M1 ACIMBSC-2G
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010361056108 356766071238760 null null
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010363684013 354497263186180 null null
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010366707885 359324098229960 ACI_HES_M0 HW-VMS_00
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370969153 351918091513470 OACI_E4 HW-VMS_04
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010347398005 357379077321620 HALLESMBSC-2G ACI_HES_M3
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350110808 358215070663880 null null
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010344458276 359144080831670 HESRNCSRAN01 ACIOML_S1
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010347260645 359838071595350 null null
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010340332759 358301073333720 null null
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010380590345 358219094356980 null null
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010380958183 351759086406450 HWBACOBSC01 ACI_SEG_M2
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010365397470 353502071424140 null null
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370972147 357549081271250 OML_GMSC58 HW-VMS_03
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010366015514 352883055959350 NSNMBSC_SEG ACIOML_S3
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010363113963 351664089068710 ACI_HES_M1 ACIMBSC-2G
+2022-06-28 13:49:01.487  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370017856 355938099199460 null null
+2022-06-28 13:49:01.488  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010102215643 353553093470990 null null
+2022-06-28 13:49:01.488  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370017856 355938099199460 null null
+2022-06-28 13:49:01.488  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010105245878 353999099409260 HWBACOMBSC-2G ACI_SEG_M2
+2022-06-28 13:49:01.488  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010361800044 355236090544290 HWSEVMBSC-3G HWSEVMBSC-3G
+2022-06-28 13:49:01.488  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010361926422 358005083588680 HWSEVMBSC-3G HWSEVMBSC-3G
+2022-06-28 13:49:01.488  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370830632 352131099951640 ATELMSC1_1 HALLESMBSC-2G
+2022-06-28 13:49:01.488  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010204221115 354685086719670 HWKYSBSC01 ACI_SEG_M0
+2022-06-28 13:49:01.488  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371410309 352193092931980 null null
+2022-06-28 13:49:01.488  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010364754931 356258069629890 null null
+2022-06-28 13:49:01.488  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370096958 357669813913620 null null
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370075228 358274065407230 HALLESMBSC-2G ACI_SEG_M3
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010210715169 357081058029420 null null
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370214885 358421086256560 HALLESMBSC-2G ACIOML_S3
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010100514344 352832091035890 null null
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375298567 353688058210490 null null
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010102352288 357574098761890 ACI_SEG_M1 ACIMBSC-3G
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010380590345 358219094356980 null null
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010380590345 358219094356980 null null
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374800738 356839094386220 null null
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350176075 359305047052140 null null
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010363792986 358716051392510 null null
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010360763775 354185082769310 HWBACOMBSC-2G ACIOML_S3
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010305825775 355760099440300 null null
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010365397470 353502071424140 null null
+2022-06-28 13:49:01.490  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010346353261 359768073835820 HWBACOMBSC-2G HW-VMS_03
+2022-06-28 13:49:01.491  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010365404047 null HWBACOMBSC-2G HW-VMS_03
+2022-06-28 13:49:01.491  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366204766 351764082244580 null null
+2022-06-28 13:49:01.491  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010202007792 356402071857480 null null
+2022-06-28 13:49:01.491  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366204766 351764082244580 null null
+2022-06-28 13:49:01.491  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366204766 351764082244580 null null
+2022-06-28 13:49:01.491  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370936018 358448076689050 null null
+2022-06-28 13:49:01.491  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010349880112 358005086067940 HWMPTBSC01 ACI_HES_M5
+2022-06-28 13:49:01.491  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010350791385 354038097943440 ACI_HES_M2 SLYMBSC-2G
+2022-06-28 13:49:01.491  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371665396 355989099555480 null null
+2022-06-28 13:49:01.491  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374972424 357274071161820 null null
+2022-06-28 13:49:01.491  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010380502801 355623085659890 null null
+2022-06-28 13:49:01.491  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010203279731 358421085125010 OML_GMSC58 ACIMBSC-2G
+2022-06-28 13:49:01.492  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010345685200 354497216387510 HWKOUTIALABSC01 HW-VMS_00
+2022-06-28 13:49:01.492  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010348734904 null HWKOUTIALABSC01 HW-VMS_00
+2022-06-28 13:49:01.492  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350694108 357658095004870 null null
+2022-06-28 13:49:01.492  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370296944 null OACI_E2 HW-VMS_01
+2022-06-28 13:49:01.492  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370940577 355210089332090 null null
+2022-06-28 13:49:01.492  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350052811 357073085805500 null null
+2022-06-28 13:49:01.492  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010201143821 354859077134590 ACI_HES_M0 HW-VMS_02
+2022-06-28 13:49:01.492  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375298567 353688058210490 null null
+2022-06-28 13:49:01.492  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010380590345 358219094356980 null null
+2022-06-28 13:49:01.492  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010365397470 353502071424140 null null
+2022-06-28 13:49:01.493  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010365529719 353974090648390 null null
+2022-06-28 13:49:01.493  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370333137 354608087864660 null null
+2022-06-28 13:49:01.493  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010364843533 355593096223840 OACI_E4 SLYMBSC-2G
+2022-06-28 13:49:01.493  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010366528007 354378067441870 null null
+2022-06-28 13:49:01.493  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366204766 351764082244580 null null
+2022-06-28 13:49:01.493  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366204766 351764082244580 null null
+2022-06-28 13:49:01.493  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010210715169 357081058029420 null null
+2022-06-28 13:49:01.493  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010210715169 357081058029420 null null
+2022-06-28 13:49:01.493  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010104274500 354301093747780 null null
+2022-06-28 13:49:01.493  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342511222 861275024425510 null null
+2022-06-28 13:49:01.493  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375610389 356402074178780 null null
+2022-06-28 13:49:01.494  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010346405618 354941079906360 null null
+2022-06-28 13:49:01.494  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010366662538 null OACI_E4 HW-VMS_00
+2022-06-28 13:49:01.494  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370096958 357669813913620 null null
+2022-06-28 13:49:01.494  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010380888563 355521076078060 HESRNCSRAN01 ACIOML_S2
+2022-06-28 13:49:01.494  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010350731963 355197056462770 ACIMBSC-2G ACI_SEG_M1
+2022-06-28 13:49:01.494  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342495076 355806056543750 null null
+2022-06-28 13:49:01.494  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366363076 354771092467140 null null
+2022-06-28 13:49:01.494  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370920709 353949084254040 ACI_SEG_M4 HWSEVMBSC-2G
+2022-06-28 13:49:01.494  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010349548850 null OACI_E3 HW-VMS_04
+2022-06-28 13:49:01.494  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010365782441 357025082063340 ACI_HES_M2 SLYMBSC-3G
+2022-06-28 13:49:01.494  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010101549935 357025081357670 null null
+2022-06-28 13:49:01.494  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010375083326 355232082211170 ACI_HES_M0 HW-VMS_02
+2022-06-28 13:49:01.495  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010306075884 355944083516630 null null
+2022-06-28 13:49:01.495  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010210715169 357081058029420 null null
+2022-06-28 13:49:01.495  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370315870 null OACI_E4 HW-VMS_00
+2022-06-28 13:49:01.495  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010213495407 354411070213270 null null
+2022-06-28 13:49:01.495  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366474106 358756075685840 null null
+2022-06-28 13:49:01.495  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010309945553 355236094967690 null null
+2022-06-28 13:49:01.496  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010363792986 358716051392510 null null
+2022-06-28 13:49:01.496  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350694108 357658095004870 null null
+2022-06-28 13:49:01.496  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374002222 359946030725680 null null
+2022-06-28 13:49:01.496  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370494613 354634094666370 null null
+2022-06-28 13:49:01.496  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374087095 354301095836900 null null
+2022-06-28 13:49:01.496  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375107026 356242062920810 null null
+2022-06-28 13:49:01.496  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375600762 352595097532700 null null
+2022-06-28 13:49:01.496  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010204731343 359939097917570 COURAMBSC-3G ACIOML_S3
+2022-06-28 13:49:01.497  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366736811 865149029303550 null null
+2022-06-28 13:49:01.497  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010346052084 352264082483460 null null
+2022-06-28 13:49:01.497  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010345469649 352767088432690 HWKITABSC01 HW-VMS_01
+2022-06-28 13:49:01.497  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010305730325 353002503741700 HWKITABSC01 HW-VMS_01
+2022-06-28 13:49:01.497  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370333137 354608087864660 null null
+2022-06-28 13:49:01.497  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010351094879 353998090556640 HWSKSBSC01 ACIOML_S3
+2022-06-28 13:49:01.497  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366778290 359992080195870 null null
+2022-06-28 13:49:01.498  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010340205100 990002755742950 null null
+2022-06-28 13:49:01.498  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010370935401 354682092875260 null null
+2022-06-28 13:49:01.498  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010210715169 357081058029420 null null
+2022-06-28 13:49:01.498  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010347797202 354684090623700 ACIMBSC-3G ACI_HES_M1
+2022-06-28 13:49:01.498  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366768146 355194094863550 null null
+2022-06-28 13:49:01.498  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010201554201 353002504693530 null null
+2022-06-28 13:49:01.498  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010349313345 355501097138780 null null
+2022-06-28 13:49:01.499  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010349313345 355501097138780 null null
+2022-06-28 13:49:01.499  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010208532254 352654073770170 null null
+2022-06-28 13:49:01.499  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370281965 356410051192300 ACI_HES_M4 HWSEVMBSC-2G
+2022-06-28 13:49:01.499  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375918981 352883055361300 null null
+2022-06-28 13:49:01.499  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010374726008 352193091510310 RNCNSN01_SEG ACIOML_S2
+2022-06-28 13:49:01.499  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010307658524 null OML_GMSC58 HW-VMS_04
+2022-06-28 13:49:01.499  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010101892990 354553071431670 HESRNCSRAN01 ACI_HES_M3
+2022-06-28 13:49:01.519  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370119398 862924011216180 null null
+2022-06-28 13:49:01.519  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010372204553 359927071744660 OACI_E3 HW-VMS_03
+2022-06-28 13:49:01.521  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010350671834 351701098809740 ACI_HES_M1 HW-VMS_02
+2022-06-28 13:49:01.521  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342511222 861275024425510 null null
+2022-06-28 13:49:01.521  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371410309 352193092931980 null null
+2022-06-28 13:49:01.521  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010366082230 352470098365360 ACI_SEG_M0 HW-VMS_02
+2022-06-28 13:49:01.521  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010362156836 356103032611200 null null
+2022-06-28 13:49:01.521  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010104523705 358005084871300 ACI_HES_M3 HALLESMBSC-2G
+2022-06-28 13:49:01.521  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010211653166 359531082634840 DJELIMBSC-2G ACI_HES_M0
+2022-06-28 13:49:01.521  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010342319788 358967087561640 ACIMBSC-2G ACIOML_S1
+2022-06-28 13:49:01.521  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375683618 357574094887780 null null
+2022-06-28 13:49:01.521  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010348661144 359914072628890 null null
+2022-06-28 13:49:01.523  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010201554201 353002504693530 null null
+2022-06-28 13:49:01.523  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370815845 359607073007560 null null
+2022-06-28 13:49:01.523  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350694108 357658095004870 null null
+2022-06-28 13:49:01.523  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010349313345 355501097138780 null null
+2022-06-28 13:49:01.523  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370815845 359607073007560 null null
+2022-06-28 13:49:01.524  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342144406 351665080637220 null null
+2022-06-28 13:49:01.524  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010349628259 354682090589590 COURAMBSC-3G ACIOML_S3
+2022-06-28 13:49:01.524  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010364612774 352711085838760 OML_GMSC58 HALLESMBSC-2G
+2022-06-28 13:49:01.524  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342017279 352708096836390 null null
+2022-06-28 13:49:01.524  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370119398 862924011216180 null null
+2022-06-28 13:49:01.524  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370119398 862924011216180 null null
+2022-06-28 13:49:01.524  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010366754974 359818091077790 HALLESMBSC-2G ACI_HES_M3
+2022-06-28 13:49:01.524  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370898755 358085082564510 ALCSIKASSOBSC01 ACI_HES_M3
+2022-06-28 13:49:01.524  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370333137 354608087864660 null null
+2022-06-28 13:49:01.524  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370655265 359051091466680 HESRNCSRAN01 ACIOML_S1
+2022-06-28 13:49:01.524  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374901936 356451092642630 null null
+2022-06-28 13:49:01.524  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010207091329 354497246361470 OACI_E3 HALLESMBSC-2G
+2022-06-28 13:49:01.525  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342511222 861275024425510 null null
+2022-06-28 13:49:01.525  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375342339 354859074330100 null null
+2022-06-28 13:49:01.525  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010361924760 351765084430240 null null
+2022-06-28 13:49:01.525  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370859214 355970091637290 ACIMBSC-2G ACI_SEG_M1
+2022-06-28 13:49:01.525  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010344191655 353012092270260 null null
+2022-06-28 13:49:01.525  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010363919173 358005086723120 OML_GMSC58 HESRNCSRAN01
+2022-06-28 13:49:01.526  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010350418170 356911093731590 COURAMBSC-2G ACI_SEG_M1
+2022-06-28 13:49:01.526  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370940755 355970090208040 null null
+2022-06-28 13:49:01.526  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010305959597 354110086604270 null null
+2022-06-28 13:49:01.526  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370062196 355413090155950 SLYMBSC-2G HW-VMS_00
+2022-06-28 13:49:01.526  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010207970464 359067075700840 SLYMBSC-2G HW-VMS_00
+2022-06-28 13:49:01.526  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010349313345 355501097138780 null null
+2022-06-28 13:49:01.526  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370815845 359607073007560 null null
+2022-06-28 13:49:01.527  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370815845 359607073007560 null null
+2022-06-28 13:49:01.527  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010341388786 355236090410100 HWBACOMBSC-3G ATELMSC1_2
+2022-06-28 13:49:01.527  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375918981 352883055361300 null null
+2022-06-28 13:49:01.527  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374619860 352287109185240 null null
+2022-06-28 13:49:01.527  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370668050 355489070248430 null null
+2022-06-28 13:49:01.527  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010380502801 355623085659890 null null
+2022-06-28 13:49:01.528  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370119398 862924011216180 null null
+2022-06-28 13:49:01.528  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370119398 862924011216180 null null
+2022-06-28 13:49:01.528  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010347222198 null OACI_E3 HW-VMS_03
+2022-06-28 13:49:01.528  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010308153339 352833075590420 null null
+2022-06-28 13:49:01.528  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370333137 354608087864660 null null
+2022-06-28 13:49:01.528  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010343947017 354340090502280 SLYMBSC-2G ACI_HES_M2
+2022-06-28 13:49:01.528  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010349783375 357212083058740 null null
+2022-06-28 13:49:01.529  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010213494636 359762077746150 null null
+2022-06-28 13:49:01.529  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370657496 354029056768480 HALLESMBSC-2G ACIOML_S1
+2022-06-28 13:49:01.529  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371410309 352193092931980 null null
+2022-06-28 13:49:01.529  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010366543943 355722083673840 DJELIMBSC-2G HW-VMS_03
+2022-06-28 13:49:01.529  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010309183398 null DJELIMBSC-2G HW-VMS_03
+2022-06-28 13:49:01.529  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010213634709 357653082953610 null null
+2022-06-28 13:49:01.530  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010103873138 357899074678340 ACIMBSC-2G ACIMBSC-2G
+2022-06-28 13:49:01.530  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010342316964 358421083599720 ACIMBSC-2G ACIMBSC-2G
+2022-06-28 13:49:01.530  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010361541778 null OACI_E4 HW-VMS_04
+2022-06-28 13:49:01.530  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370815845 359607073007560 null null
+2022-06-28 13:49:01.530  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350694108 357658095004870 null null
+2022-06-28 13:49:01.530  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010349313345 355501097138780 null null
+2022-06-28 13:49:01.531  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375918981 352883055361300 null null
+2022-06-28 13:49:01.531  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370668050 355489070248430 null null
+2022-06-28 13:49:01.531  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010213495407 354411070213270 null null
+2022-06-28 13:49:01.531  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370888632 359939099484270 null null
+2022-06-28 13:49:01.531  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010308153339 352833075590420 null null
+2022-06-28 13:49:01.531  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010306075884 355944083516630 null null
+2022-06-28 13:49:01.531  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010361059863 354525074626230 ACIMBSC-2G ACIOML_S3
+2022-06-28 13:49:01.539  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010366426965 357736088408190 RNCNSN01_SEG ACI_HES_M5
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010348190842 359181097252150 OACI_E2 ACIMBSC-2G
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010347160855 357471085226020 ACI_SEG_M0 HWSKSBSC01
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010347795522 355263092331630 null null
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010365969043 355989095532210 null null
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371227263 354988093045920 null null
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010209144452 353001407282700 ACI_HES_M5 NSNMBSC_SEG
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010209638294 356910097961700 HWMPTBSC01 HWCTI
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370668050 355489070248430 null null
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370267150 353415065229100 null null
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370267150 353415065229100 null null
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370668050 355489070248430 null null
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010361576969 355970093745810 OML_GMSC58 HW-VMS_01
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010380502801 355623085659890 null null
+2022-06-28 13:49:01.540  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370061657 353974093926780 null null
+2022-06-28 13:49:01.541  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010360040271 358495099777660 HESRNCSRAN01 ACIOML_S2
+2022-06-28 13:49:01.541  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010305161821 352779101003170 null null
+2022-06-28 13:49:01.541  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010213546399 354340092392970 HALLESMBSC-2G ACI_HES_M3
+2022-06-28 13:49:01.541  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010375355074 354346075514900 HESRNCSRAN01 ACIOML_S3
+2022-06-28 13:49:01.541  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371082314 355501093598430 null null
+2022-06-28 13:49:01.541  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010306428234 359772078267000 null null
+2022-06-28 13:49:01.541  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010102866114 null OML_GMSC58 HW-VMS_00
+2022-06-28 13:49:01.542  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010349702344 359714092645830 null null
+2022-06-28 13:49:01.542  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010350129894 null OACI_E3 HW-VMS_04
+2022-06-28 13:49:01.542  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371410309 352193092931980 null null
+2022-06-28 13:49:01.542  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010201737736 358640060262360 null null
+2022-06-28 13:49:01.543  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 612030237993045 359363075195310 null null
+2022-06-28 13:49:01.543  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010305130765 359895062283380 null null
+2022-06-28 13:49:01.545  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010372429615 352131091835190 null null
+2022-06-28 13:49:01.545  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350694108 357658095004870 null null
+2022-06-28 13:49:01.545  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375918981 352883055361300 null null
+2022-06-28 13:49:01.546  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370267150 353415065229100 null null
+2022-06-28 13:49:01.546  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370668050 355489070248430 null null
+2022-06-28 13:49:01.546  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370267150 353415065229100 null null
+2022-06-28 13:49:01.546  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374531618 351547092251750 null null
+2022-06-28 13:49:01.546  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350481124 357213086535640 null null
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374374265 354758020368880 null null
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010213495407 354411070213270 null null
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010360475763 352708096240230 COURAMBSC-3G ACIOML_S3
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010305591747 351861104054000 null null
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010350918052 863677028561240 ACI_HES_M2 HWBACOMBSC-2G
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010306075884 355944083516630 null null
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370931660 null OACI_E4 HW-VMS_04
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010350829340 359181091975120 null null
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010366309048 358314084261630 OACI_E4 ALUSEVBSC
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010342153337 358054080537300 HESRNCSRAN01 ACIOML_S3
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010202352740 354473057429460 null null
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010306916386 355182094021430 DJELIMBSC-2G ACIOML_S1
+2022-06-28 13:49:01.547  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370326382 358073078836290 null null
+2022-06-28 13:49:01.548  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010103890933 869537021377950 null null
+2022-06-28 13:49:01.555  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371227263 354988093045920 null null
+2022-06-28 13:49:01.555  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010304047890 358084087657980 null null
+2022-06-28 13:49:01.555  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370129044 352262071296720 null null
+2022-06-28 13:49:01.555  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010373958678 358765086582230 null null
+2022-06-28 13:49:01.556  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350369199 354301094488040 null null
+2022-06-28 13:49:01.556  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010102201719 353467092756410 ACI_SEG_M1 HW-VMS_00
+2022-06-28 13:49:01.556  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374619860 352287109185240 null null
+2022-06-28 13:49:01.556  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374531618 351547092251750 null null
+2022-06-28 13:49:01.556  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010301927703 357793084301050 null null
+2022-06-28 13:49:01.557  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010380502801 355623085659890 null null
+2022-06-28 13:49:01.557  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370852651 null OACI_E2 HW-VMS_01
+2022-06-28 13:49:01.557  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350884584 355655050150930 null null
+2022-06-28 13:49:01.557  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010200428054 351726075414320 null null
+2022-06-28 13:49:01.557  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010360296330 357274077049850 null null
+2022-06-28 13:49:01.557  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010365298173 null OACI_E3 HW-VMS_00
+2022-06-28 13:49:01.558  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010303044851 359083052135170 null null
+2022-06-28 13:49:01.558  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010303035325 359767074322840 null null
+2022-06-28 13:49:01.558  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010342014356 864722037278980 ACI_HES_M1 COURAMBSC-2G
+2022-06-28 13:49:01.558  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371410309 352193092931980 null null
+2022-06-28 13:49:01.562  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010304047890 358084087657980 null null
+2022-06-28 13:49:01.562  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370973097 355345160148690 ACIMBSC-2G ACIOML_S3
+2022-06-28 13:49:01.562  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010346444049 354111089675660 OACI_E4 HW-VMS_02
+2022-06-28 13:49:01.562  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375918981 352883055361300 null null
+2022-06-28 13:49:01.562  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010351023753 353330097548580 null null
+2022-06-28 13:49:01.562  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010306761618 355308075580680 ACI_HES_M2 SLYMBSC-2G
+2022-06-28 13:49:01.562  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370128502 null OACI_E2 HW-VMS_03
+2022-06-28 13:49:01.563  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374619860 352287109185240 null null
+2022-06-28 13:49:01.563  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370888632 359939099484270 null null
+2022-06-28 13:49:01.563  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010380502801 355623085659890 null null
+2022-06-28 13:49:01.563  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374374265 354758020368880 null null
+2022-06-28 13:49:01.563  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010213495407 354411070213270 null null
+2022-06-28 13:49:01.563  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010375891605 358764080403040 ACI_SEG_M4 HWSEVMBSC-3G
+2022-06-28 13:49:01.563  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010306075884 355944083516630 null null
+2022-06-28 13:49:01.563  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010208280450 356893097031220 HWBACOMBSC-2G ACIOML_S3
+2022-06-28 13:49:01.567  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366161649 359185091260620 null null
+2022-06-28 13:49:01.567  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375342339 354859074330100 null null
+2022-06-28 13:49:01.567  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375555270 358818074773320 null null
+2022-06-28 13:49:01.567  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010305126344 358971076689500 null null
+2022-06-28 13:49:01.567  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371410309 352193092931980 null null
+2022-06-28 13:49:01.569  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342308746 356612090031020 null null
+2022-06-28 13:49:01.569  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010380887467 353197094035620 HWSLMBGBSC01 ACIOML_S3
+2022-06-28 13:49:01.570  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010346912314 352511096312910 null null
+2022-06-28 13:49:01.570  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010104337439 356838091970430 ACI_SEG_M0 DJELIMBSC-2G
+2022-06-28 13:49:01.570  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370249224 356786068940750 HALLESMBSC-2G ACIOML_S3
+2022-06-28 13:49:01.570  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010371297665 351976082782860 null null
+2022-06-28 13:49:01.570  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010301927703 357793084301050 null null
+2022-06-28 13:49:01.570  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374531618 351547092251750 null null
+2022-06-28 13:49:01.570  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350369199 354301094488040 null null
+2022-06-28 13:49:01.570  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010344231788 359041065015070 ACI_NSN2_M1 SLYMBSC-3G
+2022-06-28 13:49:01.570  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374374265 354758020368880 null null
+2022-06-28 13:49:01.570  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350884584 355655050150930 null null
+2022-06-28 13:49:01.571  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010300699138 352504092445810 ACI_SEG_M5 NSNMBSC_SEG
+2022-06-28 13:49:01.571  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342301321 355210085739410 null null
+2022-06-28 13:49:01.571  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010366031514 352609052787180 HALLESMBSC-2G HW-VMS_01
+2022-06-28 13:49:01.571  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010362895121 356435090696500 HALLESMBSC-2G HW-VMS_01
+2022-06-28 13:49:01.571  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010362854862 355851062627130 OACI_E4 HALLESMBSC-2G
+2022-06-28 13:49:01.571  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010212181489 354110084613540 null null
+2022-06-28 13:49:01.571  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370794206 356286090178330 NSNMBSC_SEG ACI_HES_M5
+2022-06-28 13:49:01.572  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010304270938 865972010029510 null null
+2022-06-28 13:49:01.572  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010364750956 354634092719470 OACI_E4 COURAMBSC-2G
+2022-06-28 13:49:01.572  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366655331 358583085264760 null null
+2022-06-28 13:49:01.572  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010301630736 353946067293380 null null
+2022-06-28 13:49:01.572  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010375141932 null ATELMSC1_1 HW-VMS_01
+2022-06-28 13:49:01.579  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010364772330 357392084308800 null null
+2022-06-28 13:49:01.591  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375897666 353997094767380 null null
+2022-06-28 13:49:01.591  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366665855 358085086045830 null null
+2022-06-28 13:49:01.591  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010375110885 354360082813690 HESRNCSRAN01 HALLESMBSC-2G
+2022-06-28 13:49:01.591  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010365462804 352463058003570 HESRNCSRAN01 HALLESMBSC-2G
+2022-06-28 13:49:01.593  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374619860 352287109185240 null null
+2022-06-28 13:49:01.595  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370888632 359939099484270 null null
+2022-06-28 13:49:01.596  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010305591747 351861104054000 null null
+2022-06-28 13:49:01.596  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010213495407 354411070213270 null null
+2022-06-28 13:49:01.596  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010303532854 null ATELMSC1_2 HW-VMS_01
+2022-06-28 13:49:01.596  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350884584 355655050150930 null null
+2022-06-28 13:49:01.597  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010344892686 352769085351000 null null
+2022-06-28 13:49:01.597  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010306075884 355944083516630 null null
+2022-06-28 13:49:01.597  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010348996906 351674085435330 null null
+2022-06-28 13:49:01.599  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010375754509 357005084765370 HESRNCSRAN01 ACIOML_S2
+2022-06-28 13:49:01.599  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366161649 359185091260620 null null
+2022-06-28 13:49:01.599  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010365712671 null OACI_E2 HW-VMS_01
+2022-06-28 13:49:01.599  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010374583033 null OML_GMSC58 HW-VMS_01
+2022-06-28 13:49:01.599  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010342395981 358334066168430 ACI_HES_M4 HWKOUTIALABSC01
+2022-06-28 13:49:01.599  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350481124 357213086535640 null null
+2022-06-28 13:49:01.600  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370136493 356766079682780 GAOBSC_IP ACI_SEG_M3
+2022-06-28 13:49:01.600  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366629751 354340090887900 null null
+2022-06-28 13:49:01.600  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370200823 356456095982500 null null
+2022-06-28 13:49:01.600  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370957883 352620097928020 SLYMBSC-3G ACIOML_S3
+2022-06-28 13:49:01.600  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010366271470 359147084430230 SLYMBSC-2G ACIOML_S3
+2022-06-28 13:49:01.601  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374531618 351547092251750 null null
+2022-06-28 13:49:01.601  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010301927703 357793084301050 null null
+2022-06-28 13:49:01.601  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370187031 356907067209430 HESRNCSRAN01 ACIOML_S1
+2022-06-28 13:49:01.601  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010305591747 351861104054000 null null
+2022-06-28 13:49:01.602  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370888632 359939099484270 null null
+2022-06-28 13:49:01.602  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374374265 354758020368880 null null
+2022-06-28 13:49:01.602  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010103875979 359818097130190 null null
+2022-06-28 13:49:01.602  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374973270 354977083432230 null null
+2022-06-28 13:49:01.602  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010101773182 356319082633750 RNCNSN01_SEG ACI_HES_M5
+2022-06-28 13:49:01.603  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010303035325 359767074322840 null null
+2022-06-28 13:49:01.603  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010303035325 359767074322840 null null
+2022-06-28 13:49:01.603  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010207679327 353003501454460 ACI_SEG_M4 HWSEVMBSC-2G
+2022-06-28 13:49:01.603  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350481124 357213086535640 null null
+2022-06-28 13:49:01.603  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366665855 358085086045830 null null
+2022-06-28 13:49:01.603  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374619860 352287109185240 null null
+2022-06-28 13:49:01.603  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374531618 351547092251750 null null
+2022-06-28 13:49:01.603  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010347964606 358005084845330 null null
+2022-06-28 13:49:01.603  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010346956436 352620097654820 HESRNCSRAN01 HESRNCSRAN01
+2022-06-28 13:49:01.603  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370115636 355210089408920 HESRNCSRAN01 HESRNCSRAN01
+2022-06-28 13:49:01.606  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010342403044 353502075715630 null null
+2022-06-28 13:49:01.607  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010305126344 358971076689500 null null
+2022-06-28 13:49:01.607  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010350884584 355655050150930 null null
+2022-06-28 13:49:01.607  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010303035325 359767074322840 null null
+2022-06-28 13:49:01.607  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010349628259 354682090589590 COURAMBSC-3G ACIOML_S3
+2022-06-28 13:49:01.607  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010212181489 354110084613540 null null
+2022-06-28 13:49:01.609  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010370835031 357251083323270 RNCNSN01_SEG ACIOML_S1
+2022-06-28 13:49:01.609  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366161649 359185091260620 null null
+2022-06-28 13:49:01.609  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010374107699 357676060770490 null null
+2022-06-28 13:49:01.609  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010200350882 356402075452170 OACI_E2 ACIMBSC-2G
+2022-06-28 13:49:01.609  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMO 610010370178575 357155085303610 null null
+2022-06-28 13:49:01.609  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010349974767 356369090653320 null null
+2022-06-28 13:49:01.609  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010347798902 356301088454740 COURAMBSC-3G ATELMSC1_2
+2022-06-28 13:49:01.611  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010366751883 356766079447310 NSNMBSC_SEG ACI_HES_M5
+2022-06-28 13:49:01.611  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010342022493 357569094580520 HALLESMBSC-2G HW-VMS_03
+2022-06-28 13:49:01.612  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010200419107 null HALLESMBSC-2G HW-VMS_03
+2022-06-28 13:49:01.613  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010200838010 358044088838960 ACIMBSC-2G ACIOML_S3
+2022-06-28 13:49:01.613  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010308887241 359703073276340 null null
+2022-06-28 13:49:01.613  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010347964606 358005084845330 null null
+2022-06-28 13:49:01.615  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010375555270 358818074773320 null null
+2022-06-28 13:49:01.615  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010301927703 357793084301050 null null
+2022-06-28 13:49:01.615  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010347964606 358005084845330 null null
+2022-06-28 13:49:01.615  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010372670742 358426081775230 null null
+2022-06-28 13:49:01.615  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010370888632 359939099484270 null null
+2022-06-28 13:49:01.615  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010380549287 359183091782370 HESRNCSRAN01 HW-VMS_03
+2022-06-28 13:49:01.616  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010370285548 null HESRNCSRAN01 HW-VMS_03
+2022-06-28 13:49:01.616  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MT 610010362498909 354727093490610 ACI_HES_M3 HALLESMBSC-2G
+2022-06-28 13:49:01.616  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010305126344 358971076689500 null null
+2022-06-28 13:49:01.616  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010303035325 359767074322840 null null
+2022-06-28 13:49:01.617  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010366663352 358859096948380 null null
+2022-06-28 13:49:01.617  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010212181489 354110084613540 null null
+2022-06-28 13:49:01.617  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR MO 610010366789806 353892091145500 HWACI2KBSC01 ACI_HES_M0
+2022-06-28 13:49:01.617  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010212181489 354110084613540 null null
+2022-06-28 13:49:01.617  INFO  151 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : CDR SMSMT 610010200750780 359659065566000 null null
+2022-06-28 13:49:01.617  INFO  155 --- [age 1.0 (TID 1)] com.elite.cdr.validator.Application      : rows [SMSMO,610010342429350,354682094969190,null,null]
+2022-06-28 13:49:01.769  ERROR   94 --- [age 1.0 (TID 1)] org.apache.spark.internal.Logging        : Exception in task 0.0 in stage 1.0 (TID 1)
+java.lang.NullPointerException
+	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:155)
+	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:153)
+	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$1(Dataset.scala:89)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:88)
+	at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$4(SparkSession.scala:388)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.SparkSession.createDataFrame(SparkSession.scala:386)
+	at com.elite.cdr.validator.Application.lambda$null$2ab2678f$1(Application.java:156)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1(JavaRDDLike.scala:352)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1$adapted(JavaRDDLike.scala:352)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2(RDD.scala:1012)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2$adapted(RDD.scala:1012)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2254)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2022-06-28 13:49:01.870  WARN   69 --- [result-getter-0] org.apache.spark.internal.Logging        : Lost task 0.0 in stage 1.0 (TID 1) (host.docker.internal executor driver): java.lang.NullPointerException
+	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:155)
+	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:153)
+	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$1(Dataset.scala:89)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:88)
+	at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$4(SparkSession.scala:388)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.SparkSession.createDataFrame(SparkSession.scala:386)
+	at com.elite.cdr.validator.Application.lambda$null$2ab2678f$1(Application.java:156)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1(JavaRDDLike.scala:352)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1$adapted(JavaRDDLike.scala:352)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2(RDD.scala:1012)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2$adapted(RDD.scala:1012)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2254)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-06-28 13:49:01.873  ERROR   73 --- [result-getter-0] org.apache.spark.internal.Logging        : Task 0 in stage 1.0 failed 1 times; aborting job
+2022-06-28 13:49:01.875  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2022-06-28 13:49:01.891  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Cancelling stage 1
+2022-06-28 13:49:01.893  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 1: Stage cancelled
+2022-06-28 13:49:01.897  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 1 (foreach at Application.java:136) failed in 0.860 s due to Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (host.docker.internal executor driver): java.lang.NullPointerException
+	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:155)
+	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:153)
+	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$1(Dataset.scala:89)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:88)
+	at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$4(SparkSession.scala:388)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.SparkSession.createDataFrame(SparkSession.scala:386)
+	at com.elite.cdr.validator.Application.lambda$null$2ab2678f$1(Application.java:156)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1(JavaRDDLike.scala:352)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1$adapted(JavaRDDLike.scala:352)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2(RDD.scala:1012)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2$adapted(RDD.scala:1012)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2254)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Driver stacktrace:
+2022-06-28 13:49:01.909  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 6 failed: foreach at Application.java:136, took 0.887322 s
+2022-06-28 13:49:01.910  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1656420541000 ms.0 from job set of time 1656420541000 ms
+2022-06-28 13:49:01.914  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1656420541000 ms.1 from job set of time 1656420541000 ms
+2022-06-28 13:49:01.916  ERROR   94 --- [   JobScheduler] org.apache.spark.internal.Logging        : Error running job streaming job 1656420541000 ms.0
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (host.docker.internal executor driver): java.lang.NullPointerException
+	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:155)
+	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:153)
+	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$1(Dataset.scala:89)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:88)
+	at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$4(SparkSession.scala:388)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.SparkSession.createDataFrame(SparkSession.scala:386)
+	at com.elite.cdr.validator.Application.lambda$null$2ab2678f$1(Application.java:156)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1(JavaRDDLike.scala:352)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1$adapted(JavaRDDLike.scala:352)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2(RDD.scala:1012)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2$adapted(RDD.scala:1012)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2254)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2454)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2403)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2402)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2402)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1160)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1160)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1160)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2642)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2584)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2573)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:938)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2214)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2235)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2254)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2279)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$1(RDD.scala:1012)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.foreach(RDD.scala:1010)
+	at org.apache.spark.api.java.JavaRDDLike.foreach(JavaRDDLike.scala:352)
+	at org.apache.spark.api.java.JavaRDDLike.foreach$(JavaRDDLike.scala:351)
+	at org.apache.spark.api.java.AbstractJavaRDDLike.foreach(JavaRDDLike.scala:45)
+	at com.elite.cdr.validator.Application.lambda$main$4730e995$1(Application.java:136)
+	at org.apache.spark.streaming.api.java.JavaDStreamLike.$anonfun$foreachRDD$1(JavaDStreamLike.scala:272)
+	at org.apache.spark.streaming.api.java.JavaDStreamLike.$anonfun$foreachRDD$1$adapted(JavaDStreamLike.scala:272)
+	at org.apache.spark.streaming.dstream.DStream.$anonfun$foreachRDD$2(DStream.scala:629)
+	at org.apache.spark.streaming.dstream.DStream.$anonfun$foreachRDD$2$adapted(DStream.scala:629)
+	at org.apache.spark.streaming.dstream.ForEachDStream.$anonfun$generateJob$2(ForEachDStream.scala:51)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:417)
+	at org.apache.spark.streaming.dstream.ForEachDStream.$anonfun$generateJob$1(ForEachDStream.scala:51)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.$anonfun$run$1(JobScheduler.scala:256)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException
+	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:155)
+	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:153)
+	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$1(Dataset.scala:89)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:88)
+	at org.apache.spark.sql.SparkSession.$anonfun$createDataFrame$4(SparkSession.scala:388)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.SparkSession.createDataFrame(SparkSession.scala:386)
+	at com.elite.cdr.validator.Application.lambda$null$2ab2678f$1(Application.java:156)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1(JavaRDDLike.scala:352)
+	at org.apache.spark.api.java.JavaRDDLike.$anonfun$foreach$1$adapted(JavaRDDLike.scala:352)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2(RDD.scala:1012)
+	at org.apache.spark.rdd.RDD.$anonfun$foreach$2$adapted(RDD.scala:1012)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2254)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:506)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1462)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:509)
+	... 3 more
+2022-06-28 13:49:01.927  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: print at Application.java:240
+2022-06-28 13:49:01.930  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 7 (print at Application.java:240) with 1 output partitions
+2022-06-28 13:49:01.930  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 2 (print at Application.java:240)
+2022-06-28 13:49:01.930  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-06-28 13:49:01.932  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-06-28 13:49:01.933  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 2 (MapPartitionsRDD[12] at map at Application.java:132), which has no missing parents
+2022-06-28 13:49:01.939  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_2 stored as values in memory (estimated size 4.4 KiB, free 897.0 MiB)
+2022-06-28 13:49:01.943  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Invoking stop(stopGracefully=false) from shutdown hook
+2022-06-28 13:49:01.945  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.4 KiB, free 897.0 MiB)
+2022-06-28 13:49:01.949  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_2_piece0 in memory on host.docker.internal:53846 (size: 2.4 KiB, free: 897.1 MiB)
+2022-06-28 13:49:01.951  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 2 from broadcast at DAGScheduler.scala:1478
+2022-06-28 13:49:01.952  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[12] at map at Application.java:132) (first 15 tasks are for partitions Vector(0))
+2022-06-28 13:49:01.952  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 2.0 with 1 tasks resource profile 0
+2022-06-28 13:49:01.954  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Sent stop signal to all 1 receivers
+2022-06-28 13:49:01.957  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Received stop signal
+2022-06-28 13:49:01.957  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 2.0 (TID 2) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4394 bytes) taskResourceAssignments Map()
+2022-06-28 13:49:01.959  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopping receiver with message: Stopped by driver: 
+2022-06-28 13:49:01.959  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-06-28 13:49:01.959  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-06-28 13:49:01.960  ERROR   94 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Ignoring error
+java.util.concurrent.RejectedExecutionException: Task org.apache.spark.executor.Executor$TaskRunner@b9e3731 rejected from java.util.concurrent.ThreadPoolExecutor@723981af[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 1]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at org.apache.spark.executor.Executor.launchTask(Executor.scala:270)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1(LocalSchedulerBackend.scala:93)
+	at org.apache.spark.scheduler.local.LocalEndpoint.$anonfun$reviveOffers$1$adapted(LocalSchedulerBackend.scala:91)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.scheduler.local.LocalEndpoint.reviveOffers(LocalSchedulerBackend.scala:91)
+	at org.apache.spark.scheduler.local.LocalEndpoint$$anonfun$receive$1.applyOrElse(LocalSchedulerBackend.scala:68)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:115)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2022-06-28 13:49:01.963  ERROR   73 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Stopped by driver
+2022-06-28 13:49:01.964  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-06-28 13:49:01.967  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopping BlockGenerator
+2022-06-28 13:49:02.053  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1656420542000 ms
+2022-06-28 13:49:02.248  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopped timer for BlockGenerator after time 1656420542200
+2022-06-28 13:49:02.248  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Waiting for block pushing thread to terminate
+2022-06-28 13:49:02.261  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Pushing out the last 0 blocks
+2022-06-28 13:49:02.261  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Stopped block pushing thread
+2022-06-28 13:49:02.263  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopped BlockGenerator
+2022-06-28 13:49:02.264  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Stopped receiver without error
+2022-06-28 13:49:02.275  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 0.0 (TID 0). 923 bytes result sent to driver
+2022-06-28 13:49:02.291  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 0.0 (TID 0) in 6364 ms on host.docker.internal (executor driver) (1/1)
+2022-06-28 13:49:02.291  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2022-06-28 13:49:02.299  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 0 (start at Application.java:243) finished in 6.737 s
+2022-06-28 13:49:02.302  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-06-28 13:49:02.303  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 0: Stage finished
+2022-06-28 13:49:02.314  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : All of the receivers have deregistered successfully
+2022-06-28 13:49:02.317  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : ReceiverTracker stopped
+2022-06-28 13:49:02.318  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopping JobGenerator immediately
+2022-06-28 13:49:02.329  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped timer for JobGenerator after time 1656420542000
+2022-06-28 13:49:02.401  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped JobGenerator
+2022-06-28 13:49:04.419  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped JobScheduler
+2022-06-28 13:49:04.429  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@5c10285a{/streaming,null,STOPPED,@Spark}
+2022-06-28 13:49:04.430  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@6f38a289{/streaming/json,null,STOPPED,@Spark}
+2022-06-28 13:49:04.432  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@3157e4c0{/streaming/batch,null,STOPPED,@Spark}
+2022-06-28 13:49:04.432  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@328902d5{/streaming/batch/json,null,STOPPED,@Spark}
+2022-06-28 13:49:04.434  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@39e67516{/static/streaming,null,STOPPED,@Spark}
+2022-06-28 13:49:04.436  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : StreamingContext stopped successfully
+2022-06-28 13:49:04.437  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Invoking stop() from shutdown hook
+2022-06-28 13:49:04.448  INFO  381 --- [shutdown-hook-0] rkproject.jetty.server.AbstractConnector : Stopped Spark@7caa550{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-06-28 13:49:04.450  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped Spark web UI at http://host.docker.internal:4040
+2022-06-28 13:49:04.455  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : ResultStage 2 (print at Application.java:240) failed in 2.519 s due to Stage cancelled because SparkContext was shut down
+2022-06-28 13:49:04.470  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : MapOutputTrackerMasterEndpoint stopped!
+2022-06-28 13:49:04.493  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : MemoryStore cleared
+2022-06-28 13:49:04.494  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : BlockManager stopped
+2022-06-28 13:49:04.500  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : BlockManagerMaster stopped
+2022-06-28 13:49:04.504  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : OutputCommitCoordinator stopped!
+2022-06-28 13:49:04.509  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Successfully stopped SparkContext
+2022-06-28 13:49:04.510  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Shutdown hook called
+2022-06-28 13:49:04.511  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Deleting directory C:\Users\Wael Hamdi\AppData\Local\Temp\spark-4b6b1e10-1220-4e1d-91b4-448fd95457fe

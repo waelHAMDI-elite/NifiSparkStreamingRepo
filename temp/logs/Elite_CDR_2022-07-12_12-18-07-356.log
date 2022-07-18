@@ -1,0 +1,805 @@
+2022-07-12 12:18:07.394  INFO   47 --- [           main] com.elite.cdr.validator.Application      : Starting ASN1 Reader 
+2022-07-12 12:18:07.400  INFO   49 --- [           main] com.elite.cdr.validator.Application      : ############### Run with the args [--env, local, --file, C:\IntelliJProjects\FraudDetectionSpark3\src\main\resources\data\simpleTypes.ber, --prop, C:\IntelliJProjects\NifiSparkStreaming\src\main\resources\myapp.properties]
+2022-07-12 12:18:07.475  INFO   55 --- [           main] com.elite.cdr.validator.Application      : ############### Run in local mode
+2022-07-12 12:18:09.464  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Running Spark version 3.2.1
+2022-07-12 12:18:09.937  INFO   57 --- [           main] org.apache.spark.internal.Logging        : ==============================================================
+2022-07-12 12:18:09.943  INFO   57 --- [           main] org.apache.spark.internal.Logging        : No custom resources configured for spark.driver.
+2022-07-12 12:18:09.945  INFO   57 --- [           main] org.apache.spark.internal.Logging        : ==============================================================
+2022-07-12 12:18:09.947  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Submitted application: NiFi-Spark Streaming example
+2022-07-12 12:18:10.019  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2022-07-12 12:18:10.061  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Limiting resource is cpu
+2022-07-12 12:18:10.072  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Added ResourceProfile id: 0
+2022-07-12 12:18:10.278  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing view acls to: Wael Hamdi
+2022-07-12 12:18:10.282  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing modify acls to: Wael Hamdi
+2022-07-12 12:18:10.285  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing view acls groups to: 
+2022-07-12 12:18:10.287  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Changing modify acls groups to: 
+2022-07-12 12:18:10.299  INFO   57 --- [           main] org.apache.spark.internal.Logging        : SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Wael Hamdi); groups with view permissions: Set(); users  with modify permissions: Set(Wael Hamdi); groups with modify permissions: Set()
+2022-07-12 12:18:12.995  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'sparkDriver' on port 62962.
+2022-07-12 12:18:13.044  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering MapOutputTracker
+2022-07-12 12:18:13.104  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManagerMaster
+2022-07-12 12:18:13.134  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2022-07-12 12:18:13.135  INFO   57 --- [           main] org.apache.spark.internal.Logging        : BlockManagerMasterEndpoint up
+2022-07-12 12:18:13.141  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManagerMasterHeartbeat
+2022-07-12 12:18:13.176  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Created local directory at C:\Users\Wael Hamdi\AppData\Local\Temp\blockmgr-d8679a06-d087-4475-8cc0-4c13766582b9
+2022-07-12 12:18:13.210  INFO   57 --- [           main] org.apache.spark.internal.Logging        : MemoryStore started with capacity 897.6 MiB
+2022-07-12 12:18:13.236  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering OutputCommitCoordinator
+2022-07-12 12:18:13.370  INFO  170 --- [           main] org.sparkproject.jetty.util.log.Log      : Logging initialized @7264ms to org.sparkproject.jetty.util.log.Slf4jLog
+2022-07-12 12:18:13.478  INFO  375 --- [           main] org.sparkproject.jetty.server.Server     : jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 1.8.0_301-b09
+2022-07-12 12:18:13.507  INFO  415 --- [           main] org.sparkproject.jetty.server.Server     : Started @7403ms
+2022-07-12 12:18:13.558  INFO  331 --- [           main] rkproject.jetty.server.AbstractConnector : Started ServerConnector@2c715e84{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-07-12 12:18:13.558  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'SparkUI' on port 4040.
+2022-07-12 12:18:13.594  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@7e70bd39{/jobs,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.598  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@6db66836{/jobs/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.599  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@2de366bb{/jobs/job,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.601  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@4eeea57d{/jobs/job/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.602  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@e24ddd0{/stages,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.603  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@548e76f1{/stages/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.604  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@72c927f1{/stages/stage,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.606  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1ee4730{/stages/stage/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.608  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@5003041b{/stages/pool,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.609  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@16fb356{/stages/pool/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.610  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@23a9ba52{/storage,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.613  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@70ab80e3{/storage/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.614  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@67427b69{/storage/rdd,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.616  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@544630b7{/storage/rdd/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.617  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1095f122{/environment,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.618  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3d6300e8{/environment/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.619  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@24a1c17f{/executors,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.620  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@73511076{/executors/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.622  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@532721fd{/executors/threadDump,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.624  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@7fb9f71f{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.635  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@51f49060{/static,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.636  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@7689ddef{/,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.638  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1a2e2935{/api,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.640  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@aa22f1c{/jobs/job/kill,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.641  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@37cd92d6{/stages/stage/kill,null,AVAILABLE,@Spark}
+2022-07-12 12:18:13.645  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Bound SparkUI to 0.0.0.0, and started at http://host.docker.internal:4040
+2022-07-12 12:18:13.936  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Starting executor ID driver on host host.docker.internal
+2022-07-12 12:18:14.002  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 62986.
+2022-07-12 12:18:14.003  INFO   82 --- [           main] .network.netty.NettyBlockTransferService : Server created on host.docker.internal:62986
+2022-07-12 12:18:14.006  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2022-07-12 12:18:14.023  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registering BlockManager BlockManagerId(driver, host.docker.internal, 62986, None)
+2022-07-12 12:18:14.033  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Registering block manager host.docker.internal:62986 with 897.6 MiB RAM, BlockManagerId(driver, host.docker.internal, 62986, None)
+2022-07-12 12:18:14.039  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Registered BlockManager BlockManagerId(driver, host.docker.internal, 62986, None)
+2022-07-12 12:18:14.042  INFO   57 --- [           main] org.apache.spark.internal.Logging        : Initialized BlockManager: BlockManagerId(driver, host.docker.internal, 62986, None)
+2022-07-12 12:18:14.423  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@3b152928{/metrics/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:15.378  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Starting 1 receivers
+2022-07-12 12:18:15.385  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : ReceiverTracker started
+2022-07-12 12:18:15.395  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-07-12 12:18:15.396  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-07-12 12:18:15.398  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-07-12 12:18:15.399  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-07-12 12:18:15.400  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.PluggableInputDStream@4ea24fac
+2022-07-12 12:18:15.400  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-07-12 12:18:15.401  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-07-12 12:18:15.402  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-07-12 12:18:15.402  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-07-12 12:18:15.403  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@2c08aba5
+2022-07-12 12:18:15.403  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Slide time = 1000 ms
+2022-07-12 12:18:15.403  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Storage level = Serialized 1x Replicated
+2022-07-12 12:18:15.404  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Checkpoint interval = null
+2022-07-12 12:18:15.404  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Remember interval = 1000 ms
+2022-07-12 12:18:15.404  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@20d9faac
+2022-07-12 12:18:15.535  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started timer for JobGenerator at time 1657624696000
+2022-07-12 12:18:15.536  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started JobGenerator at 1657624696000 ms
+2022-07-12 12:18:15.538  INFO   57 --- [streaming-start] org.apache.spark.internal.Logging        : Started JobScheduler
+2022-07-12 12:18:15.543  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1ab6718{/streaming,null,AVAILABLE,@Spark}
+2022-07-12 12:18:15.545  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@460510aa{/streaming/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:15.547  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@78b41097{/streaming/batch,null,AVAILABLE,@Spark}
+2022-07-12 12:18:15.550  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@327c7bea{/streaming/batch/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:15.552  INFO  915 --- [           main] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@7cf283e1{/static/streaming,null,AVAILABLE,@Spark}
+2022-07-12 12:18:15.553  INFO   57 --- [           main] org.apache.spark.internal.Logging        : StreamingContext started
+2022-07-12 12:18:15.641  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Receiver 0 started
+2022-07-12 12:18:15.658  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 0 (start at Application.java:146) with 1 output partitions
+2022-07-12 12:18:15.659  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 0 (start at Application.java:146)
+2022-07-12 12:18:15.660  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-07-12 12:18:15.663  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-12 12:18:15.672  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:609), which has no missing parents
+2022-07-12 12:18:15.905  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_0 stored as values in memory (estimated size 97.5 KiB, free 897.5 MiB)
+2022-07-12 12:18:16.053  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 897.5 MiB)
+2022-07-12 12:18:16.058  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_0_piece0 in memory on host.docker.internal:62986 (size: 34.2 KiB, free: 897.6 MiB)
+2022-07-12 12:18:16.066  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 0 from broadcast at DAGScheduler.scala:1478
+2022-07-12 12:18:16.077  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624696000 ms
+2022-07-12 12:18:16.084  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624696000 ms.0 from job set of time 1657624696000 ms
+2022-07-12 12:18:16.092  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:609) (first 15 tasks are for partitions Vector(0))
+2022-07-12 12:18:16.094  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 0.0 with 1 tasks resource profile 0
+2022-07-12 12:18:16.288  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkContext; some configuration may not take effect.
+2022-07-12 12:18:16.317  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 0.0 (TID 0) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 5950 bytes) taskResourceAssignments Map()
+2022-07-12 12:18:16.374  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 0.0 (TID 0)
+2022-07-12 12:18:16.944  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Started timer for BlockGenerator at time 1657624697000
+2022-07-12 12:18:16.947  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Started BlockGenerator
+2022-07-12 12:18:17.204  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Registered receiver for stream 0 from host.docker.internal:62962
+2022-07-12 12:18:17.207  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Starting receiver 0
+2022-07-12 12:18:17.210  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Called receiver 0 onStart
+2022-07-12 12:18:17.211  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Waiting for receiver to be stopped
+2022-07-12 12:18:17.191  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Started block pushing thread
+2022-07-12 12:18:17.207  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624697000 ms
+2022-07-12 12:18:17.763  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+2022-07-12 12:18:18.004  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624698000 ms
+2022-07-12 12:18:19.007  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624699000 ms
+2022-07-12 12:18:20.019  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624700000 ms
+2022-07-12 12:18:20.207  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Warehouse path is 'file:/C:/IntelliJProjects/NifiSparkStreaming/spark-warehouse'.
+2022-07-12 12:18:20.296  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@2d3e8791{/SQL,null,AVAILABLE,@Spark}
+2022-07-12 12:18:20.299  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@71625a3a{/SQL/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:20.301  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@28edb0dd{/SQL/execution,null,AVAILABLE,@Spark}
+2022-07-12 12:18:20.303  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@1f226f71{/SQL/execution/json,null,AVAILABLE,@Spark}
+2022-07-12 12:18:20.308  INFO  915 --- [-job-executor-0] ject.jetty.server.handler.ContextHandler : Started o.s.j.s.ServletContextHandler@5881a23b{/static/sql,null,AVAILABLE,@Spark}
+2022-07-12 12:18:21.011  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624701000 ms
+2022-07-12 12:18:21.521  INFO  571 --- [  NiFi Receiver] g.apache.nifi.remote.client.PeerSelector : Successfully refreshed peer status cache; remote group consists of 1 peers
+2022-07-12 12:18:21.527  INFO  571 --- [ool Maintenance] g.apache.nifi.remote.client.PeerSelector : Successfully refreshed peer status cache; remote group consists of 1 peers
+2022-07-12 12:18:22.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624702000 ms
+2022-07-12 12:18:22.743  INFO   57 --- [  NiFi Receiver] org.apache.spark.internal.Logging        : Block input-0-1657624696919 stored as values in memory (estimated size 55.9 MiB, free 841.6 MiB)
+2022-07-12 12:18:22.745  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added input-0-1657624696919 in memory on host.docker.internal:62986 (size: 55.9 MiB, free: 841.7 MiB)
+2022-07-12 12:18:23.009  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624703000 ms
+2022-07-12 12:18:24.004  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624704000 ms
+2022-07-12 12:18:25.002  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624705000 ms
+2022-07-12 12:18:26.006  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624706000 ms
+2022-07-12 12:18:26.173  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Code generated in 289.5477 ms
+2022-07-12 12:18:26.208  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624696000 ms.0 from job set of time 1657624696000 ms
+2022-07-12 12:18:26.212  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 10.207 s for time 1657624696000 ms (execution: 10.124 s)
+2022-07-12 12:18:26.213  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624697000 ms.0 from job set of time 1657624697000 ms
+2022-07-12 12:18:26.217  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:26.218  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:26.224  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 
+2022-07-12 12:18:26.229  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 
+2022-07-12 12:18:26.467  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:26.467  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:26.475  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624697000 ms.0 from job set of time 1657624697000 ms
+2022-07-12 12:18:26.476  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 9.475 s for time 1657624697000 ms (execution: 0.262 s)
+2022-07-12 12:18:26.478  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624698000 ms.0 from job set of time 1657624698000 ms
+2022-07-12 12:18:26.481  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 2 from persistence list
+2022-07-12 12:18:26.515  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 1 from persistence list
+2022-07-12 12:18:26.519  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[1] at receiverStream at Application.java:122 of time 1657624697000 ms
+2022-07-12 12:18:26.524  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 
+2022-07-12 12:18:26.524  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 
+2022-07-12 12:18:26.525  INFO   57 --- [c-thread-pool-1] org.apache.spark.internal.Logging        : Removing RDD 1
+2022-07-12 12:18:26.525  INFO   57 --- [c-thread-pool-0] org.apache.spark.internal.Logging        : Removing RDD 2
+2022-07-12 12:18:26.602  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624698000 ms.0 from job set of time 1657624698000 ms
+2022-07-12 12:18:26.603  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 8.602 s for time 1657624698000 ms (execution: 0.125 s)
+2022-07-12 12:18:26.603  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624699000 ms.0 from job set of time 1657624699000 ms
+2022-07-12 12:18:26.603  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 6 from persistence list
+2022-07-12 12:18:26.605  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:26.605  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:26.608  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 5 from persistence list
+2022-07-12 12:18:26.619  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[5] at receiverStream at Application.java:122 of time 1657624698000 ms
+2022-07-12 12:18:26.621  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624696000 ms
+2022-07-12 12:18:26.621  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624696000 ms
+2022-07-12 12:18:26.628  INFO   57 --- [c-thread-pool-6] org.apache.spark.internal.Logging        : Removing RDD 6
+2022-07-12 12:18:26.630  INFO   57 --- [c-thread-pool-7] org.apache.spark.internal.Logging        : Removing RDD 5
+2022-07-12 12:18:26.687  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624699000 ms.0 from job set of time 1657624699000 ms
+2022-07-12 12:18:26.688  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 7.687 s for time 1657624699000 ms (execution: 0.084 s)
+2022-07-12 12:18:26.688  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624700000 ms.0 from job set of time 1657624700000 ms
+2022-07-12 12:18:26.688  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:26.690  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:26.690  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 8 from persistence list
+2022-07-12 12:18:26.692  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 7 from persistence list
+2022-07-12 12:18:26.701  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[7] at receiverStream at Application.java:122 of time 1657624699000 ms
+2022-07-12 12:18:26.701  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624697000 ms
+2022-07-12 12:18:26.705  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624697000 ms
+2022-07-12 12:18:26.706  INFO   57 --- [-thread-pool-12] org.apache.spark.internal.Logging        : Removing RDD 8
+2022-07-12 12:18:26.706  INFO   57 --- [-thread-pool-13] org.apache.spark.internal.Logging        : Removing RDD 7
+2022-07-12 12:18:26.785  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624700000 ms.0 from job set of time 1657624700000 ms
+2022-07-12 12:18:26.785  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 6.785 s for time 1657624700000 ms (execution: 0.097 s)
+2022-07-12 12:18:26.787  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624701000 ms.0 from job set of time 1657624701000 ms
+2022-07-12 12:18:26.788  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 10 from persistence list
+2022-07-12 12:18:26.789  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 9 from persistence list
+2022-07-12 12:18:26.791  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[9] at receiverStream at Application.java:122 of time 1657624700000 ms
+2022-07-12 12:18:26.792  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624698000 ms
+2022-07-12 12:18:26.793  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624698000 ms
+2022-07-12 12:18:26.794  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:26.795  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:26.798  INFO   57 --- [-thread-pool-18] org.apache.spark.internal.Logging        : Removing RDD 10
+2022-07-12 12:18:26.799  INFO   57 --- [-thread-pool-19] org.apache.spark.internal.Logging        : Removing RDD 9
+2022-07-12 12:18:26.863  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624701000 ms.0 from job set of time 1657624701000 ms
+2022-07-12 12:18:26.864  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 5.863 s for time 1657624701000 ms (execution: 0.076 s)
+2022-07-12 12:18:26.864  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 12 from persistence list
+2022-07-12 12:18:26.864  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624702000 ms.0 from job set of time 1657624702000 ms
+2022-07-12 12:18:26.866  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 11 from persistence list
+2022-07-12 12:18:26.867  INFO   57 --- [-thread-pool-24] org.apache.spark.internal.Logging        : Removing RDD 12
+2022-07-12 12:18:26.867  INFO   57 --- [-thread-pool-25] org.apache.spark.internal.Logging        : Removing RDD 11
+2022-07-12 12:18:26.868  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[11] at receiverStream at Application.java:122 of time 1657624701000 ms
+2022-07-12 12:18:26.869  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:26.869  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:26.869  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624699000 ms
+2022-07-12 12:18:26.870  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624699000 ms
+2022-07-12 12:18:26.977  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624702000 ms.0 from job set of time 1657624702000 ms
+2022-07-12 12:18:26.977  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 4.977 s for time 1657624702000 ms (execution: 0.113 s)
+2022-07-12 12:18:26.981  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624703000 ms.0 from job set of time 1657624703000 ms
+2022-07-12 12:18:26.983  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 14 from persistence list
+2022-07-12 12:18:26.984  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 13 from persistence list
+2022-07-12 12:18:26.986  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[13] at receiverStream at Application.java:122 of time 1657624702000 ms
+2022-07-12 12:18:26.988  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624700000 ms
+2022-07-12 12:18:26.989  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624700000 ms
+2022-07-12 12:18:26.990  INFO   57 --- [-thread-pool-30] org.apache.spark.internal.Logging        : Removing RDD 14
+2022-07-12 12:18:26.991  INFO   57 --- [-thread-pool-31] org.apache.spark.internal.Logging        : Removing RDD 13
+2022-07-12 12:18:26.993  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:26.999  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:27.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624707000 ms
+2022-07-12 12:18:27.105  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Starting job: show at Application.java:141
+2022-07-12 12:18:27.108  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Got job 1 (show at Application.java:141) with 1 output partitions
+2022-07-12 12:18:27.109  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Final stage: ResultStage 1 (show at Application.java:141)
+2022-07-12 12:18:27.109  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Parents of final stage: List()
+2022-07-12 12:18:27.109  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Missing parents: List()
+2022-07-12 12:18:27.112  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting ResultStage 1 (MapPartitionsRDD[56] at show at Application.java:141), which has no missing parents
+2022-07-12 12:18:27.150  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_1 stored as values in memory (estimated size 12.9 KiB, free 841.6 MiB)
+2022-07-12 12:18:27.153  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.8 KiB, free 841.6 MiB)
+2022-07-12 12:18:27.154  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Added broadcast_1_piece0 in memory on host.docker.internal:62986 (size: 5.8 KiB, free: 841.7 MiB)
+2022-07-12 12:18:27.155  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Created broadcast 1 from broadcast at DAGScheduler.scala:1478
+2022-07-12 12:18:27.156  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[56] at show at Application.java:141) (first 15 tasks are for partitions Vector(0))
+2022-07-12 12:18:27.156  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Adding task set 1.0 with 1 tasks resource profile 0
+2022-07-12 12:18:27.161  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : Starting task 0.0 in stage 1.0 (TID 1) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4394 bytes) taskResourceAssignments Map()
+2022-07-12 12:18:27.175  INFO   57 --- [age 1.0 (TID 1)] org.apache.spark.internal.Logging        : Running task 0.0 in stage 1.0 (TID 1)
+2022-07-12 12:18:27.450  INFO   57 --- [age 1.0 (TID 1)] org.apache.spark.internal.Logging        : Found block input-0-1657624696919 locally
+2022-07-12 12:18:27.984  INFO   57 --- [age 1.0 (TID 1)] org.apache.spark.internal.Logging        : 1 block locks were not released by task 0.0 in stage 1.0 (TID 1)
+[input-0-1657624696919]
+2022-07-12 12:18:27.995  INFO   57 --- [age 1.0 (TID 1)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 1.0 (TID 1). 2374 bytes result sent to driver
+2022-07-12 12:18:28.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624708000 ms
+2022-07-12 12:18:28.009  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 1.0 (TID 1) in 849 ms on host.docker.internal (executor driver) (1/1)
+2022-07-12 12:18:28.013  INFO   57 --- [result-getter-0] org.apache.spark.internal.Logging        : Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2022-07-12 12:18:28.022  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 1 (show at Application.java:141) finished in 0.894 s
+2022-07-12 12:18:28.029  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-12 12:18:28.030  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 1: Stage finished
+2022-07-12 12:18:28.034  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Job 1 finished: show at Application.java:141, took 0.928411 s
+2022-07-12 12:18:28.120  INFO   57 --- [-job-executor-0] org.apache.spark.internal.Logging        : Code generated in 40.0332 ms
+2022-07-12 12:18:28.136  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624703000 ms.0 from job set of time 1657624703000 ms
+2022-07-12 12:18:28.136  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 5.136 s for time 1657624703000 ms (execution: 1.155 s)
+2022-07-12 12:18:28.136  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624704000 ms.0 from job set of time 1657624704000 ms
+2022-07-12 12:18:28.138  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:28.139  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:28.141  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 16 from persistence list
+2022-07-12 12:18:28.145  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 15 from persistence list
+2022-07-12 12:18:28.147  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[15] at receiverStream at Application.java:122 of time 1657624703000 ms
+2022-07-12 12:18:28.147  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624701000 ms
+2022-07-12 12:18:28.148  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624701000 ms
+2022-07-12 12:18:28.149  INFO   57 --- [-thread-pool-36] org.apache.spark.internal.Logging        : Removing RDD 16
+2022-07-12 12:18:28.152  INFO   57 --- [-thread-pool-37] org.apache.spark.internal.Logging        : Removing RDD 15
+2022-07-12 12:18:28.219  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:28.220  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:28.257  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624704000 ms.0 from job set of time 1657624704000 ms
+2022-07-12 12:18:28.259  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 4.256 s for time 1657624704000 ms (execution: 0.120 s)
+2022-07-12 12:18:28.259  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624705000 ms.0 from job set of time 1657624705000 ms
+2022-07-12 12:18:28.261  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 18 from persistence list
+2022-07-12 12:18:28.264  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 17 from persistence list
+2022-07-12 12:18:28.266  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[17] at receiverStream at Application.java:122 of time 1657624704000 ms
+2022-07-12 12:18:28.270  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624702000 ms
+2022-07-12 12:18:28.271  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624702000 ms
+2022-07-12 12:18:28.344  INFO   57 --- [-thread-pool-44] org.apache.spark.internal.Logging        : Removing RDD 17
+2022-07-12 12:18:28.350  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed broadcast_1_piece0 on host.docker.internal:62986 in memory (size: 5.8 KiB, free: 841.7 MiB)
+2022-07-12 12:18:28.353  INFO   57 --- [ckManagerMaster] org.apache.spark.internal.Logging        : Removed input-0-1657624696919 on host.docker.internal:62986 in memory (size: 55.9 MiB, free: 897.6 MiB)
+2022-07-12 12:18:28.344  INFO   57 --- [-thread-pool-43] org.apache.spark.internal.Logging        : Removing RDD 18
+2022-07-12 12:18:28.363  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624705000 ms.0 from job set of time 1657624705000 ms
+2022-07-12 12:18:28.364  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 3.363 s for time 1657624705000 ms (execution: 0.104 s)
+2022-07-12 12:18:28.364  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624706000 ms.0 from job set of time 1657624706000 ms
+2022-07-12 12:18:28.368  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 20 from persistence list
+2022-07-12 12:18:28.375  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:28.375  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:28.382  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 19 from persistence list
+2022-07-12 12:18:28.387  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[19] at receiverStream at Application.java:122 of time 1657624705000 ms
+2022-07-12 12:18:28.388  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624703000 ms
+2022-07-12 12:18:28.389  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624703000 ms
+2022-07-12 12:18:28.440  INFO   57 --- [-thread-pool-54] org.apache.spark.internal.Logging        : Removing RDD 20
+2022-07-12 12:18:28.443  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624706000 ms.0 from job set of time 1657624706000 ms
+2022-07-12 12:18:28.444  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 2.443 s for time 1657624706000 ms (execution: 0.079 s)
+2022-07-12 12:18:28.444  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624707000 ms.0 from job set of time 1657624707000 ms
+2022-07-12 12:18:28.445  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 22 from persistence list
+2022-07-12 12:18:28.446  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:28.447  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:28.449  INFO   57 --- [-thread-pool-55] org.apache.spark.internal.Logging        : Removing RDD 19
+2022-07-12 12:18:28.466  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 21 from persistence list
+2022-07-12 12:18:28.476  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[21] at receiverStream at Application.java:122 of time 1657624706000 ms
+2022-07-12 12:18:28.477  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624704000 ms
+2022-07-12 12:18:28.477  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624704000 ms
+2022-07-12 12:18:28.539  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624707000 ms.0 from job set of time 1657624707000 ms
+2022-07-12 12:18:28.539  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 1.539 s for time 1657624707000 ms (execution: 0.095 s)
+2022-07-12 12:18:28.542  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:28.542  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:28.544  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 24 from persistence list
+2022-07-12 12:18:28.542  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624708000 ms.0 from job set of time 1657624708000 ms
+2022-07-12 12:18:28.548  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 23 from persistence list
+2022-07-12 12:18:28.550  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[23] at receiverStream at Application.java:122 of time 1657624707000 ms
+2022-07-12 12:18:28.550  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624705000 ms
+2022-07-12 12:18:28.551  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624705000 ms
+2022-07-12 12:18:28.614  INFO   57 --- [-thread-pool-63] org.apache.spark.internal.Logging        : Removing RDD 23
+2022-07-12 12:18:28.626  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624708000 ms.0 from job set of time 1657624708000 ms
+2022-07-12 12:18:28.627  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.626 s for time 1657624708000 ms (execution: 0.086 s)
+2022-07-12 12:18:28.615  INFO   57 --- [-thread-pool-62] org.apache.spark.internal.Logging        : Removing RDD 24
+2022-07-12 12:18:28.615  INFO   57 --- [-thread-pool-61] org.apache.spark.internal.Logging        : Removing RDD 21
+2022-07-12 12:18:28.615  INFO   57 --- [-thread-pool-60] org.apache.spark.internal.Logging        : Removing RDD 22
+2022-07-12 12:18:28.633  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 53 from persistence list
+2022-07-12 12:18:28.639  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 52 from persistence list
+2022-07-12 12:18:28.639  WARN   69 --- [ver-heartbeater] org.apache.spark.internal.Logging        : Exception when trying to compute pagesize, as a result reporting of ProcessTree metrics is stopped
+2022-07-12 12:18:28.645  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[52] at receiverStream at Application.java:122 of time 1657624708000 ms
+2022-07-12 12:18:28.646  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624706000 ms
+2022-07-12 12:18:28.646  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624706000 ms
+2022-07-12 12:18:28.659  INFO   57 --- [-thread-pool-70] org.apache.spark.internal.Logging        : Removing RDD 53
+2022-07-12 12:18:28.661  INFO   57 --- [-thread-pool-73] org.apache.spark.internal.Logging        : Removing RDD 52
+2022-07-12 12:18:29.002  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624709000 ms
+2022-07-12 12:18:29.004  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624709000 ms.0 from job set of time 1657624709000 ms
+2022-07-12 12:18:29.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:29.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:29.053  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624709000 ms.0 from job set of time 1657624709000 ms
+2022-07-12 12:18:29.053  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.053 s for time 1657624709000 ms (execution: 0.049 s)
+2022-07-12 12:18:29.054  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 58 from persistence list
+2022-07-12 12:18:29.055  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 57 from persistence list
+2022-07-12 12:18:29.057  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[57] at receiverStream at Application.java:122 of time 1657624709000 ms
+2022-07-12 12:18:29.057  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624707000 ms
+2022-07-12 12:18:29.058  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624707000 ms
+2022-07-12 12:18:29.059  INFO   57 --- [-thread-pool-78] org.apache.spark.internal.Logging        : Removing RDD 58
+2022-07-12 12:18:29.060  INFO   57 --- [-thread-pool-79] org.apache.spark.internal.Logging        : Removing RDD 57
+2022-07-12 12:18:30.006  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624710000 ms
+2022-07-12 12:18:30.007  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624710000 ms.0 from job set of time 1657624710000 ms
+2022-07-12 12:18:30.017  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:30.017  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:30.066  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624710000 ms.0 from job set of time 1657624710000 ms
+2022-07-12 12:18:30.066  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.066 s for time 1657624710000 ms (execution: 0.059 s)
+2022-07-12 12:18:30.067  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 80 from persistence list
+2022-07-12 12:18:30.068  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 79 from persistence list
+2022-07-12 12:18:30.068  INFO   57 --- [-thread-pool-84] org.apache.spark.internal.Logging        : Removing RDD 80
+2022-07-12 12:18:30.069  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[79] at receiverStream at Application.java:122 of time 1657624710000 ms
+2022-07-12 12:18:30.070  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624708000 ms
+2022-07-12 12:18:30.070  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624708000 ms
+2022-07-12 12:18:30.070  INFO   57 --- [-thread-pool-85] org.apache.spark.internal.Logging        : Removing RDD 79
+2022-07-12 12:18:31.006  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624711000 ms
+2022-07-12 12:18:31.006  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624711000 ms.0 from job set of time 1657624711000 ms
+2022-07-12 12:18:31.009  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:31.009  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:31.052  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624711000 ms.0 from job set of time 1657624711000 ms
+2022-07-12 12:18:31.053  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.052 s for time 1657624711000 ms (execution: 0.046 s)
+2022-07-12 12:18:31.054  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 86 from persistence list
+2022-07-12 12:18:31.055  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 85 from persistence list
+2022-07-12 12:18:31.055  INFO   57 --- [-thread-pool-90] org.apache.spark.internal.Logging        : Removing RDD 86
+2022-07-12 12:18:31.057  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[85] at receiverStream at Application.java:122 of time 1657624711000 ms
+2022-07-12 12:18:31.057  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624709000 ms
+2022-07-12 12:18:31.057  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624709000 ms
+2022-07-12 12:18:31.058  INFO   57 --- [-thread-pool-93] org.apache.spark.internal.Logging        : Removing RDD 85
+2022-07-12 12:18:32.005  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624712000 ms
+2022-07-12 12:18:32.006  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624712000 ms.0 from job set of time 1657624712000 ms
+2022-07-12 12:18:32.013  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:32.014  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:32.069  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624712000 ms.0 from job set of time 1657624712000 ms
+2022-07-12 12:18:32.070  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 92 from persistence list
+2022-07-12 12:18:32.070  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.069 s for time 1657624712000 ms (execution: 0.063 s)
+2022-07-12 12:18:32.075  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 91 from persistence list
+2022-07-12 12:18:32.077  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[91] at receiverStream at Application.java:122 of time 1657624712000 ms
+2022-07-12 12:18:32.078  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624710000 ms
+2022-07-12 12:18:32.078  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624710000 ms
+2022-07-12 12:18:32.079  INFO   57 --- [-thread-pool-96] org.apache.spark.internal.Logging        : Removing RDD 92
+2022-07-12 12:18:32.079  INFO   57 --- [-thread-pool-97] org.apache.spark.internal.Logging        : Removing RDD 91
+2022-07-12 12:18:33.005  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624713000 ms
+2022-07-12 12:18:33.005  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624713000 ms.0 from job set of time 1657624713000 ms
+2022-07-12 12:18:33.014  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:33.015  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:33.060  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624713000 ms.0 from job set of time 1657624713000 ms
+2022-07-12 12:18:33.061  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.060 s for time 1657624713000 ms (execution: 0.055 s)
+2022-07-12 12:18:33.061  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 98 from persistence list
+2022-07-12 12:18:33.062  INFO   57 --- [c-thread-pool-0] org.apache.spark.internal.Logging        : Removing RDD 98
+2022-07-12 12:18:33.063  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 97 from persistence list
+2022-07-12 12:18:33.064  INFO   57 --- [c-thread-pool-5] org.apache.spark.internal.Logging        : Removing RDD 97
+2022-07-12 12:18:33.064  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[97] at receiverStream at Application.java:122 of time 1657624713000 ms
+2022-07-12 12:18:33.064  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624711000 ms
+2022-07-12 12:18:33.065  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624711000 ms
+2022-07-12 12:18:34.005  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624714000 ms
+2022-07-12 12:18:34.005  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624714000 ms.0 from job set of time 1657624714000 ms
+2022-07-12 12:18:34.011  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:34.011  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:34.048  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624714000 ms.0 from job set of time 1657624714000 ms
+2022-07-12 12:18:34.048  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.047 s for time 1657624714000 ms (execution: 0.042 s)
+2022-07-12 12:18:34.048  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 104 from persistence list
+2022-07-12 12:18:34.049  INFO   57 --- [c-thread-pool-9] org.apache.spark.internal.Logging        : Removing RDD 104
+2022-07-12 12:18:34.049  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 103 from persistence list
+2022-07-12 12:18:34.050  INFO   57 --- [-thread-pool-11] org.apache.spark.internal.Logging        : Removing RDD 103
+2022-07-12 12:18:34.050  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[103] at receiverStream at Application.java:122 of time 1657624714000 ms
+2022-07-12 12:18:34.051  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624712000 ms
+2022-07-12 12:18:34.051  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624712000 ms
+2022-07-12 12:18:35.006  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624715000 ms
+2022-07-12 12:18:35.007  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624715000 ms.0 from job set of time 1657624715000 ms
+2022-07-12 12:18:35.013  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:35.013  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:35.082  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624715000 ms.0 from job set of time 1657624715000 ms
+2022-07-12 12:18:35.082  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.082 s for time 1657624715000 ms (execution: 0.075 s)
+2022-07-12 12:18:35.083  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 110 from persistence list
+2022-07-12 12:18:35.084  INFO   57 --- [-thread-pool-13] org.apache.spark.internal.Logging        : Removing RDD 110
+2022-07-12 12:18:35.084  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 109 from persistence list
+2022-07-12 12:18:35.088  INFO   57 --- [-thread-pool-17] org.apache.spark.internal.Logging        : Removing RDD 109
+2022-07-12 12:18:35.089  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[109] at receiverStream at Application.java:122 of time 1657624715000 ms
+2022-07-12 12:18:35.089  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624713000 ms
+2022-07-12 12:18:35.089  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624713000 ms
+2022-07-12 12:18:36.009  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624716000 ms
+2022-07-12 12:18:36.009  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624716000 ms.0 from job set of time 1657624716000 ms
+2022-07-12 12:18:36.012  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:36.013  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:36.051  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624716000 ms.0 from job set of time 1657624716000 ms
+2022-07-12 12:18:36.052  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.051 s for time 1657624716000 ms (execution: 0.042 s)
+2022-07-12 12:18:36.052  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 116 from persistence list
+2022-07-12 12:18:36.053  INFO   57 --- [-thread-pool-19] org.apache.spark.internal.Logging        : Removing RDD 116
+2022-07-12 12:18:36.053  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 115 from persistence list
+2022-07-12 12:18:36.054  INFO   57 --- [-thread-pool-23] org.apache.spark.internal.Logging        : Removing RDD 115
+2022-07-12 12:18:36.055  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[115] at receiverStream at Application.java:122 of time 1657624716000 ms
+2022-07-12 12:18:36.055  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624714000 ms
+2022-07-12 12:18:36.056  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624714000 ms
+2022-07-12 12:18:37.004  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624717000 ms
+2022-07-12 12:18:37.005  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624717000 ms.0 from job set of time 1657624717000 ms
+2022-07-12 12:18:37.010  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:37.012  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:37.059  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624717000 ms.0 from job set of time 1657624717000 ms
+2022-07-12 12:18:37.060  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.059 s for time 1657624717000 ms (execution: 0.054 s)
+2022-07-12 12:18:37.060  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 122 from persistence list
+2022-07-12 12:18:37.061  INFO   57 --- [-thread-pool-26] org.apache.spark.internal.Logging        : Removing RDD 122
+2022-07-12 12:18:37.061  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 121 from persistence list
+2022-07-12 12:18:37.062  INFO   57 --- [-thread-pool-29] org.apache.spark.internal.Logging        : Removing RDD 121
+2022-07-12 12:18:37.062  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[121] at receiverStream at Application.java:122 of time 1657624717000 ms
+2022-07-12 12:18:37.063  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624715000 ms
+2022-07-12 12:18:37.063  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624715000 ms
+2022-07-12 12:18:38.002  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624718000 ms
+2022-07-12 12:18:38.003  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624718000 ms.0 from job set of time 1657624718000 ms
+2022-07-12 12:18:38.007  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:38.007  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:38.076  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624718000 ms.0 from job set of time 1657624718000 ms
+2022-07-12 12:18:38.076  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.076 s for time 1657624718000 ms (execution: 0.073 s)
+2022-07-12 12:18:38.076  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 128 from persistence list
+2022-07-12 12:18:38.077  INFO   57 --- [-thread-pool-33] org.apache.spark.internal.Logging        : Removing RDD 128
+2022-07-12 12:18:38.077  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 127 from persistence list
+2022-07-12 12:18:38.083  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[127] at receiverStream at Application.java:122 of time 1657624718000 ms
+2022-07-12 12:18:38.084  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624716000 ms
+2022-07-12 12:18:38.084  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624716000 ms
+2022-07-12 12:18:38.085  INFO   57 --- [-thread-pool-34] org.apache.spark.internal.Logging        : Removing RDD 127
+2022-07-12 12:18:39.001  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624719000 ms
+2022-07-12 12:18:39.001  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624719000 ms.0 from job set of time 1657624719000 ms
+2022-07-12 12:18:39.004  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:39.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:39.106  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624719000 ms.0 from job set of time 1657624719000 ms
+2022-07-12 12:18:39.117  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.105 s for time 1657624719000 ms (execution: 0.104 s)
+2022-07-12 12:18:39.122  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 134 from persistence list
+2022-07-12 12:18:39.123  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 133 from persistence list
+2022-07-12 12:18:39.123  INFO   57 --- [-thread-pool-38] org.apache.spark.internal.Logging        : Removing RDD 134
+2022-07-12 12:18:39.126  INFO   57 --- [-thread-pool-37] org.apache.spark.internal.Logging        : Removing RDD 133
+2022-07-12 12:18:39.126  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[133] at receiverStream at Application.java:122 of time 1657624719000 ms
+2022-07-12 12:18:39.127  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624717000 ms
+2022-07-12 12:18:39.127  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624717000 ms
+2022-07-12 12:18:40.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624720000 ms
+2022-07-12 12:18:40.003  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624720000 ms.0 from job set of time 1657624720000 ms
+2022-07-12 12:18:40.007  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:40.008  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:40.053  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624720000 ms.0 from job set of time 1657624720000 ms
+2022-07-12 12:18:40.054  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.053 s for time 1657624720000 ms (execution: 0.050 s)
+2022-07-12 12:18:40.054  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 140 from persistence list
+2022-07-12 12:18:40.055  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 139 from persistence list
+2022-07-12 12:18:40.056  INFO   57 --- [-thread-pool-43] org.apache.spark.internal.Logging        : Removing RDD 140
+2022-07-12 12:18:40.057  INFO   57 --- [-thread-pool-42] org.apache.spark.internal.Logging        : Removing RDD 139
+2022-07-12 12:18:40.057  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[139] at receiverStream at Application.java:122 of time 1657624720000 ms
+2022-07-12 12:18:40.058  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624718000 ms
+2022-07-12 12:18:40.058  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624718000 ms
+2022-07-12 12:18:41.002  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624721000 ms
+2022-07-12 12:18:41.003  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624721000 ms.0 from job set of time 1657624721000 ms
+2022-07-12 12:18:41.005  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:41.005  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:41.051  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624721000 ms.0 from job set of time 1657624721000 ms
+2022-07-12 12:18:41.054  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.051 s for time 1657624721000 ms (execution: 0.048 s)
+2022-07-12 12:18:41.054  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 146 from persistence list
+2022-07-12 12:18:41.055  INFO   57 --- [-thread-pool-50] org.apache.spark.internal.Logging        : Removing RDD 146
+2022-07-12 12:18:41.055  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 145 from persistence list
+2022-07-12 12:18:41.056  INFO   57 --- [-thread-pool-53] org.apache.spark.internal.Logging        : Removing RDD 145
+2022-07-12 12:18:41.057  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[145] at receiverStream at Application.java:122 of time 1657624721000 ms
+2022-07-12 12:18:41.057  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624719000 ms
+2022-07-12 12:18:41.057  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624719000 ms
+2022-07-12 12:18:42.002  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624722000 ms
+2022-07-12 12:18:42.002  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624722000 ms.0 from job set of time 1657624722000 ms
+2022-07-12 12:18:42.005  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:42.005  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:42.041  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624722000 ms.0 from job set of time 1657624722000 ms
+2022-07-12 12:18:42.042  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.041 s for time 1657624722000 ms (execution: 0.039 s)
+2022-07-12 12:18:42.043  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 152 from persistence list
+2022-07-12 12:18:42.044  INFO   57 --- [-thread-pool-57] org.apache.spark.internal.Logging        : Removing RDD 152
+2022-07-12 12:18:42.044  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 151 from persistence list
+2022-07-12 12:18:42.047  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[151] at receiverStream at Application.java:122 of time 1657624722000 ms
+2022-07-12 12:18:42.048  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624720000 ms
+2022-07-12 12:18:42.048  INFO   57 --- [-thread-pool-63] org.apache.spark.internal.Logging        : Removing RDD 151
+2022-07-12 12:18:42.048  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624720000 ms
+2022-07-12 12:18:43.023  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624723000 ms
+2022-07-12 12:18:43.024  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624723000 ms.0 from job set of time 1657624723000 ms
+2022-07-12 12:18:43.056  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:43.061  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:43.106  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624723000 ms.0 from job set of time 1657624723000 ms
+2022-07-12 12:18:43.106  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.106 s for time 1657624723000 ms (execution: 0.083 s)
+2022-07-12 12:18:43.107  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 158 from persistence list
+2022-07-12 12:18:43.108  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 157 from persistence list
+2022-07-12 12:18:43.108  INFO   57 --- [-thread-pool-62] org.apache.spark.internal.Logging        : Removing RDD 158
+2022-07-12 12:18:43.109  INFO   57 --- [-thread-pool-62] org.apache.spark.internal.Logging        : Removing RDD 157
+2022-07-12 12:18:43.109  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[157] at receiverStream at Application.java:122 of time 1657624723000 ms
+2022-07-12 12:18:43.109  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624721000 ms
+2022-07-12 12:18:43.110  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624721000 ms
+2022-07-12 12:18:44.002  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624724000 ms
+2022-07-12 12:18:44.002  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624724000 ms.0 from job set of time 1657624724000 ms
+2022-07-12 12:18:44.004  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:44.004  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:44.038  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624724000 ms.0 from job set of time 1657624724000 ms
+2022-07-12 12:18:44.038  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.038 s for time 1657624724000 ms (execution: 0.036 s)
+2022-07-12 12:18:44.039  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 164 from persistence list
+2022-07-12 12:18:44.039  INFO   57 --- [-thread-pool-68] org.apache.spark.internal.Logging        : Removing RDD 164
+2022-07-12 12:18:44.039  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 163 from persistence list
+2022-07-12 12:18:44.040  INFO   57 --- [-thread-pool-71] org.apache.spark.internal.Logging        : Removing RDD 163
+2022-07-12 12:18:44.040  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[163] at receiverStream at Application.java:122 of time 1657624724000 ms
+2022-07-12 12:18:44.042  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624722000 ms
+2022-07-12 12:18:44.042  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624722000 ms
+2022-07-12 12:18:45.014  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624725000 ms
+2022-07-12 12:18:45.015  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624725000 ms.0 from job set of time 1657624725000 ms
+2022-07-12 12:18:45.018  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:45.018  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:45.065  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624725000 ms.0 from job set of time 1657624725000 ms
+2022-07-12 12:18:45.066  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.065 s for time 1657624725000 ms (execution: 0.050 s)
+2022-07-12 12:18:45.066  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 170 from persistence list
+2022-07-12 12:18:45.067  INFO   57 --- [-thread-pool-74] org.apache.spark.internal.Logging        : Removing RDD 170
+2022-07-12 12:18:45.067  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 169 from persistence list
+2022-07-12 12:18:45.067  INFO   57 --- [-thread-pool-77] org.apache.spark.internal.Logging        : Removing RDD 169
+2022-07-12 12:18:45.068  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[169] at receiverStream at Application.java:122 of time 1657624725000 ms
+2022-07-12 12:18:45.068  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624723000 ms
+2022-07-12 12:18:45.068  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624723000 ms
+2022-07-12 12:18:46.001  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624726000 ms
+2022-07-12 12:18:46.002  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624726000 ms.0 from job set of time 1657624726000 ms
+2022-07-12 12:18:46.005  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:46.005  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:46.061  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624726000 ms.0 from job set of time 1657624726000 ms
+2022-07-12 12:18:46.064  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.061 s for time 1657624726000 ms (execution: 0.059 s)
+2022-07-12 12:18:46.066  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 176 from persistence list
+2022-07-12 12:18:46.067  INFO   57 --- [-thread-pool-80] org.apache.spark.internal.Logging        : Removing RDD 176
+2022-07-12 12:18:46.067  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 175 from persistence list
+2022-07-12 12:18:46.071  INFO   57 --- [-thread-pool-82] org.apache.spark.internal.Logging        : Removing RDD 175
+2022-07-12 12:18:46.071  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[175] at receiverStream at Application.java:122 of time 1657624726000 ms
+2022-07-12 12:18:46.072  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624724000 ms
+2022-07-12 12:18:46.072  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624724000 ms
+2022-07-12 12:18:47.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624727000 ms
+2022-07-12 12:18:47.004  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624727000 ms.0 from job set of time 1657624727000 ms
+2022-07-12 12:18:47.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:47.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:47.042  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624727000 ms.0 from job set of time 1657624727000 ms
+2022-07-12 12:18:47.042  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.042 s for time 1657624727000 ms (execution: 0.039 s)
+2022-07-12 12:18:47.042  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 182 from persistence list
+2022-07-12 12:18:47.043  INFO   57 --- [-thread-pool-86] org.apache.spark.internal.Logging        : Removing RDD 182
+2022-07-12 12:18:47.043  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 181 from persistence list
+2022-07-12 12:18:47.044  INFO   57 --- [-thread-pool-89] org.apache.spark.internal.Logging        : Removing RDD 181
+2022-07-12 12:18:47.044  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[181] at receiverStream at Application.java:122 of time 1657624727000 ms
+2022-07-12 12:18:47.048  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624725000 ms
+2022-07-12 12:18:47.049  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624725000 ms
+2022-07-12 12:18:48.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624728000 ms
+2022-07-12 12:18:48.003  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624728000 ms.0 from job set of time 1657624728000 ms
+2022-07-12 12:18:48.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:48.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:48.037  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624728000 ms.0 from job set of time 1657624728000 ms
+2022-07-12 12:18:48.037  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.037 s for time 1657624728000 ms (execution: 0.034 s)
+2022-07-12 12:18:48.037  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 188 from persistence list
+2022-07-12 12:18:48.038  INFO   57 --- [-thread-pool-92] org.apache.spark.internal.Logging        : Removing RDD 188
+2022-07-12 12:18:48.038  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 187 from persistence list
+2022-07-12 12:18:48.039  INFO   57 --- [-thread-pool-95] org.apache.spark.internal.Logging        : Removing RDD 187
+2022-07-12 12:18:48.039  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[187] at receiverStream at Application.java:122 of time 1657624728000 ms
+2022-07-12 12:18:48.040  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624726000 ms
+2022-07-12 12:18:48.040  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624726000 ms
+2022-07-12 12:18:49.000  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624729000 ms
+2022-07-12 12:18:49.000  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624729000 ms.0 from job set of time 1657624729000 ms
+2022-07-12 12:18:49.000  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:49.000  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:49.047  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624729000 ms.0 from job set of time 1657624729000 ms
+2022-07-12 12:18:49.047  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.047 s for time 1657624729000 ms (execution: 0.047 s)
+2022-07-12 12:18:49.048  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 194 from persistence list
+2022-07-12 12:18:49.048  INFO   57 --- [c-thread-pool-3] org.apache.spark.internal.Logging        : Removing RDD 194
+2022-07-12 12:18:49.049  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 193 from persistence list
+2022-07-12 12:18:49.049  INFO   57 --- [-thread-pool-99] org.apache.spark.internal.Logging        : Removing RDD 193
+2022-07-12 12:18:49.049  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[193] at receiverStream at Application.java:122 of time 1657624729000 ms
+2022-07-12 12:18:49.050  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624727000 ms
+2022-07-12 12:18:49.050  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624727000 ms
+2022-07-12 12:18:50.001  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624730000 ms
+2022-07-12 12:18:50.001  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624730000 ms.0 from job set of time 1657624730000 ms
+2022-07-12 12:18:50.004  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:50.004  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:50.054  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624730000 ms.0 from job set of time 1657624730000 ms
+2022-07-12 12:18:50.055  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.054 s for time 1657624730000 ms (execution: 0.053 s)
+2022-07-12 12:18:50.055  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 200 from persistence list
+2022-07-12 12:18:50.056  INFO   57 --- [c-thread-pool-4] org.apache.spark.internal.Logging        : Removing RDD 200
+2022-07-12 12:18:50.056  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 199 from persistence list
+2022-07-12 12:18:50.056  INFO   57 --- [c-thread-pool-8] org.apache.spark.internal.Logging        : Removing RDD 199
+2022-07-12 12:18:50.057  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[199] at receiverStream at Application.java:122 of time 1657624730000 ms
+2022-07-12 12:18:50.057  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624728000 ms
+2022-07-12 12:18:50.057  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624728000 ms
+2022-07-12 12:18:51.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624731000 ms
+2022-07-12 12:18:51.003  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624731000 ms.0 from job set of time 1657624731000 ms
+2022-07-12 12:18:51.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:51.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:51.043  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624731000 ms.0 from job set of time 1657624731000 ms
+2022-07-12 12:18:51.044  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.043 s for time 1657624731000 ms (execution: 0.040 s)
+2022-07-12 12:18:51.047  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 206 from persistence list
+2022-07-12 12:18:51.048  INFO   57 --- [-thread-pool-10] org.apache.spark.internal.Logging        : Removing RDD 206
+2022-07-12 12:18:51.048  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 205 from persistence list
+2022-07-12 12:18:51.051  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[205] at receiverStream at Application.java:122 of time 1657624731000 ms
+2022-07-12 12:18:51.052  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624729000 ms
+2022-07-12 12:18:51.052  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624729000 ms
+2022-07-12 12:18:51.052  INFO   57 --- [-thread-pool-11] org.apache.spark.internal.Logging        : Removing RDD 205
+2022-07-12 12:18:52.001  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624732000 ms
+2022-07-12 12:18:52.001  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624732000 ms.0 from job set of time 1657624732000 ms
+2022-07-12 12:18:52.003  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:52.003  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:52.036  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624732000 ms.0 from job set of time 1657624732000 ms
+2022-07-12 12:18:52.036  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.036 s for time 1657624732000 ms (execution: 0.035 s)
+2022-07-12 12:18:52.037  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 212 from persistence list
+2022-07-12 12:18:52.037  INFO   57 --- [-thread-pool-15] org.apache.spark.internal.Logging        : Removing RDD 212
+2022-07-12 12:18:52.038  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 211 from persistence list
+2022-07-12 12:18:52.038  INFO   57 --- [-thread-pool-21] org.apache.spark.internal.Logging        : Removing RDD 211
+2022-07-12 12:18:52.039  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[211] at receiverStream at Application.java:122 of time 1657624732000 ms
+2022-07-12 12:18:52.039  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624730000 ms
+2022-07-12 12:18:52.039  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624730000 ms
+2022-07-12 12:18:53.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624733000 ms
+2022-07-12 12:18:53.004  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624733000 ms.0 from job set of time 1657624733000 ms
+2022-07-12 12:18:53.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:53.007  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:53.043  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624733000 ms.0 from job set of time 1657624733000 ms
+2022-07-12 12:18:53.044  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.043 s for time 1657624733000 ms (execution: 0.039 s)
+2022-07-12 12:18:53.044  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 218 from persistence list
+2022-07-12 12:18:53.045  INFO   57 --- [-thread-pool-22] org.apache.spark.internal.Logging        : Removing RDD 218
+2022-07-12 12:18:53.045  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 217 from persistence list
+2022-07-12 12:18:53.046  INFO   57 --- [-thread-pool-25] org.apache.spark.internal.Logging        : Removing RDD 217
+2022-07-12 12:18:53.047  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[217] at receiverStream at Application.java:122 of time 1657624733000 ms
+2022-07-12 12:18:53.047  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624731000 ms
+2022-07-12 12:18:53.047  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624731000 ms
+2022-07-12 12:18:54.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624734000 ms
+2022-07-12 12:18:54.003  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624734000 ms.0 from job set of time 1657624734000 ms
+2022-07-12 12:18:54.007  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:54.008  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:54.041  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624734000 ms.0 from job set of time 1657624734000 ms
+2022-07-12 12:18:54.042  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.041 s for time 1657624734000 ms (execution: 0.038 s)
+2022-07-12 12:18:54.042  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 224 from persistence list
+2022-07-12 12:18:54.043  INFO   57 --- [-thread-pool-27] org.apache.spark.internal.Logging        : Removing RDD 224
+2022-07-12 12:18:54.043  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 223 from persistence list
+2022-07-12 12:18:54.044  INFO   57 --- [-thread-pool-32] org.apache.spark.internal.Logging        : Removing RDD 223
+2022-07-12 12:18:54.044  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[223] at receiverStream at Application.java:122 of time 1657624734000 ms
+2022-07-12 12:18:54.044  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624732000 ms
+2022-07-12 12:18:54.044  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624732000 ms
+2022-07-12 12:18:55.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624735000 ms
+2022-07-12 12:18:55.003  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624735000 ms.0 from job set of time 1657624735000 ms
+2022-07-12 12:18:55.010  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:55.010  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:55.047  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624735000 ms.0 from job set of time 1657624735000 ms
+2022-07-12 12:18:55.048  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.047 s for time 1657624735000 ms (execution: 0.044 s)
+2022-07-12 12:18:55.048  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 230 from persistence list
+2022-07-12 12:18:55.048  INFO   57 --- [-thread-pool-34] org.apache.spark.internal.Logging        : Removing RDD 230
+2022-07-12 12:18:55.049  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 229 from persistence list
+2022-07-12 12:18:55.050  INFO   57 --- [-thread-pool-39] org.apache.spark.internal.Logging        : Removing RDD 229
+2022-07-12 12:18:55.050  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[229] at receiverStream at Application.java:122 of time 1657624735000 ms
+2022-07-12 12:18:55.051  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624733000 ms
+2022-07-12 12:18:55.051  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624733000 ms
+2022-07-12 12:18:56.002  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624736000 ms
+2022-07-12 12:18:56.002  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624736000 ms.0 from job set of time 1657624736000 ms
+2022-07-12 12:18:56.004  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:56.004  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:56.031  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624736000 ms.0 from job set of time 1657624736000 ms
+2022-07-12 12:18:56.031  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.031 s for time 1657624736000 ms (execution: 0.029 s)
+2022-07-12 12:18:56.031  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 236 from persistence list
+2022-07-12 12:18:56.032  INFO   57 --- [-thread-pool-41] org.apache.spark.internal.Logging        : Removing RDD 236
+2022-07-12 12:18:56.032  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 235 from persistence list
+2022-07-12 12:18:56.033  INFO   57 --- [-thread-pool-47] org.apache.spark.internal.Logging        : Removing RDD 235
+2022-07-12 12:18:56.033  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[235] at receiverStream at Application.java:122 of time 1657624736000 ms
+2022-07-12 12:18:56.034  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624734000 ms
+2022-07-12 12:18:56.034  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624734000 ms
+2022-07-12 12:18:57.001  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624737000 ms
+2022-07-12 12:18:57.001  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624737000 ms.0 from job set of time 1657624737000 ms
+2022-07-12 12:18:57.003  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:57.004  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:57.033  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624737000 ms.0 from job set of time 1657624737000 ms
+2022-07-12 12:18:57.034  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.033 s for time 1657624737000 ms (execution: 0.032 s)
+2022-07-12 12:18:57.035  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 242 from persistence list
+2022-07-12 12:18:57.035  INFO   57 --- [-thread-pool-45] org.apache.spark.internal.Logging        : Removing RDD 242
+2022-07-12 12:18:57.036  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 241 from persistence list
+2022-07-12 12:18:57.036  INFO   57 --- [-thread-pool-49] org.apache.spark.internal.Logging        : Removing RDD 241
+2022-07-12 12:18:57.037  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[241] at receiverStream at Application.java:122 of time 1657624737000 ms
+2022-07-12 12:18:57.037  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624735000 ms
+2022-07-12 12:18:57.037  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624735000 ms
+2022-07-12 12:18:58.003  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624738000 ms
+2022-07-12 12:18:58.003  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624738000 ms.0 from job set of time 1657624738000 ms
+2022-07-12 12:18:58.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:58.006  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:58.031  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624738000 ms.0 from job set of time 1657624738000 ms
+2022-07-12 12:18:58.031  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.031 s for time 1657624738000 ms (execution: 0.028 s)
+2022-07-12 12:18:58.031  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 248 from persistence list
+2022-07-12 12:18:58.032  INFO   57 --- [-thread-pool-51] org.apache.spark.internal.Logging        : Removing RDD 248
+2022-07-12 12:18:58.032  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 247 from persistence list
+2022-07-12 12:18:58.033  INFO   57 --- [-thread-pool-55] org.apache.spark.internal.Logging        : Removing RDD 247
+2022-07-12 12:18:58.033  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[247] at receiverStream at Application.java:122 of time 1657624738000 ms
+2022-07-12 12:18:58.033  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624736000 ms
+2022-07-12 12:18:58.034  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624736000 ms
+2022-07-12 12:18:59.002  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624739000 ms
+2022-07-12 12:18:59.002  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624739000 ms.0 from job set of time 1657624739000 ms
+2022-07-12 12:18:59.005  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:18:59.005  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:18:59.025  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624739000 ms.0 from job set of time 1657624739000 ms
+2022-07-12 12:18:59.025  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.025 s for time 1657624739000 ms (execution: 0.023 s)
+2022-07-12 12:18:59.025  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 254 from persistence list
+2022-07-12 12:18:59.026  INFO   57 --- [-thread-pool-58] org.apache.spark.internal.Logging        : Removing RDD 254
+2022-07-12 12:18:59.026  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 253 from persistence list
+2022-07-12 12:18:59.027  INFO   57 --- [-thread-pool-63] org.apache.spark.internal.Logging        : Removing RDD 253
+2022-07-12 12:18:59.027  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[253] at receiverStream at Application.java:122 of time 1657624739000 ms
+2022-07-12 12:18:59.027  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624737000 ms
+2022-07-12 12:18:59.028  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624737000 ms
+2022-07-12 12:19:00.001  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624740000 ms
+2022-07-12 12:19:00.001  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624740000 ms.0 from job set of time 1657624740000 ms
+2022-07-12 12:19:00.005  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:19:00.005  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:19:00.048  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624740000 ms.0 from job set of time 1657624740000 ms
+2022-07-12 12:19:00.048  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.048 s for time 1657624740000 ms (execution: 0.047 s)
+2022-07-12 12:19:00.049  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 260 from persistence list
+2022-07-12 12:19:00.050  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 259 from persistence list
+2022-07-12 12:19:00.051  INFO   57 --- [-thread-pool-67] org.apache.spark.internal.Logging        : Removing RDD 260
+2022-07-12 12:19:00.053  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[259] at receiverStream at Application.java:122 of time 1657624740000 ms
+2022-07-12 12:19:00.053  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624738000 ms
+2022-07-12 12:19:00.054  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624738000 ms
+2022-07-12 12:19:00.054  INFO   57 --- [-thread-pool-60] org.apache.spark.internal.Logging        : Removing RDD 259
+2022-07-12 12:19:01.001  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624741000 ms
+2022-07-12 12:19:01.001  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624741000 ms.0 from job set of time 1657624741000 ms
+2022-07-12 12:19:01.005  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:19:01.005  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:19:01.035  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624741000 ms.0 from job set of time 1657624741000 ms
+2022-07-12 12:19:01.036  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.035 s for time 1657624741000 ms (execution: 0.034 s)
+2022-07-12 12:19:01.036  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 266 from persistence list
+2022-07-12 12:19:01.036  INFO   57 --- [-thread-pool-68] org.apache.spark.internal.Logging        : Removing RDD 266
+2022-07-12 12:19:01.037  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 265 from persistence list
+2022-07-12 12:19:01.037  INFO   57 --- [-thread-pool-75] org.apache.spark.internal.Logging        : Removing RDD 265
+2022-07-12 12:19:01.037  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[265] at receiverStream at Application.java:122 of time 1657624741000 ms
+2022-07-12 12:19:01.038  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624739000 ms
+2022-07-12 12:19:01.038  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624739000 ms
+2022-07-12 12:19:02.001  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Added jobs for time 1657624742000 ms
+2022-07-12 12:19:02.001  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Starting job streaming job 1657624742000 ms.0 from job set of time 1657624742000 ms
+2022-07-12 12:19:02.004  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; the static sql configurations will not take effect.
+2022-07-12 12:19:02.004  WARN   69 --- [-job-executor-0] org.apache.spark.internal.Logging        : Using an existing SparkSession; some spark core configurations may not take effect.
+2022-07-12 12:19:02.025  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Finished job streaming job 1657624742000 ms.0 from job set of time 1657624742000 ms
+2022-07-12 12:19:02.025  INFO   57 --- [   JobScheduler] org.apache.spark.internal.Logging        : Total delay: 0.025 s for time 1657624742000 ms (execution: 0.024 s)
+2022-07-12 12:19:02.025  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 272 from persistence list
+2022-07-12 12:19:02.027  INFO   57 --- [-thread-pool-74] org.apache.spark.internal.Logging        : Removing RDD 272
+2022-07-12 12:19:02.027  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing RDD 271 from persistence list
+2022-07-12 12:19:02.028  INFO   57 --- [-thread-pool-77] org.apache.spark.internal.Logging        : Removing RDD 271
+2022-07-12 12:19:02.028  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Removing blocks of RDD BlockRDD[271] at receiverStream at Application.java:122 of time 1657624742000 ms
+2022-07-12 12:19:02.029  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : Deleting batches: 1657624740000 ms
+2022-07-12 12:19:02.029  INFO   57 --- [   JobGenerator] org.apache.spark.internal.Logging        : remove old batch metadata: 1657624740000 ms
+2022-07-12 12:19:02.109  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Invoking stop(stopGracefully=false) from shutdown hook
+2022-07-12 12:19:02.116  INFO   57 --- [er-event-loop-3] org.apache.spark.internal.Logging        : Sent stop signal to all 1 receivers
+2022-07-12 12:19:02.117  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Received stop signal
+2022-07-12 12:19:02.119  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopping receiver with message: Stopped by driver: 
+2022-07-12 12:19:02.119  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Called receiver onStop
+2022-07-12 12:19:02.119  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Deregistering receiver 0
+2022-07-12 12:19:02.121  ERROR   73 --- [er-event-loop-1] org.apache.spark.internal.Logging        : Deregistered receiver for stream 0: Stopped by driver
+2022-07-12 12:19:02.122  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopped receiver 0
+2022-07-12 12:19:02.124  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopping BlockGenerator
+2022-07-12 12:19:02.400  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopped timer for BlockGenerator after time 1657624742400
+2022-07-12 12:19:02.400  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Waiting for block pushing thread to terminate
+2022-07-12 12:19:02.416  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Pushing out the last 0 blocks
+2022-07-12 12:19:02.416  INFO   57 --- [      Thread-14] org.apache.spark.internal.Logging        : Stopped block pushing thread
+2022-07-12 12:19:02.416  INFO   57 --- [er-event-loop-0] org.apache.spark.internal.Logging        : Stopped BlockGenerator
+2022-07-12 12:19:02.416  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Stopped receiver without error
+2022-07-12 12:19:02.416  INFO   57 --- [age 0.0 (TID 0)] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 0.0 (TID 0). 880 bytes result sent to driver
+2022-07-12 12:19:02.416  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Finished task 0.0 in stage 0.0 (TID 0) in 46129 ms on host.docker.internal (executor driver) (1/1)
+2022-07-12 12:19:02.416  INFO   57 --- [result-getter-1] org.apache.spark.internal.Logging        : Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2022-07-12 12:19:02.416  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : ResultStage 0 (start at Application.java:146) finished in 46.710 s
+2022-07-12 12:19:02.416  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+2022-07-12 12:19:02.416  INFO   57 --- [uler-event-loop] org.apache.spark.internal.Logging        : Killing all running tasks in stage 0: Stage finished
+2022-07-12 12:19:02.431  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : All of the receivers have deregistered successfully
+2022-07-12 12:19:02.431  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : ReceiverTracker stopped
+2022-07-12 12:19:02.431  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopping JobGenerator immediately
+2022-07-12 12:19:02.431  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped timer for JobGenerator after time 1657624742000
+2022-07-12 12:19:02.431  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped JobGenerator
+2022-07-12 12:19:02.431  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped JobScheduler
+2022-07-12 12:19:02.463  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@1ab6718{/streaming,null,STOPPED,@Spark}
+2022-07-12 12:19:02.463  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@460510aa{/streaming/json,null,STOPPED,@Spark}
+2022-07-12 12:19:02.478  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@78b41097{/streaming/batch,null,STOPPED,@Spark}
+2022-07-12 12:19:02.478  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@327c7bea{/streaming/batch/json,null,STOPPED,@Spark}
+2022-07-12 12:19:02.478  INFO 1153 --- [shutdown-hook-0] ject.jetty.server.handler.ContextHandler : Stopped o.s.j.s.ServletContextHandler@7cf283e1{/static/streaming,null,STOPPED,@Spark}
+2022-07-12 12:19:02.478  INFO  165 --- [           main] com.elite.cdr.validator.Application      : ****************************************************
+2022-07-12 12:19:02.478  INFO  166 --- [           main] com.elite.cdr.validator.Application      : Duration: 0.0 seconds
+2022-07-12 12:19:02.478  INFO  167 --- [           main] com.elite.cdr.validator.Application      : Batch executed with success
+2022-07-12 12:19:02.478  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : StreamingContext stopped successfully
+2022-07-12 12:19:02.478  INFO  168 --- [           main] com.elite.cdr.validator.Application      : ****************************************************
+2022-07-12 12:19:02.478  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Invoking stop() from shutdown hook
+2022-07-12 12:19:02.494  INFO  381 --- [shutdown-hook-0] rkproject.jetty.server.AbstractConnector : Stopped Spark@2c715e84{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2022-07-12 12:19:02.494  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Stopped Spark web UI at http://host.docker.internal:4040
+2022-07-12 12:19:02.509  INFO   57 --- [er-event-loop-1] org.apache.spark.internal.Logging        : MapOutputTrackerMasterEndpoint stopped!
+2022-07-12 12:19:02.525  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : MemoryStore cleared
+2022-07-12 12:19:02.525  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : BlockManager stopped
+2022-07-12 12:19:02.525  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : BlockManagerMaster stopped
+2022-07-12 12:19:02.541  INFO   57 --- [er-event-loop-2] org.apache.spark.internal.Logging        : OutputCommitCoordinator stopped!
+2022-07-12 12:19:02.541  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Successfully stopped SparkContext
+2022-07-12 12:19:02.541  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Shutdown hook called
+2022-07-12 12:19:02.541  INFO   57 --- [shutdown-hook-0] org.apache.spark.internal.Logging        : Deleting directory C:\Users\Wael Hamdi\AppData\Local\Temp\spark-945244e2-b171-40cb-8442-7f89000398ac

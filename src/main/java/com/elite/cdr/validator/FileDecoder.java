@@ -9,13 +9,6 @@ import java.io.Serializable;
 import java.util.*;
 
 public class FileDecoder implements Serializable {
-    public FileDecoder(byte[] rddFile) {
-        try {
-            decode(rddFile);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     public List<Cdr> decode(byte[] rddFile)  throws IOException {
 
@@ -107,7 +100,7 @@ public class FileDecoder implements Serializable {
                 }
                 cdrList.add(cdr);
                 // j++;
-                System.out.println(cdr.callType+","+cdr.imsi+","+cdr.imei+","+cdr.mscIncoming+","+cdr.mscOutgoing);
+                // System.out.println(cdr.callType+","+cdr.imsi+","+cdr.imei+","+cdr.mscIncoming+","+cdr.mscOutgoing);
             }
         }
         in.close();
