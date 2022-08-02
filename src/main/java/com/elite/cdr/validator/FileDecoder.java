@@ -25,22 +25,33 @@ public class FileDecoder implements Serializable {
         fieldsConfig.put(0, Arrays.asList(
                 new Field("1", "imsi", "TBCD"),
                 new Field("2", "imei", "TBCD"),
+                new Field("4", "callingNumber", "ADDRESS"),
+                new Field("5", "calledNumber", "ADDRESS"),
                 new Field("10", true, Arrays.asList("1"), "mscIncoming", "IA5"),
-                new Field("11", true, Arrays.asList("1"), "mscOutgoing", "IA5")
+                new Field("11", true, Arrays.asList("1"), "mscOutgoing", "IA5"),
+                new Field("23", "answerTime", "ANSWERTIME")
+
         ));
         fieldsConfig.put(1, Arrays.asList(
                 new Field("1", "imsi", "TBCD"),
                 new Field("2", "imei", "TBCD"),
+                new Field("4", "callingNumber", "ADDRESS"),
+                new Field("5", "calledNumber", "ADDRESS"),
                 new Field("7", true, Arrays.asList("1"), "mscIncoming", "IA5"),
-                new Field("8", true, Arrays.asList("1"), "mscOutgoing", "IA5")
+                new Field("8", true, Arrays.asList("1"), "mscOutgoing", "IA5"),
+                new Field("20", "answerTime", "ANSWERTIME")
         ));
         fieldsConfig.put(6, Arrays.asList(
                 new Field("1", "imsi", "TBCD"),
-                new Field("2", "imei", "TBCD")
+                new Field("2", "imei", "TBCD"),
+                new Field("12", "calledNumber", "ADDRESS")
+
         ));
         fieldsConfig.put(7, Arrays.asList(
                 new Field("2", "imsi", "TBCD"),
-                new Field("3", "imei", "TBCD")
+                new Field("3", "imei", "TBCD"),
+                new Field("4", "calledNumber", "ADDRESS")
+                //new Field("201", "callingNumber", "ADDRESS")
         ));
 
         DecodingClass DecodingClass = new DecodingClass();

@@ -27,6 +27,9 @@
         <scala.version>2.12</scala.version>
         <spark.version>3.2.1</spark.version>
 
+        <!-- Ignite -->
+        <ignite.version>2.13.0</ignite.version>
+
         <!-- JUnit -->
         <junit.jupiter.version>5.7.1</junit.jupiter.version>
         <junit.jupiter.platform.version>1.6.0</junit.jupiter.platform.version>
@@ -38,7 +41,7 @@
 
         <!-- Maven lifecycle plugins -->
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-        <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
+        <maven-jar-plugin.version>3.2.2</maven-jar-plugin.version>
         <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
         <maven-help-plugin.version>3.2.0</maven-help-plugin.version>
         <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
@@ -79,6 +82,19 @@
             <artifactId>spark-streaming_2.12</artifactId>
             <version>3.2.1</version>
         </dependency>
+
+        <!-- Apache Ignite -->
+        <dependency>
+            <groupId>org.apache.ignite</groupId>
+            <artifactId>ignite-core</artifactId>
+            <version>${ignite.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.ignite</groupId>
+            <artifactId>ignite-spring</artifactId>
+            <version>${ignite.version}</version>
+        </dependency>
+
 
         <!-- Logger -->
         <dependency>
@@ -132,6 +148,14 @@
             <artifactId>jasn1</artifactId>
             <version>1.11.3</version>
         </dependency>
+
+       <!-- <dependency>
+            <groupId>org.apache.ignite</groupId>
+            <artifactId>ignite-spark_2.10</artifactId>
+            <version>2.4.0</version>
+        </dependency> -->
+        <!-- Thanks for using https://jar-download.com -->
+
 
     </dependencies>
 
@@ -212,6 +236,11 @@
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>${maven-jar-plugin.version}</version>
                     <configuration>
+                        <archive>
+                            <manifest>
+                                <mainClass>com.elite.cdr.validator.Application</mainClass>
+                            </manifest>
+                        </archive>
                         <excludes>
                             <exclude>**/config/*.yml</exclude>
                         </excludes>

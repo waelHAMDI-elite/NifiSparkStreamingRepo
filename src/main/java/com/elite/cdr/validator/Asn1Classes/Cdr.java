@@ -14,6 +14,8 @@ public class Cdr implements Serializable {
     public String location;
     public String answerTime;
 
+    public int recordNumber;
+
     public Cdr() {
     }
 
@@ -110,6 +112,14 @@ public class Cdr implements Serializable {
         this.answerTime = answerTime;
     }
 
+    public int getRecordNumber() {
+        return recordNumber;
+    }
+
+    public void setRecordNumber(int recordNumber) {
+        this.recordNumber = recordNumber;
+    }
+
     public void put(String decoded, Field fieldConfig) {
         switch (fieldConfig.name){
             case "imsi":
@@ -118,11 +128,23 @@ public class Cdr implements Serializable {
             case "imei":
                 setImei(decoded);
                 break;
+            case "answerTime":
+                setAnswerTime(decoded);
+                break;
+            case "callingNumber":
+                setCallingNumber(decoded);
+                break;
+            case "calledNumber":
+                setCalledNumber(decoded);
+                break;
             case "mscIncoming":
                 setMscIncoming(decoded);
                 break;
             case "mscOutgoing":
                 setMscOutgoing(decoded);
+                break;
+            case "recordNumber":
+                setRecordNumber(Integer.parseInt(decoded));
                 break;
         }
     }

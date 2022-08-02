@@ -4,6 +4,9 @@ import com.beust.jcommander.JCommander;
 import com.elite.cdr.validator.Asn1Classes.Cdr;
 import com.elite.cdr.validator.Asn1Classes.ConvertedFile;
 import com.elite.cdr.validator.utils.Settings;
+import org.apache.ignite.Ignite;
+import org.apache.ignite.Ignition;
+//import org.apache.ignite.spark.IgniteDataFrameSettings;
 import org.apache.log4j.Logger;
 import org.apache.nifi.remote.client.KeystoreType;
 import org.apache.nifi.remote.client.SiteToSiteClient;
@@ -30,6 +33,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.regex.Pattern;
 
@@ -41,6 +45,8 @@ public class Application {
 
   private static final String LOGGER_SEPARATOR =
           "****************************************************";
+
+  private static final String CONFIG = "C:\\Apache Ignite\\apache-ignite-2.13.0-bin\\examples\\config\\example-ignite.xml";
 
   public static void main(String[] args) throws InterruptedException {
 
@@ -64,35 +70,30 @@ public class Application {
     }
 
     //SparkConf conf = new SparkConf().setAppName("Feedback Analyzer").setMaster("local[*]");
-    //SparkSession spark = SparkSession.builder().config(conf).getOrCreate();
+    //SparkSession spark = SparkSession.builder().configAsn1(conf).getOrCreate();
     String url=null,portName=null,keystoreFilename = null,keystorePass=null,truststoreFilename=null,truststorePass=null;
     String propPath = settings.getPropretiesPath();
     try (InputStream input = new FileInputStream(propPath)) {
 
       Properties prop = new Properties();
+
       // load a properties file
       prop.load(input);
 
       //retrieve properties
       url = prop.getProperty("spark.NifiSparkStreaming.url");
-      //System.out.println(url);
       portName = prop.getProperty("spark.NifiSparkStreaming.portName");
-      //System.out.println(portName);
       keystoreFilename = prop.getProperty("spark.NifiSparkStreaming.keystoreFilename");
-      //System.out.println(keystoreFilename);
       keystorePass = prop.getProperty("spark.NifiSparkStreaming.keystorePass");
-      //System.out.println(keystorePass);
       truststoreFilename = prop.getProperty("spark.NifiSparkStreaming.truststoreFilename");
-      //System.out.println(truststoreFilename);
       truststorePass = prop.getProperty("spark.NifiSparkStreaming.truststorePass");
-      //System.out.println(truststorePass);
 
     } catch (IOException ex) {
       ex.printStackTrace();
     }
 
-    // Build a Site-to-site client config
-    /*SiteToSiteClientConfig config = new SiteToSiteClient.Builder()
+    // Build a Site-to-site client configAsn1
+    /*SiteToSiteClientConfig configAsn1 = new SiteToSiteClient.Builder()
             .url(url)
             .portName(portName)
             .keystoreFilename(keystoreFilename)
@@ -102,10 +103,15 @@ public class Application {
             .truststorePass(truststorePass)
             .truststoreType(KeystoreType.PKCS12)
             .buildConfig();*/
-      SiteToSiteClientConfig config = new SiteToSiteClient.Builder()
+      SiteToSiteClientConfig configAsn1 = new SiteToSiteClient.Builder()
               .url("http://127.0.0.1:8090/nifi/")
-              .portName("Data For Spark")
+              .portName("Asn1 For Spark")
               .buildConfig();
+
+      /*SiteToSiteClientConfig configAscii = new SiteToSiteClient.Builder()
+              .url("http://127.0.0.1:8090/nifi/")
+              .portName("Ascii For Spark")
+              .buildConfig();*/
 
     /*
         By doing that the NiFiReceiver will create an SSLContext when it builds the SiteToSiteClient
@@ -118,11 +124,16 @@ public class Application {
     
     // Create a JavaReceiverInputDStream using a NiFi receiver so that we can pull data from specified Port
     JavaReceiverInputDStream<NiFiDataPacket> packetStream =
-            jsc.receiverStream(new NiFiReceiver(config, StorageLevel.MEMORY_ONLY()));
+            jsc.receiverStream(new NiFiReceiver(configAsn1, StorageLevel.MEMORY_ONLY()));
 
+      // Create a JavaReceiverInputDStream using a NiFi receiver so that we can pull data from specified Port
+      /*JavaReceiverInputDStream<NiFiDataPacket> lines =
+              jsc.receiverStream(new NiFiReceiver(configAscii, StorageLevel.MEMORY_ONLY()));
 
-    // Map the data(files) from NiFi to converted files
-    //JavaDStream<List<Cdr>> files = packetStream.map(packet -> fileDecoder.decode(packet.getContent()));
+    // Map the data from NiFi to text, ignoring the attributes
+    JavaDStream<String> text = lines.map(dataPacket -> new String(dataPacket.getContent(), StandardCharsets.UTF_8));
+    //JavaDStream words = lines.map(x -> Arrays.asList(x.spl).iterator());
+    text.print();*/
 
     JavaDStream<List<Cdr>> files = packetStream.map(
             new Function<NiFiDataPacket, List<Cdr>>() {
@@ -136,12 +147,43 @@ public class Application {
     files.foreachRDD(rdd -> {
       JavaRDD<Cdr> rowRDD = rdd.flatMap(List::iterator);
       SparkSession spark = SparkSession.builder().config(rdd.context().getConf()).getOrCreate();
-      Dataset<Row> decodedCdrs = spark.createDataFrame(rowRDD, Cdr.class);
-      decodedCdrs.show();
-      System.out.println("count(*) = "+decodedCdrs.count());
+     /* Dataset<Row> igniteTable =spark.read()
+              .format("jdbc")
+              .option("url","jdbc:ignite:thin://127.0.0.1:10800")
+              .option("query","select * from Cdr")
+              .option("user","ignite")
+              .option("password","ignite")
+              .option("fetchsize",2)
+              .load();
+      igniteTable.show();*/
+
+      Dataset<Row> cdrsDF = spark.createDataFrame(rowRDD, Cdr.class);
+      cdrsDF.show();
+
+      //Ignite ignite = Ignition.start(CONFIG);
+      if (cdrsDF.count() > 0){
+        cdrsDF.write().mode(SaveMode.Overwrite).csv("C:\\IntelliJOutput\\StreamingOut");
+        /*cdrsDF.write()
+                //.format(IgniteDataFrameSettings.FORMAT_IGNITE())
+                //.option(IgniteDataFrameSettings.OPTION_CONFIG_FILE(), CONFIG)
+                //.option(IgniteDataFrameSettings.OPTION_TABLE(), "Cdr")
+                /*.format("FORMAT_IGNITE")
+                .option("url","jdbc:ignite:thin://127.0.0.1:10800")
+                .option("dbtable","Cdr")
+                //.option("query"," insert into Cdr values(1,'mo','6100','3500','2300','2310','2320','Incom','Outg','location','20220803');")
+                .option("user","ignite")
+                .option("password","ignite")*/
+                //.mode(SaveMode.Append)
+                //.save();
+      }
+
+        //cdrsDF.write().mode(SaveMode.Overwrite).csv("hdfs://localhost:9000/user/dataFromSpark/file1");
+        //cdrsDF.write().csv("hdfs://localhost:9000/user/dataFromSpark/file1");
+        //cdrsDF.write().csv("C:\\IntelliJOutput\\output");
+        //System.out.println("count(*) = "+cdrsDF.count());
     });
 
-    files.print();
+    //files.print();
 
     jsc.start();
     jsc.awaitTermination();
@@ -182,15 +224,3 @@ public class Application {
   }
 }
 
-class JavaSparkSessionSingleton {
-  private static transient SparkSession instance = null;
-  public static SparkSession getInstance(SparkConf sparkConf) {
-    if (instance == null) {
-      instance = SparkSession
-              .builder()
-              .config(sparkConf)
-              .getOrCreate();
-    }
-    return instance;
-  }
-}

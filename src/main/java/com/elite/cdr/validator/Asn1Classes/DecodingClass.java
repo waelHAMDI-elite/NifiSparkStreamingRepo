@@ -34,6 +34,26 @@ public class DecodingClass {
         return sb0.toString();
     }
 
+    public String AddressString(String field){
+        StringBuilder sb = new StringBuilder();
+        int d,e;
+        for(int i=1;i<field.length()-1;i+=2) {
+            StringBuilder sb1 = new StringBuilder();
+            String str1 = Character.toString(field.charAt(i + 1));
+            //sb1.append(Character.toString(field.charAt(i + 1)));
+            d = Integer.parseInt(str1,16);
+            sb.append(d);
+            if(field.charAt(i) != 'f') {
+                StringBuilder sb2 = new StringBuilder();
+                str1 = Character.toString(field.charAt(i));
+                e = Integer.parseInt(str1,16);
+                sb.append(e);
+            }
+
+        }
+        return sb.toString();
+    }
+
     private String OctetString(String field) {
        /* StringBuilder sb0 = new StringBuilder();
         for(int i=1; i<field.length()-1; i++) {
@@ -42,6 +62,16 @@ public class DecodingClass {
             sb0.append(field.charAt(i));
         }*/
         return field;
+    }
+
+    private String AnswertimeString(String field) {
+       /* StringBuilder sb0 = new StringBuilder();
+        for(int i=1; i<field.length()-1; i++) {
+            StringBuilder sb1 = new StringBuilder();
+
+            sb0.append(field.charAt(i));
+        }*/
+        return field.substring(1,field.length()-6);
     }
 
     public String decode(String originField,Field fieldConfig) {
@@ -54,8 +84,15 @@ public class DecodingClass {
                 decoded = IA5String(originField);
                 break;
             case "OCTET":
-                decoded = OctetString(originField);
+                decoded = originField; //OctetString(originField);
                 break;
+            case "ADDRESS":
+                decoded = AddressString(originField);
+                break;
+            case "ANSWERTIME":
+                    decoded = AnswertimeString(originField);
+                break;
+
 
         }
         //System.out.println("decoded "+decoded);
@@ -90,7 +127,7 @@ public class DecodingClass {
     }
 
     public void cdrDecode(ASN1InputStream in, List<Field> fields, int lengthCdr, Cdr cdr) throws IOException {
-       int compt=0;
+        int compt=0;
         while(compt<lengthCdr) {
             StringBuilder tagTree = new StringBuilder();
             List<Integer> tags = new ArrayList<>();
@@ -99,7 +136,7 @@ public class DecodingClass {
             previous.setPrevious(false);
             int k = fieldDecode(in,tags,fields,cdr,previous, level);
             compt = compt + k;
-           //System.out.println("compt after field "+ k);
+            //System.out.println("compt after field "+ k);
         }
     }
 
@@ -111,7 +148,7 @@ public class DecodingClass {
         int c = in.read();
         int d = c;
         compt++;
-        boolean constructed = d%64 > 32 ? true : false;
+        boolean constructed = d % 64 > 32 ? true : false;
         //System.out.println("constructed : "+constructed);
 
         TagMeta tagMeta = asn1Utils.readTagNumber(in, c);
@@ -148,7 +185,7 @@ public class DecodingClass {
                 tags.remove(len-1);
             }
             //System.out.println("previous : "+previous.isPrevious());
-           //System.out.println("tagTree : "+tags.toString());
+            //System.out.println("tagTree : "+tags.toString());
             previous.setPrevious(true);
             compt = compt + fieldLength;
             StringBuilder etiq = new StringBuilder();
@@ -158,23 +195,22 @@ public class DecodingClass {
                 etiq.append(tags.get(i));
             }
             //String finalEtiq = etiq;
-            System.out.println("etiq "+ etiq);
+            //System.out.println("etiq "+ etiq);
             Field field = fields.stream().filter(f -> etiq.toString().equals(f.getTag())).findFirst().orElse(null);
             if (field != null) {
-               //System.out.println("tag "+ field.tag+"name "+field.name);
+                //System.out.println("tag "+ field.tag+"name "+field.name);
                /* if (field.constructed) {
                     in.skip(fieldLength);
                 } else {*/
-                    StringBuilder sb = new StringBuilder();
-                    int k = 0;
-                    while (k < fieldLength) {
-                        // to read bytes from the binary file as hexadecimal values in 2 digits example '61','00','FF',...
-                        sb.append(Integer.toHexString((in.read() & 0xff)+256).substring(1));
-                        k++;
-                       // System.out.println("val "+ sb.toString());
-                    }
-                    String decoded = decode(sb.toString(), field);
-                    cdr.put(decoded, field);
+                StringBuilder sb = new StringBuilder();
+                int k = 0;
+                while (k < fieldLength) {
+                    // to read bytes from the binary file as hexadecimal values in 2 digits example '61','00','FF',...
+                    sb.append(Integer.toHexString((in.read() & 0xff)+256).substring(1));
+                    k++;
+                }
+                String decoded = decode(sb.toString(), field);
+                cdr.put(decoded, field);
                 //}
             } else {
                 in.skip(fieldLength);
