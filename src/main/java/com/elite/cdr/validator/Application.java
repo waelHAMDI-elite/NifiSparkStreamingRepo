@@ -3,6 +3,7 @@ package com.elite.cdr.validator;
 import com.beust.jcommander.JCommander;
 import com.elite.cdr.validator.Asn1Classes.Cdr;
 import com.elite.cdr.validator.Asn1Classes.ConvertedFile;
+import com.elite.cdr.validator.functionClasses.FunctionsClass;
 import com.elite.cdr.validator.utils.Settings;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.Ignition;
@@ -147,34 +148,30 @@ public class Application {
     files.foreachRDD(rdd -> {
       JavaRDD<Cdr> rowRDD = rdd.flatMap(List::iterator);
       SparkSession spark = SparkSession.builder().config(rdd.context().getConf()).getOrCreate();
-     /* Dataset<Row> igniteTable =spark.read()
-              .format("jdbc")
-              .option("url","jdbc:ignite:thin://127.0.0.1:10800")
-              .option("query","select * from Cdr")
-              .option("user","ignite")
-              .option("password","ignite")
-              .option("fetchsize",2)
-              .load();
-      igniteTable.show();*/
 
-      Dataset<Row> cdrsDF = spark.createDataFrame(rowRDD, Cdr.class);
+
+      Dataset<Row> cdrsDF = spark.createDataFrame(rowRDD,Cdr.class).select("id","CALLTYPE","IMSI","IMEI","MSISDN","CALLINGNUMBER","CALLEDNUMBER","MSCINCOMING","MSCOUTGOING","LOCATION","ANSWERTIME");
       cdrsDF.show();
 
-      //Ignite ignite = Ignition.start(CONFIG);
       if (cdrsDF.count() > 0){
-        cdrsDF.write().mode(SaveMode.Overwrite).csv("C:\\IntelliJOutput\\StreamingOut");
-        /*cdrsDF.write()
+        //cdrsDF.write().mode(SaveMode.Overwrite).csv("C:\\IntelliJOutput\\StreamingOut");
+
+        cdrsDF.write()
                 //.format(IgniteDataFrameSettings.FORMAT_IGNITE())
                 //.option(IgniteDataFrameSettings.OPTION_CONFIG_FILE(), CONFIG)
                 //.option(IgniteDataFrameSettings.OPTION_TABLE(), "Cdr")
-                /*.format("FORMAT_IGNITE")
-                .option("url","jdbc:ignite:thin://127.0.0.1:10800")
+                .format("jdbc")
+                .option("url","jdbc:ignite:thin://127.0.0.1")
                 .option("dbtable","Cdr")
-                //.option("query"," insert into Cdr values(1,'mo','6100','3500','2300','2310','2320','Incom','Outg','location','20220803');")
                 .option("user","ignite")
-                .option("password","ignite")*/
-                //.mode(SaveMode.Append)
-                //.save();
+                .option("password","ignite")
+                .mode(SaveMode.Append)
+                .save();
+
+        FunctionsClass functions = new FunctionsClass();
+        functions.addrNorm();
+        functions.loadToHdfs(spark);
+
       }
 
         //cdrsDF.write().mode(SaveMode.Overwrite).csv("hdfs://localhost:9000/user/dataFromSpark/file1");

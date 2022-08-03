@@ -60,7 +60,7 @@ public class FileDecoder implements Serializable {
         List<Cdr> cdrList = new ArrayList<>();
 
         ASN1InputStream in = new ASN1InputStream(rddFile);
-
+        int j=0;
         while (in.available() > 0) {
             //ASN1Primitive primitive = in.readObject();
             DLTaggedObject dlobj = (DLTaggedObject) in.readObject();
@@ -74,7 +74,7 @@ public class FileDecoder implements Serializable {
 
                 ASN1Primitive primitive = dlobj.getObject();
                 DLSequence sequence = (DLSequence) primitive;
-                Cdr cdr = new Cdr();
+                Cdr cdr = new Cdr(++j);
                 //System.out.println(cdrTag);
                 cdr.setCallType(cdrTag);
 

@@ -68,7 +68,7 @@ public class FileDecoder2 implements Serializable {
             if(cdrsConfig.containsKey(cdrTag.tag)){
                 StringBuilder tagTree = new StringBuilder();
                 j++;
-                Cdr cdr = new Cdr();
+                Cdr cdr = new Cdr(j);
                 cdr.setCallType(cdrTag.tag);
                 //System.out.println(j + " **** CDR "+cdrTag.tag+" len "+lengthCdr.length+" ****");
                 List<Field> fields = fieldsConfig.get(cdrTag.tag);

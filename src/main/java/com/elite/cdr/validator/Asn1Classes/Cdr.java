@@ -3,6 +3,7 @@ package com.elite.cdr.validator.Asn1Classes;
 import java.io.Serializable;
 
 public class Cdr implements Serializable {
+    public int id;
     public String callType;
     public String imsi;
     public String imei;
@@ -16,7 +17,8 @@ public class Cdr implements Serializable {
 
     public int recordNumber;
 
-    public Cdr() {
+    public Cdr(int j) {
+        this.id = j;
     }
 
     public String getCallType() {
@@ -118,6 +120,14 @@ public class Cdr implements Serializable {
 
     public void setRecordNumber(int recordNumber) {
         this.recordNumber = recordNumber;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void put(String decoded, Field fieldConfig) {
